@@ -6,8 +6,17 @@ export default {
 	  transform: (content) => content.replace(/taos:/g, ''),
 	},
 	theme: {
-	  extend: {},
-	},
+		extend: {
+		  colors: {
+			oscuro: '#262626',
+			claro: '#F8F8F8',
+			acento: '#EB9719',
+			banner: '#383838',
+			hoverClaro: '#dfdfdf',
+			plants: '#EFEFEF',
+		  },
+		},
+	  },
 	plugins: [
 	  require('preline/plugin'),
 	  require('taos/plugin'),

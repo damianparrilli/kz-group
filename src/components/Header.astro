@@ -1,0 +1,211 @@
+<div
+  id="overlay"
+  class="fixed top-0 left-0 w-screen h-screen bg-oscuro opacity-0 transition-all duration-300 ease-in-out pointer-events-none z-40 block md:hidden"
+>
+</div>
+<header id="nav-menu" class="bg-oscuro w-full h-[70px] z-50 sticky top-0">
+  <div
+    class="contenedor flex w-full h-full items-center gap-10 justify-center md:justify-start relative"
+  >
+    <div id="navigation" class="absolute right-[20px] flex md:hidden">
+      <input
+        type="checkbox"
+        id="hamburger-toggle"
+        aria-label="hamburger"
+        aria-controls="menu"
+        aria-expanded="false"
+      />
+      <label for="hamburger-toggle" id="hamburger" aria-hidden="true">
+        <span class="slice"></span>
+        <span class="slice"></span>
+        <span class="slice"></span>
+      </label>
+    </div>
+    <a href="/" class="group">
+      <svg
+        class="w-20 h-auto"
+        viewBox="0 0 610 250"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          class="fill-claro group-hover:fill-acento transition-all duration-300 ease-in-out"
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M0.664 69.1661C-0.266 166.002 -0.168 236.779 0.896 237.436C1.388 237.741 7.799 236.858 15.142 235.474C22.484 234.091 35.694 232.256 44.496 231.397C53.298 230.537 64.775 229.295 70 228.636L79.5 227.438V186.219C79.5 163.549 79.802 145.113 80.172 145.251C80.762 145.47 105.316 167.258 119.443 180.097C126.098 186.145 156.018 212.915 158.213 214.785C159.725 216.072 162.076 215.881 178.213 213.153C201.997 209.134 211.878 207.889 249 204.239L256.5 203.501L203.5 161.116C174.35 137.804 150.365 118.387 150.2 117.966C149.93 117.276 159.098 110.236 192.5 85.4861C207.935 74.0491 232.757 55.6781 244 47.3691C299.782 6.14906 307 0.761062 307 0.345062C307 0.156062 280.788 0.0240623 248.75 0.0530623L190.5 0.105062L151.337 35.8031C129.797 55.4371 108.662 74.6511 104.37 78.5011C100.078 82.3511 93.002 88.7641 88.645 92.7511C84.289 96.7381 80.449 100.001 80.112 100.001C79.776 100.001 79.621 77.5011 79.768 50.0011L80.036 0.00106227H40.683H1.329L0.664 69.1661ZM322.872 9.59206C318.817 14.8681 310.437 25.7801 304.248 33.8421C298.06 41.9051 290.484 51.7331 287.413 55.6841C284.342 59.6351 281.755 63.2351 281.665 63.6841C281.574 64.1331 322.83 64.7261 373.344 65.0011L465.188 65.5011L446.344 79.7381C435.98 87.5691 419.625 99.9561 410 107.265C372.827 135.496 353.999 149.812 341 159.73C333.575 165.396 319.542 175.987 309.815 183.266C300.088 190.545 292.101 196.839 292.065 197.251C292.029 197.663 292.788 198.003 293.75 198.005C295.431 198.009 324.083 193.05 346 188.962C368.394 184.785 397.412 180.671 422.846 178.067C434.214 176.903 442.874 175.554 443.846 174.796C444.756 174.086 449.621 170.129 454.658 166.003C459.695 161.877 468.92 154.369 475.158 149.318C499.087 129.944 527.912 106.572 537.582 98.7041C543.128 94.1921 554.378 85.1221 562.582 78.5471C581.067 63.7341 592.854 52.0981 595.986 45.5721C599.187 38.9031 599.867 27.4971 597.542 19.4991C595.892 13.8221 592.561 8.37006 588.5 4.70006C583.085 -0.193937 588.621 0.00106227 455.154 0.00106227H330.244L322.872 9.59206ZM593.911 185.424C593.678 185.656 581.116 186.571 565.994 187.456C550.872 188.342 528.15 189.743 515.5 190.57C502.85 191.398 481.925 192.716 469 193.5C456.075 194.284 443.25 195.15 440.5 195.425C437.75 195.701 428.75 196.635 420.5 197.502C412.25 198.368 396.275 199.954 385 201.024C373.725 202.095 353.7 204.322 340.5 205.973C327.3 207.623 311.205 209.633 304.732 210.439C298.26 211.245 292.523 212.178 291.982 212.512C291.442 212.846 291 216.917 291 221.56C291 226.203 290.663 229.998 290.25 229.995C289.837 229.992 285.58 226.801 280.788 222.905L272.076 215.821L253.788 216.966C234.375 218.182 231 218.506 196.5 222.463C184.4 223.851 173.938 224.99 173.25 224.994C170.05 225.012 172.051 227.225 189.409 242.872L197.319 250.001L380.909 249.982L564.5 249.963L573.5 237.331C578.45 230.383 583.976 222.629 585.781 220.099C587.585 217.57 590.06 214.072 591.281 212.325C592.501 210.578 597.212 203.953 601.75 197.604C606.288 191.254 610 185.821 610 185.53C610 184.907 594.53 184.804 593.911 185.424ZM62 235.996C24.075 239.72 2.901 242.326 0.992 243.506C0.447 243.843 0 245.442 0 247.06V250.001H40.044H80.088L79.794 242.751L79.5 235.501L74.5 235.38C71.75 235.314 66.125 235.591 62 235.996Z"
+        ></path>
+      </svg>
+    </a>
+    <ul
+      id="lista"
+      class="fixed lista bg-oscuro md:bg-transparent md:relative top-[70px] md:top-0 p-10 md:p-0 right-0 w-80 flex flex-col md:flex-row gap-12 md:gap-10 md:w-full h-[calc(100dvh-70px)] md:h-full md:items-center text-lg md:text-base -z-10 md:z-10"
+    >
+      <li>
+        <a
+          href="/"
+          class="hover:text-acento font-medium transition-all duration-300 ease-in-out"
+          >Inicio</a
+        >
+      </li>
+      <li>
+        <a
+          href="/division-dispositivos"
+          class="hover:text-acento font-medium transition-all duration-300 ease-in-out"
+          >División Dispositivos</a
+        >
+      </li>
+      <li>
+        <a
+          href="/division-inyeccion"
+          class="hover:text-acento font-medium transition-all duration-300 ease-in-out"
+          >División Inyección</a
+        >
+      </li>
+      <li>
+        <a
+          href="/division-matriceria"
+          class="hover:text-acento font-medium transition-all duration-300 ease-in-out"
+          >División Matricería</a
+        >
+      </li>
+    </ul>
+  </div>
+</header>
+
+<style>
+  #nav-menu {
+    transition: top 0.3s ease-in-out;
+  }
+  #menu {
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 100;
+  }
+  #hamburger-toggle {
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
+  }
+  #hamburger {
+    display: block;
+    padding: 0.5rem;
+    cursor: pointer;
+    width: clamp(16px, 10vmin, 32px);
+    height: clamp(16px, 10vmin, 32px);
+    box-sizing: content-box;
+    transition: transform 0.2s ease;
+  }
+  #hamburger .slice {
+    --slice-height: 2px;
+    display: block;
+    position: relative;
+    width: 100%;
+    height: var(--slice-height, 2px);
+    border-radius: var(--slice-height);
+    transition: all 0.2s ease;
+    background-color: #f8f8f8;
+    opacity: 90%;
+  }
+  #hamburger .slice {
+    margin-top: 22%; /* Fallback to produce something hamburger-ish if calc is not available */
+    margin-top: calc(33% - var(--slice-height));
+    top: calc((33% - var(--slice-height)) / -2);
+  }
+
+  #hamburger-toggle:checked ~ #menu {
+    visibility: visible;
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+  #hamburger-toggle:checked ~ #hamburger .slice:nth-child(1) {
+    top: calc(50% - 33% + var(--slice-height) / 2);
+    transform: rotate(45deg);
+  }
+  #hamburger-toggle:checked ~ #hamburger .slice:nth-child(2) {
+    opacity: 0;
+  }
+  #hamburger-toggle:checked ~ #hamburger .slice:nth-child(3) {
+    top: calc(-50% + var(--slice-height) / 2);
+    transform: rotate(-45deg);
+  }
+
+  @media (width < 768px) {
+    .lista {
+      transform: translateX(320px);
+      transition: transform 0.3s ease-in-out;
+    }
+    .open {
+      transform: translateX(0);
+    }
+  }
+</style>
+
+<script>
+  import { swapBodyElement } from "astro/virtual-modules/transitions-swap-functions.js";
+
+  const nav = document.getElementById("navigation") as HTMLElement | null;
+  const hamburger = document.getElementById(
+    "hamburger-toggle"
+  ) as HTMLInputElement | null;
+  const menu = document.getElementById("menu") as HTMLElement | null;
+
+  if (nav && hamburger && menu) {
+    const updateHamburgerARIA = () => {
+      hamburger.setAttribute(
+        "aria-expanded",
+        hamburger.checked ? "true" : "false"
+      );
+      menu.setAttribute("aria-hidden", !hamburger.checked ? "true" : "false");
+    };
+
+    hamburger.addEventListener("change", updateHamburgerARIA);
+
+    window.addEventListener("click", (event: MouseEvent) => {
+      const eventPath = event.composedPath() as EventTarget[];
+      const isTargeted = eventPath.includes(nav);
+      if (!isTargeted) {
+        hamburger.checked = false;
+        updateHamburgerARIA();
+      }
+    });
+  }
+  const overlay = document.getElementById("overlay") as HTMLElement | null;
+  const abrirMenu = () => {
+    const lista = document.getElementById("lista") as HTMLElement | null;
+
+    lista.classList.toggle("open");
+    overlay.classList.toggle("opacity-0");
+    overlay.classList.toggle("opacity-50");
+    overlay.classList.toggle("pointer-events-none");
+    document.body.classList.toggle("overflow-y-hidden");
+  };
+
+  overlay.addEventListener("click", () => {
+    const checkbox = document.getElementById(
+      "hamburger-toggle"
+    ) as HTMLInputElement;
+    checkbox.checked = false;
+    abrirMenu();
+  });
+
+  hamburger.addEventListener("change", abrirMenu);
+
+  //Animación para el header
+  let lastScrollTop = 0;
+  const header = document.getElementById("nav-menu");
+
+  window.addEventListener("scroll", function () {
+    const currentScrollTop =
+      window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScrollTop > lastScrollTop) {
+      header.style.top = "-70px";
+    } else {
+      header.style.top = "0";
+    }
+
+    lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
+  });
+</script>
