@@ -95,11 +95,17 @@ const { title, description, keywords } = Astro.props;
   }
 
   html {
-    scrollbar-gutter: stable;
+    /* scrollbar-gutter: stable; */
     text-wrap: pretty;
     font-family: "Nunito Sans", serif;
     background-color: #f8f8f8;
     color: #f8f8f8;
+  }
+
+  body{
+    display: grid;
+    min-height: 100dvh;
+    grid-template-rows: auto 1fr auto;
   }
 
   .contenedor {

@@ -1,9 +1,15 @@
-<section class="py-36 overflow-x-hidden">
+---
+const isHomePage = new URL(Astro.request.url).pathname === "/";
+---
+
+<section class=`${isHomePage ? "py-36" : "pb-24 pt-10"} overflow-x-hidden`>
   <div class="contenedor flex flex-col justify-center items-center gap-12">
-    <h2 class="text-3xl font-bold text-oscuro [animation-iteration-count:infinite] delay-[200ms] duration-[500ms] taos:translate-y-[-200px] taos:opacity-0" data-taos-offset="0">
-      Nuestras <span class="text-acento">plantas</span>
-    </h2>
-    <div class="w-full flex flex-col md:flex-row [animation-iteration-count:infinite] delay-[200ms] duration-[500ms] taos:translate-x-[-200px] taos:opacity-0 gap-4" data-taos-offset="0">
+    {isHomePage ? (
+      <h2 class="text-3xl font-bold text-oscuro [animation-iteration-count:infinite] delay-[200ms] duration-[500ms] taos:translate-y-[-200px] taos:opacity-0" data-taos-offset="0">
+        Nuestras <span class="text-acento">plantas</span>
+      </h2>
+    ) : null}
+    <div class=`w-full flex flex-col md:flex-row ${isHomePage && "[animation-iteration-count:infinite] delay-[200ms] duration-[500ms] taos:translate-x-[-200px] taos:opacity-0"} gap-4` data-taos-offset="0">
       <div class="flex flex-col gap-4 w-full">
         <h3 class="text-xl font-medium text-oscuro">PLANTA MATRICERÍA</h3>
         <div class="flex flex-wrap gap-4 h-full justify-between text-oscuro text-center text-sm sm:text-base">
@@ -53,7 +59,7 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.496194341593!2d-58.546120699999996!3d-34.5409901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb0ac35cd443b%3A0x1e5d699695f9fab4!2sLavalle%201550%2C%20B1653%20Villa%20Ballester%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1741364137193!5m2!1ses-419!2sar" class="w-full h-[300px] md:h-full" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
-    <div class="w-full flex  flex-col md:flex-row [animation-iteration-count:infinite] delay-[200ms] duration-[500ms] taos:translate-x-[200px] taos:opacity-0 gap-4" data-taos-offset="0">
+    <div class=`w-full flex  flex-col md:flex-row ${isHomePage && "[animation-iteration-count:infinite] delay-[200ms] duration-[500ms] taos:translate-x-[200px] taos:opacity-0"} gap-4` data-taos-offset="0">
         <div class="flex flex-col gap-4 w-full order-1 md:order-2">
           <h3 class="text-xl font-medium text-oscuro">PLANTA INYECCIÓN Y DISPOSITIVOS</h3>
           <div class="flex flex-wrap gap-4 h-full justify-between text-oscuro text-center text-sm sm:text-base">

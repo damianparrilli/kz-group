@@ -1,13 +1,13 @@
 <div
   id="overlay"
-  class="fixed top-0 left-0 w-screen h-screen bg-oscuro opacity-0 transition-all duration-300 ease-in-out pointer-events-none z-40 block md:hidden"
+  class="fixed top-0 left-0 w-screen h-screen bg-oscuro opacity-0 transition-all duration-300 ease-in-out pointer-events-none z-40 block lg:hidden"
 >
 </div>
 <header id="nav-menu" class="bg-oscuro w-full h-[70px] z-50 sticky top-0">
   <div
-    class="contenedor flex w-full h-full items-center gap-10 justify-center md:justify-start relative"
+    class="contenedor flex w-full h-full items-center gap-14 justify-center lg:justify-start relative"
   >
-    <div id="navigation" class="absolute right-[20px] flex md:hidden">
+    <div id="navigation" class="absolute right-[20px] flex lg:hidden">
       <input
         type="checkbox"
         id="hamburger-toggle"
@@ -21,7 +21,7 @@
         <span class="slice"></span>
       </label>
     </div>
-    <a href="/" class="group">
+    <a href="/#" class="group">
       <svg
         class="w-20 h-auto"
         viewBox="0 0 610 250"
@@ -38,34 +38,81 @@
     </a>
     <ul
       id="lista"
-      class="fixed lista bg-oscuro md:bg-transparent md:relative top-[70px] md:top-0 p-10 md:p-0 right-0 w-80 flex flex-col md:flex-row gap-12 md:gap-10 md:w-full h-[calc(100dvh-70px)] md:h-full md:items-center text-lg md:text-base -z-10 md:z-10"
+      class="fixed lista bg-oscuro lg:bg-transparent lg:relative top-[70px] lg:top-0 p-10 lg:p-0 right-0 w-80 flex flex-col lg:flex-row lg:gap-10 lg:w-full h-[calc(100dvh-70px)] lg:h-full lg:items-center text-lg lg:text-base -z-10 lg:z-10 max-[1024px]:overflow-y-auto"
     >
-      <li>
+      <li class="max-[1024px]:w-full max-[1024px]:flex">
         <a
-          href="/"
-          class="hover:text-acento font-medium transition-all duration-300 ease-in-out"
+          href="/#"
+          class="hover:text-acento font-medium transition-all duration-300 ease-in-out max-[1024px]:py-6 max-[1024px]:border-b max-[1024px]:w-full max-[1024px]:border-claro"
           >Inicio</a
         >
       </li>
-      <li>
+      <li
+        class="group max-[1024px]:w-full max-[1024px]:flex max-[1024px]:flex-col"
+      >
+        <input type="checkbox" id="dropdown-toggle" class="hidden absolute" />
+        <label
+          for="dropdown-toggle"
+          class="group-hover:text-acento font-medium transition-all duration-300 ease-in-out cursor-pointer flex justify-between lg:justify-normal items-center gap-2 max-[1024px]:py-6 max-[1024px]:border-b max-[1024px]:w-full max-[1024px]:border-claro"
+          >Nuestras divisiones
+          <svg
+            viewBox="0 0 16 10"
+            fill="none"
+            id="dd-arrow"
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-4 lg:w-3 h-auto fill-claro group-hover:fill-acento transition-all duration-300 ease-in-out"
+          >
+            <path
+              d="M14.3227 0.860652L15.5594 2.09849L8.81957 8.84065C8.71157 8.94933 8.58315 9.03558 8.44169 9.09444C8.30023 9.15329 8.14853 9.18359 7.99532 9.18359C7.8421 9.18359 7.6904 9.15329 7.54894 9.09444C7.40749 9.03558 7.27906 8.94933 7.17107 8.84065L0.427734 2.09849L1.6644 0.861818L7.99357 7.18982L14.3227 0.860652Z"
+            ></path>
+          </svg>
+        </label>
+        <ul
+          id="dropdown-list"
+          class="lg:absolute h-0 lg:h-max overflow-hidden lg:opacity-0 lg:top-0 lg:-z-10 lg:pt-[84px] lg:pointer-events-none lg:bg-oscuro lg:group-hover:opacity-100 lg:group-hover:pointer-events-auto transition-all duration-300 ease-in-out lg:p-6 flex flex-col gap-10 lg:gap-6 lg:-ml-5 px-6"
+        >
+          <li>
+            <a
+              href="/division-inyeccion"
+              class="hover:text-acento font-medium transition-all duration-300 ease-in-out"
+              >División Inyección</a
+            >
+          </li>
+          <li>
+            <a
+              href="/division-matriceria"
+              class="hover:text-acento font-medium transition-all duration-300 ease-in-out"
+              >División Matricería</a
+            >
+          </li>
+          <li>
+            <a
+              href="/division-dispositivos"
+              class="hover:text-acento font-medium transition-all duration-300 ease-in-out"
+              >División Dispositivos</a
+            >
+          </li>
+        </ul>
+      </li>
+      <li class="max-[1024px]:w-full max-[1024px]:flex">
         <a
-          href="/division-dispositivos"
-          class="hover:text-acento font-medium transition-all duration-300 ease-in-out"
-          >División Dispositivos</a
+          href="/#about"
+          class="hover:text-acento font-medium transition-all duration-300 ease-in-out max-[1024px]:py-6 max-[1024px]:border-t max-[1024px]:border-b max-[1024px]:w-full max-[1024px]:border-claro"
+          >Quienes Somos</a
         >
       </li>
-      <li>
+      <li class="max-[1024px]:w-full max-[1024px]:flex">
         <a
-          href="/division-inyeccion"
-          class="hover:text-acento font-medium transition-all duration-300 ease-in-out"
-          >División Inyección</a
+          href="/ser-parte"
+          class="hover:text-acento font-medium transition-all duration-300 ease-in-out max-[1024px]:py-6 max-[1024px]:border-b max-[1024px]:w-full max-[1024px]:border-claro"
+          >Ser parte de KZ</a
         >
       </li>
-      <li>
+      <li class="max-[1024px]:w-full max-[1024px]:flex">
         <a
-          href="/division-matriceria"
-          class="hover:text-acento font-medium transition-all duration-300 ease-in-out"
-          >División Matricería</a
+          href="/#contacto"
+          class="hover:text-acento font-medium transition-all duration-300 ease-in-out max-[1024px]:py-6 max-[1024px]:border-b max-[1024px]:w-full max-[1024px]:border-claro"
+          >Contacto</a
         >
       </li>
     </ul>
@@ -131,7 +178,7 @@
     transform: rotate(-45deg);
   }
 
-  @media (width < 768px) {
+  @media (width < 1024px) {
     .lista {
       transform: translateX(320px);
       transition: transform 0.3s ease-in-out;
@@ -143,8 +190,6 @@
 </style>
 
 <script>
-  import { swapBodyElement } from "astro/virtual-modules/transitions-swap-functions.js";
-
   const nav = document.getElementById("navigation") as HTMLElement | null;
   const hamburger = document.getElementById(
     "hamburger-toggle"
@@ -171,7 +216,12 @@
       }
     });
   }
+
   const overlay = document.getElementById("overlay") as HTMLElement | null;
+  const anchors = document.querySelectorAll(
+    "#lista a"
+  ) as NodeListOf<HTMLAnchorElement>;
+
   const abrirMenu = () => {
     const lista = document.getElementById("lista") as HTMLElement | null;
 
@@ -190,9 +240,18 @@
     abrirMenu();
   });
 
+  anchors.forEach((a) => a.addEventListener("click", () => {
+    if (window.innerWidth < 1024){
+    const checkbox = document.getElementById(
+      "hamburger-toggle"
+    ) as HTMLInputElement;
+    checkbox.checked = false;
+    abrirMenu();
+  }
+  }));
+
   hamburger.addEventListener("change", abrirMenu);
 
-  //Animación para el header
   let lastScrollTop = 0;
   const header = document.getElementById("nav-menu");
 
@@ -208,4 +267,24 @@
 
     lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
   });
+
+  const dropdown = document.getElementById(
+    "dropdown-toggle"
+  ) as HTMLInputElement | null;
+
+  const abrirDropdown = () => {
+    const listaDd = document.getElementById(
+      "dropdown-list"
+    ) as HTMLElement | null;
+    const ddArrow = document.getElementById("dd-arrow") as HTMLElement | null;
+
+    if (window.innerWidth < 1024) {
+      listaDd.classList.toggle("py-10");
+      listaDd.classList.toggle("h-max");
+
+      ddArrow.classList.toggle("rotate-180");
+    }
+  };
+
+  dropdown.addEventListener("change", abrirDropdown);
 </script>
