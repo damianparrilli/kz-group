@@ -4,7 +4,7 @@
 >
 </div>
 <header id="nav-menu" class="bg-oscuro w-full h-[70px] z-50 sticky top-0">
-  <div
+  <nav
     class="contenedor flex w-full h-full items-center gap-14 justify-center lg:justify-start relative"
   >
     <div id="navigation" class="absolute right-[20px] flex lg:hidden">
@@ -42,6 +42,7 @@
     >
       <li class="max-[1024px]:w-full max-[1024px]:flex">
         <a
+          data-i18n-header-home
           href="/#"
           class="hover:text-acento font-medium transition-all duration-300 ease-in-out max-[1024px]:py-6 max-[1024px]:border-b max-[1024px]:w-full max-[1024px]:border-claro"
           >Inicio</a
@@ -52,6 +53,7 @@
       >
         <input type="checkbox" id="dropdown-toggle" class="hidden absolute" />
         <label
+        data-i18n-header-divisions
           for="dropdown-toggle"
           class="group-hover:text-acento font-medium transition-all duration-300 ease-in-out cursor-pointer flex justify-between lg:justify-normal items-center gap-2 max-[1024px]:py-6 max-[1024px]:border-b max-[1024px]:w-full max-[1024px]:border-claro"
           >Nuestras divisiones
@@ -73,6 +75,7 @@
         >
           <li>
             <a
+            data-i18n-header-divisionsInyeccion
               href="/division-inyeccion"
               class="hover:text-acento font-medium transition-all duration-300 ease-in-out"
               >División Inyección</a
@@ -80,6 +83,7 @@
           </li>
           <li>
             <a
+            data-i18n-header-divisionsMatriceria
               href="/division-matriceria"
               class="hover:text-acento font-medium transition-all duration-300 ease-in-out"
               >División Matricería</a
@@ -87,6 +91,7 @@
           </li>
           <li>
             <a
+            data-i18n-header-divisionsDispositivos
               href="/division-dispositivos"
               class="hover:text-acento font-medium transition-all duration-300 ease-in-out"
               >División Dispositivos</a
@@ -95,7 +100,8 @@
         </ul>
       </li>
       <li class="max-[1024px]:w-full max-[1024px]:flex">
-        <a
+        <a 
+        data-i18n-header-quienessomos
           href="/#about"
           class="hover:text-acento font-medium transition-all duration-300 ease-in-out max-[1024px]:py-6 max-[1024px]:border-t max-[1024px]:border-b max-[1024px]:w-full max-[1024px]:border-claro"
           >Quienes Somos</a
@@ -103,6 +109,8 @@
       </li>
       <li class="max-[1024px]:w-full max-[1024px]:flex">
         <a
+        data-i18n-header-trabajaconnosotros
+
           href="/ser-parte"
           class="hover:text-acento font-medium transition-all duration-300 ease-in-out max-[1024px]:py-6 max-[1024px]:border-b max-[1024px]:w-full max-[1024px]:border-claro"
           >Ser parte de KZ</a
@@ -110,13 +118,156 @@
       </li>
       <li class="max-[1024px]:w-full max-[1024px]:flex">
         <a
+        data-i18n-header-contacto
+
           href="/#contacto"
           class="hover:text-acento font-medium transition-all duration-300 ease-in-out max-[1024px]:py-6 max-[1024px]:border-b max-[1024px]:w-full max-[1024px]:border-claro"
           >Contacto</a
         >
       </li>
     </ul>
+    <div class="absolute left-5 lg:left-auto lg:right-5">
+    <div
+      id="custom-lang-select"
+      class="relative inline-block text-left z-50"
+    >
+      <button
+        id="lang-toggle"
+        class="bg-[#333333] bg-[url('/arrow.svg')] bg-no-repeat bg-[right_6px_center] hover:bg-[#3f3f3f]/80 text-white font-medium rounded p-3 pr-7 flex items-center gap-2"
+      >
+        <span id="lang-flag">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_311_28)">
+              <path
+                d="M18 13.4999C18 14.0303 17.7893 14.539 17.4142 14.9141C17.0391 15.2892 16.5304 15.4999 16 15.4999H2C1.46957 15.4999 0.960859 15.2892 0.585786 14.9141C0.210714 14.539 0 14.0303 0 13.4999V4.49988C0 3.96944 0.210714 3.46074 0.585786 3.08566C0.960859 2.71059 1.46957 2.49988 2 2.49988H16C16.5304 2.49988 17.0391 2.71059 17.4142 3.08566C17.7893 3.46074 18 3.96944 18 4.49988V13.4999Z"
+                fill="#C60A1D"></path>
+              <path d="M0 5.99988H18V11.9999H0V5.99988Z" fill="#FFC400"
+              ></path>
+              <path
+                d="M4.50002 8.5V10C4.50002 10.3978 4.65805 10.7794 4.93935 11.0607C5.22066 11.342 5.60219 11.5 6.00002 11.5C6.39784 11.5 6.77937 11.342 7.06068 11.0607C7.34198 10.7794 7.50002 10.3978 7.50002 10V8.5H4.50002Z"
+                fill="#EA596E"></path>
+              <path d="M6 8H7.5V9.5H6V8Z" fill="#F4A2B2"></path>
+              <path d="M4.50002 8H6.00002V9.5H4.50002V8Z" fill="#DD2E44"
+              ></path>
+              <path
+                d="M6.00002 7.99988C6.82844 7.99988 7.50002 7.66409 7.50002 7.24988C7.50002 6.83566 6.82844 6.49988 6.00002 6.49988C5.17159 6.49988 4.50002 6.83566 4.50002 7.24988C4.50002 7.66409 5.17159 7.99988 6.00002 7.99988Z"
+                fill="#EA596E"></path>
+              <path
+                d="M6.00002 7.24988C6.82844 7.24988 7.50002 7.08198 7.50002 6.87488C7.50002 6.66777 6.82844 6.49988 6.00002 6.49988C5.17159 6.49988 4.50002 6.66777 4.50002 6.87488C4.50002 7.08198 5.17159 7.24988 6.00002 7.24988Z"
+                fill="#FFAC33"></path>
+              <path
+                d="M3.5 8H4V11.5H3.5V8ZM8 8H8.5V11.5H8V8Z"
+                fill="#99AAB5"></path>
+              <path
+                d="M3 11H4.5V11.5H3V11ZM7.5 11H9V11.5H7.5V11ZM3.5 7.5H4V8H3.5V7.5ZM8 7.5H8.5V8H8V7.5Z"
+                fill="#66757F"></path>
+            </g>
+            <defs>
+              <clipPath id="clip0_311_28">
+                <rect width="18" height="18" fill="white"></rect>
+              </clipPath>
+            </defs>
+          </svg></span
+        >
+      </button>
+
+      <div
+        id="lang-menu"
+        class="hidden absolute left-0 lg:left-auto lg:right-0 mt-2 w-36 origin-top-right rounded-md bg-[#363636] shadow-lg ring-1 ring-black ring-opacity-5"
+      >
+        <ul class="text-sm text-gray-700 rounded-md overflow-hidden">
+          <li>
+            <button
+              class="w-full text-left text-claro px-6 py-4 lg:px-4 lg:py-2 hover:bg-[#313131] flex items-center gap-2"
+              data-lang="es"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_311_28)">
+                  <path
+                    d="M18 13.4999C18 14.0303 17.7893 14.539 17.4142 14.9141C17.0391 15.2892 16.5304 15.4999 16 15.4999H2C1.46957 15.4999 0.960859 15.2892 0.585786 14.9141C0.210714 14.539 0 14.0303 0 13.4999V4.49988C0 3.96944 0.210714 3.46074 0.585786 3.08566C0.960859 2.71059 1.46957 2.49988 2 2.49988H16C16.5304 2.49988 17.0391 2.71059 17.4142 3.08566C17.7893 3.46074 18 3.96944 18 4.49988V13.4999Z"
+                    fill="#C60A1D"></path>
+                  <path d="M0 5.99988H18V11.9999H0V5.99988Z" fill="#FFC400"
+                  ></path>
+                  <path
+                    d="M4.50002 8.5V10C4.50002 10.3978 4.65805 10.7794 4.93935 11.0607C5.22066 11.342 5.60219 11.5 6.00002 11.5C6.39784 11.5 6.77937 11.342 7.06068 11.0607C7.34198 10.7794 7.50002 10.3978 7.50002 10V8.5H4.50002Z"
+                    fill="#EA596E"></path>
+                  <path d="M6 8H7.5V9.5H6V8Z" fill="#F4A2B2"></path>
+                  <path d="M4.50002 8H6.00002V9.5H4.50002V8Z" fill="#DD2E44"
+                  ></path>
+                  <path
+                    d="M6.00002 7.99988C6.82844 7.99988 7.50002 7.66409 7.50002 7.24988C7.50002 6.83566 6.82844 6.49988 6.00002 6.49988C5.17159 6.49988 4.50002 6.83566 4.50002 7.24988C4.50002 7.66409 5.17159 7.99988 6.00002 7.99988Z"
+                    fill="#EA596E"></path>
+                  <path
+                    d="M6.00002 7.24988C6.82844 7.24988 7.50002 7.08198 7.50002 6.87488C7.50002 6.66777 6.82844 6.49988 6.00002 6.49988C5.17159 6.49988 4.50002 6.66777 4.50002 6.87488C4.50002 7.08198 5.17159 7.24988 6.00002 7.24988Z"
+                    fill="#FFAC33"></path>
+                  <path
+                    d="M3.5 8H4V11.5H3.5V8ZM8 8H8.5V11.5H8V8Z"
+                    fill="#99AAB5"></path>
+                  <path
+                    d="M3 11H4.5V11.5H3V11ZM7.5 11H9V11.5H7.5V11ZM3.5 7.5H4V8H3.5V7.5ZM8 7.5H8.5V8H8V7.5Z"
+                    fill="#66757F"></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0_311_28">
+                    <rect width="18" height="18" fill="white"></rect>
+                  </clipPath>
+                </defs>
+              </svg> Español
+            </button>
+          </li>
+          <li>
+            <button
+              class="w-full text-left text-claro px-6 py-4 lg:px-4 lg:py-2 hover:bg-[#313131] flex items-center gap-2"
+              data-lang="en"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_252_26)">
+                  <path
+                    d="M0 4.5295V6.5H2.814L0 4.5295ZM2.332 15.5H6.5V12.5815L2.332 15.5ZM11.5 12.582V15.5H15.6675L11.5 12.582ZM0 11.5V13.4705L2.815 11.5H0ZM15.6685 2.5H11.5V5.4185L15.6685 2.5ZM18 13.471V11.5H15.1845L18 13.471ZM18 6.5V4.5295L15.1855 6.5H18ZM6.5 2.5H2.332L6.5 5.4185V2.5Z"
+                    fill="#00247D"></path>
+                  <path
+                    d="M12.57 11.5L17.426 14.9005C17.6627 14.6559 17.8331 14.3549 17.921 14.026L14.3135 11.5H12.57ZM6.50001 11.5H5.42951L0.574006 14.9C0.834506 15.165 1.16851 15.3545 1.54301 15.4425L6.50001 11.9715V11.5ZM11.5 6.5H12.5705L17.426 3.1C17.1608 2.8314 16.8251 2.64332 16.4575 2.5575L11.5 6.0285V6.5ZM5.42951 6.5L0.574006 3.1C0.33709 3.34456 0.166538 3.64557 0.0785065 3.9745L3.68601 6.5H5.42951Z"
+                    fill="#CF1B2B"></path>
+                  <path
+                    d="M18 10.5H10.5V15.5H11.5V12.582L15.6675 15.5H16C16.2656 15.4998 16.5285 15.4466 16.7733 15.3437C17.0181 15.2408 17.24 15.0901 17.426 14.9005L12.57 11.5H14.3135L17.921 14.026C17.9675 13.8575 18 13.683 18 13.5V13.471L15.1845 11.5H18V10.5ZM0 10.5V11.5H2.815L0 13.4705V13.5C0 14.0455 0.2195 14.539 0.574 14.9L5.4295 11.5H6.5V11.9715L1.543 15.442C1.69 15.477 1.842 15.5 2 15.5H2.332L6.5 12.5815V15.5H7.5V10.5H0ZM18 4.5C18.0005 3.97596 17.7942 3.47289 17.426 3.1L12.5705 6.5H11.5V6.0285L16.4575 2.5575C16.3077 2.52076 16.1542 2.50146 16 2.5H15.6685L11.5 5.4185V2.5H10.5V7.5H18V6.5H15.1855L18 4.5295V4.5ZM6.5 2.5V5.4185L2.332 2.5H2C1.73437 2.5003 1.47147 2.55352 1.22664 2.65653C0.9818 2.75955 0.759938 2.91031 0.574 3.1L5.4295 6.5H3.686L0.0785 3.9745C0.0290784 4.1454 0.00267879 4.32212 0 4.5L0 4.5295L2.814 6.5H0V7.5H7.5V2.5H6.5Z"
+                    fill="#EEEEEE"></path>
+                  <path
+                    d="M10.5 7.5V2.5H7.5V7.5H0V10.5H7.5V15.5H10.5V10.5H18V7.5H10.5Z"
+                    fill="#CF1B2B"></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0_252_26">
+                    <rect width="18" height="18" fill="white"></rect>
+                  </clipPath>
+                </defs>
+              </svg>
+              English
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
+  </nav>
+    
 </header>
 
 <style>
@@ -176,6 +327,10 @@
   #hamburger-toggle:checked ~ #hamburger .slice:nth-child(3) {
     top: calc(-50% + var(--slice-height) / 2);
     transform: rotate(-45deg);
+  }
+
+  #lang-toggle{
+    background-size: 0.9rem;
   }
 
   @media (width < 1024px) {
@@ -240,15 +395,17 @@
     abrirMenu();
   });
 
-  anchors.forEach((a) => a.addEventListener("click", () => {
-    if (window.innerWidth < 1024){
-    const checkbox = document.getElementById(
-      "hamburger-toggle"
-    ) as HTMLInputElement;
-    checkbox.checked = false;
-    abrirMenu();
-  }
-  }));
+  anchors.forEach((a) =>
+    a.addEventListener("click", () => {
+      if (window.innerWidth < 1024) {
+        const checkbox = document.getElementById(
+          "hamburger-toggle"
+        ) as HTMLInputElement;
+        checkbox.checked = false;
+        abrirMenu();
+      }
+    })
+  );
 
   hamburger.addEventListener("change", abrirMenu);
 

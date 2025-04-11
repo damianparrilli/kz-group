@@ -1,0 +1,23 @@
+---
+const { aboutId } = Astro.props;
+
+const imageMap = {
+  inyeccion: "/inyeccion-image.webp",
+  matriceria: "/matriceria-image.webp",
+  dispositivos: "/dispositivos-image.webp"
+};
+
+const imageSrc = imageMap[aboutId] || "/default-image.webp";
+---
+
+<section class="py-24">
+    <div class="contenedor flex flex-col md:flex-row gap-8 w-full">
+        <img src={imageSrc} alt="" class="md:max-w-[50%] object-cover order-2 md:order-1"/>
+        <div class="flex flex-col gap-4 justify-center w-full order-1 md:order-2">
+            <h2 data-i18n="about.title" class="text-acento text-3xl font-bold">Nuestra historia</h2>
+            <p data-i18n="about.description1" class="text-oscuro text-sm sm:text-base">KZ es una empresa fundada en el año 1972 por el alemán Kurt Zellner, desde ese entonces esta dedicada a la fabricación de herramentales para la inyección de termo plásticos atendiendo los requerimientos de calidad de la Industria Automotriz.
+                </p>
+                <p data-i18n="about.description2" class="text-oscuro text-sm sm:text-base">Se encuentra en plena etapa de desarrollo y ampliación fusionando la experiencia de sus fundadores con la fuerza  de sus jóvenes descendientes es en este  proceso que presenta sus nuevas unidades de negocio, Inyección de Plásticos y Fabricación de Racks y Dispositivos, con el  principal objetivo de bridarles a sus clientes  la solución completa para sus productos a través de la calidad y estabilidad de los Procesos de Fabricación.</p>
+        </div>
+    </div>
+</section>

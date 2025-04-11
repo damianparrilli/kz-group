@@ -25,11 +25,11 @@
         </g>
       </svg>
         
-      <h1 id="typing-text" class="text-3xl min-[450px]:text-4xl text-center md:text-left lg:text-5xl font-bold w-[345px] min-[450px]:w-[420px] lg:w-[550px] leading-[1.5]">
+      <h1 id="typing-text" class="text-3xl min-[450px]:text-4xl text-center md:text-left lg:text-5xl font-bold w-[345px] min-[450px]:w-[420px] lg:w-[550px] h-[90px] min-[450px]:h-[80px] lg:h-[96px] leading-[1.5]">
         <span id="cursor" class="inline-block w-[8px] h-[24px] bg-acento animate-blink"></span>
       </h1>
   </div>
-  <a href="#about" class="absolute bottom-[15dvh] md:bottom-[25%] font-medium rounded-md bg-acento text-oscuro px-7 py-2 text-base sm:text-lg cursor-pointer z-10 hover:bg-[#f7b046] transition-all duration-300 ease-in-out">Conoce más</a>
+  <a href="#about" data-i18n="banner.button" class="absolute bottom-[15dvh] md:bottom-[25%] font-medium rounded-md bg-acento text-oscuro px-7 py-2 text-base sm:text-lg cursor-pointer z-10 hover:bg-[#f7b046] transition-all duration-300 ease-in-out">Conoce más</a>
 </section>
 
 <style>
@@ -42,44 +42,94 @@
   }
 </style>
 
-<script>
+<script is:inline>
+  let currentLang = document.documentElement.lang || "es";
+  let activeTimeouts = [];
+
   document.addEventListener("DOMContentLoaded", function () {
     const textElement = document.getElementById("typing-text");
     const cursor = document.getElementById("cursor");
 
-    const text = "Moldeamos soluciones, impulsamos tu industria";
-    const words = text.split(/(soluciones|industria)/g); 
-    let index = 0;
+    const highlightedWordsByLang = {
+      es: ["soluciones", "industria"],
+      en: ["solutions", "industry"],
+    };
 
-    function typeWriter() {
-      if (index < words.length) {
-        let word = words[index];
-        let span = document.createElement("span");
+    const textsByLang = {
+      es: "Moldeamos soluciones, impulsamos tu industria",
+      en: "We shape solutions, we drive your industry",
+    };
 
-        if (word === "soluciones" || word === "industria") {
-          span.classList.add("text-acento");
-        }
-
-        textElement.insertBefore(span, cursor);
-
-        let charIndex = 0;
-        function typeCharacter() {
-          if (charIndex < word.length) {
-            span.textContent += word[charIndex];
-            charIndex++;
-            setTimeout(typeCharacter, 50);
-          } else {
-            index++;
-            setTimeout(typeWriter, 100); 
-          }
-        }
-
-        typeCharacter();
-      } else {
-        cursor.style.display = "none";
-      }
+    function clearActiveTimeouts() {
+      activeTimeouts.forEach(clearTimeout);
+      activeTimeouts = [];
     }
 
-    setTimeout(typeWriter, 500);
+    function typeWriter(text) {
+      clearActiveTimeouts();
+      textElement.innerHTML = "";
+      textElement.appendChild(cursor);
+      cursor.style.display = "inline-block";
+
+      const words = text.split(/(soluciones|industria|solutions|industry)/g);
+      let index = 0;
+
+      function writeNextWord() {
+        if (index < words.length) {
+          let word = words[index];
+          let span = document.createElement("span");
+
+          if (highlightedWordsByLang[currentLang]?.includes(word)) {
+            span.classList.add("text-acento");
+          }
+
+          textElement.insertBefore(span, cursor);
+
+          let charIndex = 0;
+          function typeCharacter() {
+            if (charIndex < word.length) {
+              span.textContent += word[charIndex];
+              charIndex++;
+              const timeoutId = setTimeout(typeCharacter, 50);
+              activeTimeouts.push(timeoutId);
+            } else {
+              index++;
+              const timeoutId = setTimeout(writeNextWord, 100);
+              activeTimeouts.push(timeoutId);
+            }
+          }
+
+          typeCharacter();
+        } else {
+          cursor.style.display = "none";
+        }
+      }
+
+      const initialTimeout = setTimeout(writeNextWord, 300);
+      activeTimeouts.push(initialTimeout);
+    }
+
+    window.restartTypingAnimation = function (lang) {
+      currentLang = lang;
+      typeWriter(textsByLang[lang] || textsByLang["es"]);
+      if(lang === "es"){
+        textElement.classList.add("w-[345px]");
+        textElement.classList.add("min-[450px]:w-[420px]");
+        textElement.classList.add("lg:w-[550px]");
+        textElement.classList.remove("w-[325px]");
+        textElement.classList.remove("min-[450px]:w-[390px]");
+        textElement.classList.remove("lg:w-[520px]");
+      } else {
+        textElement.classList.remove("w-[345px]");
+        textElement.classList.remove("min-[450px]:w-[420px]");
+        textElement.classList.remove("lg:w-[550px]");
+        textElement.classList.add("w-[325px]");
+        textElement.classList.add("min-[450px]:w-[390px]");
+        textElement.classList.add("lg:w-[520px]");
+      }
+    };
+
+    restartTypingAnimation(currentLang);
   });
 </script>
+

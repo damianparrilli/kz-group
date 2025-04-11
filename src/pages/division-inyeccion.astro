@@ -1,7 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Plants from "../components/Divisions/Plants.astro";
+import About from "../components/Divisions/About.astro";
+import Banner from "../components/Divisions/Banner.astro";
+import Services from "../components/Divisions/Services.astro";
+import Contact from "../components/Contact.astro";
+import Iso from "../components/Iso.astro";
 ---
 
-<Layout title="División Inyección - KZ Group" description="" keywords="">
-
+<Layout title="División Inyección - KZ Group" description="" keywords="" pageId="inyeccion">
+    <Banner bannerId="inyeccion"/>
+    <About aboutId="inyeccion"/>
+    <Services />
+    <Plants />
+    <Contact />
+    <Iso />
 </Layout>

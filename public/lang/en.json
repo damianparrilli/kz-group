@@ -1,0 +1,233 @@
+{
+  "header": {
+    "home": "Home",
+    "divisions": "Our divisions <svg viewBox='0 0 16 10' fill='none' id='dd-arrow' xmlns='http://www.w3.org/2000/svg' class='w-4 lg:w-3 h-auto fill-claro group-hover:fill-acento transition-all duration-300 ease-in-out'><path d='M14.3227 0.860652L15.5594 2.09849L8.81957 8.84065C8.71157 8.94933 8.58315 9.03558 8.44169 9.09444C8.30023 9.15329 8.14853 9.18359 7.99532 9.18359C7.8421 9.18359 7.6904 9.15329 7.54894 9.09444C7.40749 9.03558 7.27906 8.94933 7.17107 8.84065L0.427734 2.09849L1.6644 0.861818L7.99357 7.18982L14.3227 0.860652Z'></path></svg>",
+    "divisionsInyeccion": "Injection Division",
+    "divisionsMatriceria": "Tooling Division",
+    "divisionsDispositivos": "Devices Division",
+    "quienessomos": "About us",
+    "trabajaconnosotros": "Work with KZ",
+    "contacto": "Contact"
+  },
+  "footer": {
+    "navigation": "Navigation",
+    "home": "Home",
+    "divisions": "Divisions",
+    "divisionsInyeccion": "Injection Division",
+    "divisionsMatriceria": "Tooling Division",
+    "divisionsDispositivos": "Devices Division",
+    "about": "About us",
+    "workwith": "Work with KZ",
+    "contacto": "Contact",
+    "plantInyeccion": "INJECTION AND DEVICES PLANT",
+    "plantMatriceria": "TOOLING PLANT"
+  },
+  "main": {
+    "banner": {
+      "button": "Learn more"
+    },
+    "about": {
+      "title": "About us",
+      "description1": "KZ is a company founded in 1972 by the German Kurt Zellner, since then is dedicated to the manufacture of tooling for the injection of thermoplastics meeting the quality requirements of the automotive industry.",
+      "description2": "It is in full development and expansion stage, merging the experience of its founders with the strength of its young descendants. It is in this process that it presents its new business units, Plastic Injection and Racks and Devices Manufacturing, with the main objective of providing its customers with the complete solution for their products through the quality and stability of the Manufacturing Processes."
+    },
+    "customers": {
+      "title": "Main <span class='text-acento'>customers</span>"
+    },
+    "benefits": {
+      "title": "Our benefits, <span class='text-acento'>your advantage</span>",
+      "benefits1": "Safety and confidence",
+      "benefits1desc": "Seguridad y confianza",
+      "benefits2": "Efficiency and accuracy",
+      "benefits2desc": "Seguridad y confianza",
+      "benefits3": "Quality and experience",
+      "benefits3desc": "Seguridad y confianza"
+    },
+    "divisions": {
+      "title": "Our <span class='text-acento'>divisions</span>",
+      "divInyeccion": "Injection Division",
+      "divMatriceria": "Tooling Division",
+      "divDispositivos": "Devices Division"
+    },
+    "plants": {
+      "title": "Our <span class='text-acento'>plants</span>",
+      "plantInyeccion": "INJECTION AND DEVICES PLANT",
+      "plantMatriceria": "TOOLING PLANT",
+      "direccion": "Location",
+      "tel": "Phone number",
+      "horarios": "Hours of operation",
+      "horariosInyeccion": "Monday to Friday, 8 a.m. to 6 p.m.",
+      "horariosMatriceria": "Monday to Friday, 9 a.m. to 7 p.m."
+    },
+    "contact": {
+      "title": "Contact",
+      "redes": "Our networks",
+      "formTitle": "Send us a message",
+      "formName": "Your name",
+      "formSubject": "Subject",
+      "formMessage": "Message",
+      "button": "Send message"
+    },
+    "iso": {
+      "texto1": "Due to the demand of our customers in Argentina, KZ Group decided to move forward with the certification and standardization of processes for continuous improvement.",
+      "texto2": "With great satisfaction the objective has been achieved and in the month of JULY-2020 the IRAM ISO 9001:2015 certification was obtained with the number of ref: RI 9000-9841."
+    }
+  },
+  "inyeccion": {
+    "pageTitle": "Injection Division - KZ Group",
+    "banner": {
+      "title": "Injection Division",
+      "slogan": "We design, we create, <span class='text-acento'>we refine</span>",
+      "button": "Learn more"
+    },
+    "about": {
+      "title": "Our history",
+      "description1": "KZ is a company founded in 1972 by the German Kurt Zellner, since then is dedicated to the manufacture of tooling for the injection of thermoplastics meeting the quality requirements of the automotive industry.",
+      "description2": "It is in full development and expansion stage, merging the experience of its founders with the strength of its young descendants. It is in this process that it presents its new business units, Plastic Injection and Racks and Devices Manufacturing, with the main objective of providing its customers with the complete solution for their products through the quality and stability of the Manufacturing Processes."
+    },
+    "services": {
+      "title": "What do we offer?",
+      "item1": "Co-design and product development",
+      "item2": "Detail and precision",
+      "item3": "Feasibility and improvement",
+      "item4": "Our <span class='text-acento'>services</span>",
+      "item5": "Our <span class='text-acento'>services</span>",
+      "item6": "Our <span class='text-acento'>services</span>"
+    },
+    "plants": {
+      "title": "Our <span class='text-acento'>plant</span>",
+      "plantInyeccion": "INJECTION AND DEVICES PLANT",
+      "plantMatriceria": "TOOLING PLANT",
+      "direccion": "Location",
+      "tel": "Phone number",
+      "horarios": "Hours of operation",
+      "horariosInyeccion": "Monday to Friday, 8 a.m. to 6 p.m.",
+      "horariosMatriceria": "Monday to Friday, 9 a.m. to 7 p.m."
+    },
+    "contact": {
+      "title": "Contact",
+      "redes": "Our networks",
+      "formTitle": "Send us a message",
+      "formName": "Your name",
+      "formSubject": "Subject",
+      "formMessage": "Message",
+      "button": "Send message"
+    },
+    "iso": {
+      "texto1": "Due to the demand of our customers in Argentina, KZ Group decided to move forward with the certification and standardization of processes for continuous improvement.",
+      "texto2": "With great satisfaction the objective has been achieved and in the month of JULY-2020 the IRAM ISO 9001:2015 certification was obtained with the number of ref: RI 9000-9841."
+    }
+  },
+  "matriceria": {
+    "pageTitle": "Tooling Division - KZ Group",
+    "banner": {
+      "title": "Tooling Division",
+      "slogan": "We design, we create, <span class='text-acento'>we refine</span>",
+      "button": "Learn more"
+    },
+    "about": {
+      "title": "Our history",
+      "description1": "KZ is a company founded in 1972 by the German Kurt Zellner, since then is dedicated to the manufacture of tooling for the injection of thermoplastics meeting the quality requirements of the automotive industry.",
+      "description2": "It is in full development and expansion stage, merging the experience of its founders with the strength of its young descendants. It is in this process that it presents its new business units, Plastic Injection and Racks and Devices Manufacturing, with the main objective of providing its customers with the complete solution for their products through the quality and stability of the Manufacturing Processes."
+    },
+    "services": {
+      "title": "What do we offer?",
+      "item1": "Co-design and product development",
+      "item2": "Detail and precision",
+      "item3": "Feasibility and improvement",
+      "item4": "Our <span class='text-acento'>services</span>",
+      "item5": "Our <span class='text-acento'>services</span>",
+      "item6": "Our <span class='text-acento'>services</span>"
+    },
+    "plants": {
+      "title": "Our <span class='text-acento'>plant</span>",
+      "plantInyeccion": "INJECTION AND DEVICES PLANT",
+      "plantMatriceria": "TOOLING PLANT",
+      "direccion": "Location",
+      "tel": "Phone number",
+      "horarios": "Hours of operation",
+      "horariosInyeccion": "Monday to Friday, 8 a.m. to 6 p.m.",
+      "horariosMatriceria": "Monday to Friday, 9 a.m. to 7 p.m."
+    },
+    "contact": {
+      "title": "Contact",
+      "redes": "Our networks",
+      "formTitle": "Send us a message",
+      "formName": "Your name",
+      "formSubject": "Subject",
+      "formMessage": "Message",
+      "button": "Send message"
+    },
+    "iso": {
+      "texto1": "Due to the demand of our customers in Argentina, KZ Group decided to move forward with the certification and standardization of processes for continuous improvement.",
+      "texto2": "With great satisfaction the objective has been achieved and in the month of JULY-2020 the IRAM ISO 9001:2015 certification was obtained with the number of ref: RI 9000-9841."
+    }
+  },
+  "dispositivos": {
+    "pageTitle": "Devices Division - KZ Group",
+    "banner": {
+      "title": "Devices Division",
+      "slogan": "We design, we create, <span class='text-acento'>we refine</span>",
+      "button": "Learn more"
+    },
+    "about": {
+      "title": "Our history",
+      "description1": "KZ is a company founded in 1972 by the German Kurt Zellner, since then is dedicated to the manufacture of tooling for the injection of thermoplastics meeting the quality requirements of the automotive industry.",
+      "description2": "It is in full development and expansion stage, merging the experience of its founders with the strength of its young descendants. It is in this process that it presents its new business units, Plastic Injection and Racks and Devices Manufacturing, with the main objective of providing its customers with the complete solution for their products through the quality and stability of the Manufacturing Processes."
+    },
+    "services": {
+      "title": "What do we offer?",
+      "item1": "Co-design and product development",
+      "item2": "Detail and precision",
+      "item3": "Feasibility and improvement",
+      "item4": "Our <span class='text-acento'>services</span>",
+      "item5": "Our <span class='text-acento'>services</span>",
+      "item6": "Our <span class='text-acento'>services</span>"
+    },
+    "plants": {
+      "title": "Our <span class='text-acento'>plant</span>",
+      "plantInyeccion": "INJECTION AND DEVICES PLANT",
+      "plantMatriceria": "TOOLING PLANT",
+      "direccion": "Location",
+      "tel": "Phone number",
+      "horarios": "Hours of operation",
+      "horariosInyeccion": "Monday to Friday, 8 a.m. to 6 p.m.",
+      "horariosMatriceria": "Monday to Friday, 9 a.m. to 7 p.m."
+    },
+    "contact": {
+      "title": "Contact",
+      "redes": "Our networks",
+      "formTitle": "Send us a message",
+      "formName": "Your name",
+      "formSubject": "Subject",
+      "formMessage": "Message",
+      "button": "Send message"
+    },
+    "iso": {
+      "texto1": "Due to the demand of our customers in Argentina, KZ Group decided to move forward with the certification and standardization of processes for continuous improvement.",
+      "texto2": "With great satisfaction the objective has been achieved and in the month of JULY-2020 the IRAM ISO 9001:2015 certification was obtained with the number of ref: RI 9000-9841."
+    }
+  },
+  "workwithkz": {
+    "pageTitle": "Work with us - KZ Group",
+    "contact": {
+      "title": "Work with us!",
+      "formName": "Your name",
+      "formSubject": "Subject",
+      "formMessage": "Message",
+      "formUpload": "Upload file",
+      "formUploadNoSelected": "No file selected",
+      "button": "Send message"
+    },
+    "plants": {
+      "title": "Our <span class='text-acento'>plants</span>",
+      "plantInyeccion": "INJECTION AND DEVICES PLANT",
+      "plantMatriceria": "TOOLING PLANT",
+      "direccion": "Location",
+      "tel": "Phone number",
+      "horarios": "Hours of operation",
+      "horariosInyeccion": "Monday to Friday, 8 a.m. to 6 p.m.",
+      "horariosMatriceria": "Monday to Friday, 9 a.m. to 7 p.m."
+    }
+  }
+}
