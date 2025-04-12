@@ -75,34 +75,35 @@ const { title, description, keywords, pageId } = Astro.props;
       document.documentElement.classList.add("js");
     </script>
     <script is:inline>
-      (function () {
-        const savedLang = localStorage.getItem("lang");
-        const browserLang = navigator.language.startsWith("en") ? "en" : "es";
-        const lang = savedLang || browserLang;
-        localStorage.setItem("lang", lang);
-        document.documentElement.lang = lang;
-    
-        function applyTranslation(lang, pageId) {
-          fetch(`/lang/${lang}.json`)
-            .then(res => res.json())
-            .then(data => {
-              const strings = data[pageId];
-              if (!strings) return;
-              for (const key in strings) {
-                const el = document.querySelector(`[data-i18n="${key}"]`);
-                if (el) el.textContent = strings[key];
-              }
-            });
+      (async function () {
+  const savedLang = localStorage.getItem("lang");
+  const browserLang = navigator.language.startsWith("en") ? "en" : "es";
+  const lang = savedLang || browserLang;
+  localStorage.setItem("lang", lang);
+  document.documentElement.lang = lang;
+
+  function applyTranslation(lang, pageId) {
+    return fetch(`/lang/${lang}.json`)
+      .then(res => res.json())
+      .then(data => {
+        const strings = data[pageId];
+        if (!strings) return;
+        for (const key in strings) {
+          const el = document.querySelector(`[data-i18n="${key}"]`);
+          if (el) el.textContent = strings[key];
         }
-    
-        document.addEventListener("DOMContentLoaded", () => {
-          const pageId = document.body.dataset.pageid;
-          applyTranslation(lang, pageId);
-    
-          document.body.classList.remove("preload");
-          document.body.classList.add("loaded");
-        });
-      })();
+      });
+  }
+
+  document.addEventListener("DOMContentLoaded", async () => {
+    const pageId = document.body.dataset.pageid;
+    await applyTranslation(lang, pageId);
+
+    document.body.classList.remove("preload");
+    document.body.classList.add("loaded");
+  });
+})();
+
     </script>
     
   </head>
@@ -150,7 +151,6 @@ const { title, description, keywords, pageId } = Astro.props;
   }
   .loaded {
     opacity: 1;
-    transition: opacity 0.3s ease;
   }
 </style>
 
