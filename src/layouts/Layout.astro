@@ -1,24 +1,29 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import { ClientRouter } from "astro:transitions";
+
 interface Props {
   title: string;
-  description: string;
+  description?: string;
   keywords?: string;
   pageId?: string;
+  lang: string;
+  base: string;
+  t: Record<string, any>;
 }
 
-const { title, description, keywords, pageId } = Astro.props;
+const { title, description, keywords, pageId, lang, base, t } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
 
     <meta name="title" content={title} />
     <meta name="description" content={description} />
-    <meta name="kewords" content={keywords} />
+    <meta name="keywords" content={keywords} />
 
     <!-- Facebook Meta Tags -->
     <meta property="og:url" content="https://testing-kzgroup.netlify.app/" />
@@ -45,6 +50,7 @@ const { title, description, keywords, pageId } = Astro.props;
     />
 
     <meta name="viewport" content="width=device-width" />
+    <ClientRouter />
     <link rel="icon" type="image/svg+xml" href="/favicon/favicon.ico" />
     <link
       rel="apple-touch-icon"
@@ -70,47 +76,18 @@ const { title, description, keywords, pageId } = Astro.props;
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
       rel="stylesheet"
     />
+    <link rel="alternate" hreflang="es" href="https://tusitio.com{base}" />
+    <link rel="alternate" hreflang="en" href="https://tusitio.com/en{base}" />
+
     <title>{title}</title>
     <script is:inline>
       document.documentElement.classList.add("js");
     </script>
-    <script is:inline>
-      (async function () {
-  const savedLang = localStorage.getItem("lang");
-  const browserLang = navigator.language.startsWith("en") ? "en" : "es";
-  const lang = savedLang || browserLang;
-  localStorage.setItem("lang", lang);
-  document.documentElement.lang = lang;
-
-  function applyTranslation(lang, pageId) {
-    return fetch(`/lang/${lang}.json`)
-      .then(res => res.json())
-      .then(data => {
-        const strings = data[pageId];
-        if (!strings) return;
-        for (const key in strings) {
-          const el = document.querySelector(`[data-i18n="${key}"]`);
-          if (el) el.textContent = strings[key];
-        }
-      });
-  }
-
-  document.addEventListener("DOMContentLoaded", async () => {
-    const pageId = document.body.dataset.pageid;
-    await applyTranslation(lang, pageId);
-
-    document.body.classList.remove("preload");
-    document.body.classList.add("loaded");
-  });
-})();
-
-    </script>
-    
   </head>
-  <body class="overflow-x-hidden preload" data-pageid={pageId}>
-    <Header />
+  <body :transitions class="overflow-x-hidden" data-pageid={pageId}>
+    <Header base={base} t={t.header} />
     <slot />
-    <Footer />
+    <Footer t={t.footer} base={base} />
 
     <script src="https://unpkg.com/taos@1.0.5/dist/taos.js" is:inline></script>
   </body>
@@ -123,7 +100,6 @@ const { title, description, keywords, pageId } = Astro.props;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
   }
 
   html {
@@ -132,12 +108,14 @@ const { title, description, keywords, pageId } = Astro.props;
     font-family: "Nunito Sans", serif;
     background-color: #f8f8f8;
     color: #f8f8f8;
+    
   }
 
   body {
     display: grid;
     min-height: 100dvh;
     grid-template-rows: auto 1fr auto;
+    
   }
 
   .contenedor {
@@ -146,126 +124,12 @@ const { title, description, keywords, pageId } = Astro.props;
     padding: 0 20px;
   }
 
-  .preload {
-    opacity: 0;
-  }
-  .loaded {
-    opacity: 1;
-  }
+html.disable-smooth,
+body.disable-smooth {
+  scroll-behavior: auto !important;
+}
+
+
+  
+
 </style>
-
-<script is:inline>
-  const supportedLangs = ["es", "en"];
-  const savedLang = localStorage.getItem("lang");
-  const browserLang = navigator.language.slice(0, 2);
-  const lang = supportedLangs.includes(savedLang)
-    ? savedLang
-    : supportedLangs.includes(browserLang)
-      ? browserLang
-      : "es";
-
-  const pageId = document.body.dataset.pageid;
-  const langToggle = document.getElementById("lang-toggle");
-  const langMenu = document.getElementById("lang-menu");
-  const langFlag = document.getElementById("lang-flag");
-
-  const flags = {
-    es: `<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_311_28)">
-<path d="M18 13.4999C18 14.0303 17.7893 14.539 17.4142 14.9141C17.0391 15.2892 16.5304 15.4999 16 15.4999H2C1.46957 15.4999 0.960859 15.2892 0.585786 14.9141C0.210714 14.539 0 14.0303 0 13.4999V4.49988C0 3.96944 0.210714 3.46074 0.585786 3.08566C0.960859 2.71059 1.46957 2.49988 2 2.49988H16C16.5304 2.49988 17.0391 2.71059 17.4142 3.08566C17.7893 3.46074 18 3.96944 18 4.49988V13.4999Z" fill="#C60A1D"/>
-<path d="M0 5.99988H18V11.9999H0V5.99988Z" fill="#FFC400"/>
-<path d="M4.50002 8.5V10C4.50002 10.3978 4.65805 10.7794 4.93935 11.0607C5.22066 11.342 5.60219 11.5 6.00002 11.5C6.39784 11.5 6.77937 11.342 7.06068 11.0607C7.34198 10.7794 7.50002 10.3978 7.50002 10V8.5H4.50002Z" fill="#EA596E"/>
-<path d="M6 8H7.5V9.5H6V8Z" fill="#F4A2B2"/>
-<path d="M4.50002 8H6.00002V9.5H4.50002V8Z" fill="#DD2E44"/>
-<path d="M6.00002 7.99988C6.82844 7.99988 7.50002 7.66409 7.50002 7.24988C7.50002 6.83566 6.82844 6.49988 6.00002 6.49988C5.17159 6.49988 4.50002 6.83566 4.50002 7.24988C4.50002 7.66409 5.17159 7.99988 6.00002 7.99988Z" fill="#EA596E"/>
-<path d="M6.00002 7.24988C6.82844 7.24988 7.50002 7.08198 7.50002 6.87488C7.50002 6.66777 6.82844 6.49988 6.00002 6.49988C5.17159 6.49988 4.50002 6.66777 4.50002 6.87488C4.50002 7.08198 5.17159 7.24988 6.00002 7.24988Z" fill="#FFAC33"/>
-<path d="M3.5 8H4V11.5H3.5V8ZM8 8H8.5V11.5H8V8Z" fill="#99AAB5"/>
-<path d="M3 11H4.5V11.5H3V11ZM7.5 11H9V11.5H7.5V11ZM3.5 7.5H4V8H3.5V7.5ZM8 7.5H8.5V8H8V7.5Z" fill="#66757F"/>
-</g>
-<defs>
-<clipPath id="clip0_311_28">
-<rect width="18" height="18" fill="white"/>
-</clipPath>
-</defs>
-</svg>
-`,
-    en: `<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_252_26)">
-<path d="M0 4.5295V6.5H2.814L0 4.5295ZM2.332 15.5H6.5V12.5815L2.332 15.5ZM11.5 12.582V15.5H15.6675L11.5 12.582ZM0 11.5V13.4705L2.815 11.5H0ZM15.6685 2.5H11.5V5.4185L15.6685 2.5ZM18 13.471V11.5H15.1845L18 13.471ZM18 6.5V4.5295L15.1855 6.5H18ZM6.5 2.5H2.332L6.5 5.4185V2.5Z" fill="#00247D"/>
-<path d="M12.57 11.5L17.426 14.9005C17.6627 14.6559 17.8331 14.3549 17.921 14.026L14.3135 11.5H12.57ZM6.50001 11.5H5.42951L0.574006 14.9C0.834506 15.165 1.16851 15.3545 1.54301 15.4425L6.50001 11.9715V11.5ZM11.5 6.5H12.5705L17.426 3.1C17.1608 2.8314 16.8251 2.64332 16.4575 2.5575L11.5 6.0285V6.5ZM5.42951 6.5L0.574006 3.1C0.33709 3.34456 0.166538 3.64557 0.0785065 3.9745L3.68601 6.5H5.42951Z" fill="#CF1B2B"/>
-<path d="M18 10.5H10.5V15.5H11.5V12.582L15.6675 15.5H16C16.2656 15.4998 16.5285 15.4466 16.7733 15.3437C17.0181 15.2408 17.24 15.0901 17.426 14.9005L12.57 11.5H14.3135L17.921 14.026C17.9675 13.8575 18 13.683 18 13.5V13.471L15.1845 11.5H18V10.5ZM0 10.5V11.5H2.815L0 13.4705V13.5C0 14.0455 0.2195 14.539 0.574 14.9L5.4295 11.5H6.5V11.9715L1.543 15.442C1.69 15.477 1.842 15.5 2 15.5H2.332L6.5 12.5815V15.5H7.5V10.5H0ZM18 4.5C18.0005 3.97596 17.7942 3.47289 17.426 3.1L12.5705 6.5H11.5V6.0285L16.4575 2.5575C16.3077 2.52076 16.1542 2.50146 16 2.5H15.6685L11.5 5.4185V2.5H10.5V7.5H18V6.5H15.1855L18 4.5295V4.5ZM6.5 2.5V5.4185L2.332 2.5H2C1.73437 2.5003 1.47147 2.55352 1.22664 2.65653C0.9818 2.75955 0.759938 2.91031 0.574 3.1L5.4295 6.5H3.686L0.0785 3.9745C0.0290784 4.1454 0.00267879 4.32212 0 4.5L0 4.5295L2.814 6.5H0V7.5H7.5V2.5H6.5Z" fill="#EEEEEE"/>
-<path d="M10.5 7.5V2.5H7.5V7.5H0V10.5H7.5V15.5H10.5V10.5H18V7.5H10.5Z" fill="#CF1B2B"/>
-</g>
-<defs>
-<clipPath id="clip0_252_26">
-<rect width="18" height="18" fill="white"/>
-</clipPath>
-</defs>
-</svg>
-`,
-  };
-
-  function getNestedValue(obj, path) {
-    return path.split(".").reduce((acc, part) => acc?.[part], obj);
-  }
-
-  function applyTranslation(lang, pageId) {
-    fetch(`/lang/${lang}.json`)
-      .then((res) => res.json())
-      .then((data) => {
-        const pageData = data[pageId] || {};
-
-        document.querySelectorAll("[data-i18n]").forEach((el) => {
-          const key = el.getAttribute("data-i18n");
-          const value = getNestedValue(pageData, key);
-          if (value) {
-            if ("placeholder" in el) {
-              el.placeholder = value;
-            } else {
-              el.innerHTML = value;
-            }
-          }
-        });
-
-        const header = data.header || {};
-        for (const key in header) {
-          const el = document.querySelector(`[data-i18n-header-${key}]`);
-          if (el) el.innerHTML = header[key];
-        }
-
-        const footer = data.footer || {};
-        for (const key in footer) {
-          const el = document.querySelector(`[data-i18n-footer-${key}]`);
-          if (el) el.innerHTML = footer[key];
-        }
-
-        document.title = pageData.pageTitle || document.title;
-        document.documentElement.lang = lang;
-        langFlag.innerHTML = flags[lang];
-      });
-  }
-
-  applyTranslation(lang, pageId);
-
-  langToggle.addEventListener("click", () => {
-    langMenu.classList.toggle("hidden");
-  });
-
-  document.querySelectorAll("[data-lang]").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const newLang = btn.getAttribute("data-lang");
-      localStorage.setItem("lang", newLang);
-      applyTranslation(newLang, pageId);
-      if (pageId === "main") {
-        window.restartTypingAnimation(newLang);
-      }
-      langMenu.classList.add("hidden");
-    });
-  });
-
-  document.addEventListener("click", (e) => {
-    if (!document.getElementById("custom-lang-select").contains(e.target)) {
-      langMenu.classList.add("hidden");
-    }
-  });
-</script>

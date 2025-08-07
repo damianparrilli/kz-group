@@ -1,11 +1,15 @@
+---
+const { t } = Astro.props;
+---
+
 <section id="contacto" class="py-36 bg-oscuro min-h-[100dvh]">
   <div
     class="contenedor flex flex-col justify-center items-center gap-12 w-full"
   >
-    <h2 data-i18n="contact.title" class="text-claro text-3xl font-bold">Contacto</h2>
+    <h2 class="text-claro text-3xl font-bold">{t.title}</h2>
     <div class="flex flex-col lg:flex-row w-full gap-24 md:gap-8 max-w-[600px] lg:max-w-none">
       <div class="flex flex-col gap-4 w-full">
-        <h3 data-i18n="contact.redes" class="text-claro text-xl font-medium">Nuestras redes</h3>
+        <h3 class="text-claro text-xl font-medium">{t.redes}</h3>
         <div class="flex flex-col w-full gap-4 h-full text-sm sm:text-base">
           <div class="flex gap-4 w-full h-full flex-col min-[450px]:flex-row">
             <div class="rounded-lg px-4 py-10 border-[0.5px] border-claro flex flex-col gap-2 justify-center items-center w-full">
@@ -45,13 +49,46 @@
         </div>
       </div>
       <form action="" class="flex flex-col gap-4 w-full md:h-[500px]">
-        <h3 data-i18n="contact.formTitle" class="text-claro text-xl font-medium">Escribinos un mensaje</h3>
-        <input data-i18n="contact.formName" type="text" name="nombre" id="nombre" placeholder="Nombre" class="w-full rounded-lg px-4 py-2 border-[0.5px] text-oscuro focus:outline-none flex flex-col gap-2 justify-center items-center bg-[#DBDBDB]">
-        <input type="email" name="email" id="email" placeholder="E-mail" class="w-full rounded-lg px-4 py-2 border-[0.5px] text-oscuro focus:outline-none flex flex-col gap-2 justify-center items-center bg-[#DBDBDB]">
-        <input data-i18n="contact.formSubject" type="text" name="asunto" id="asunto" placeholder="Asunto" class="w-full rounded-lg px-4 py-2 border-[0.5px] text-oscuro focus:outline-none flex flex-col gap-2 justify-center items-center bg-[#DBDBDB]">
-        <textarea data-i18n="contact.formMessage" name="mensaje" id="mensaje" placeholder="Mensaje" class="w-full rounded-lg px-4 py-2 border-[0.5px] text-oscuro focus:outline-none bg-[#DBDBDB] min-h-32 md:h-full"></textarea>
-        <a data-i18n="contact.button" class="w-full text-center font-medium rounded-md bg-acento text-oscuro px-7 py-3 text-lg cursor-pointer z-10 hover:bg-[#f7b046] transition-all duration-300 ease-in-out">Enviar mensaje</a>
-      </form>
+  <h3 class="text-claro text-xl font-medium">{t.formTitle}</h3>
+
+  <label for="nombre" class="sr-only">{t.formName}</label>
+  <input 
+    type="text" 
+    name="nombre" 
+    id="nombre" 
+    placeholder={t.formName} 
+    class="w-full rounded-lg px-4 py-2 border-[0.5px] text-oscuro focus:outline-none flex flex-col gap-2 justify-center items-center bg-[#DBDBDB]"
+  >
+
+  <label for="email" class="sr-only">E-mail</label>
+  <input 
+    type="email" 
+    name="email" 
+    id="email" 
+    placeholder="E-mail" 
+    class="w-full rounded-lg px-4 py-2 border-[0.5px] text-oscuro focus:outline-none flex flex-col gap-2 justify-center items-center bg-[#DBDBDB]"
+  >
+
+  <label for="asunto" class="sr-only">{t.formSubject}</label>
+  <input 
+    type="text" 
+    name="asunto" 
+    id="asunto" 
+    placeholder={t.formSubject} 
+    class="w-full rounded-lg px-4 py-2 border-[0.5px] text-oscuro focus:outline-none flex flex-col gap-2 justify-center items-center bg-[#DBDBDB]"
+  >
+
+  <label for="mensaje" class="sr-only">{t.formMessage}</label>
+  <textarea 
+    name="mensaje" 
+    id="mensaje" 
+    placeholder={t.formMessage} 
+    class="w-full rounded-lg px-4 py-2 border-[0.5px] text-oscuro focus:outline-none bg-[#DBDBDB] min-h-32 md:h-full"
+  ></textarea>
+
+  <a class="w-full text-center font-medium rounded-md bg-acento text-oscuro px-7 py-3 text-lg cursor-pointer z-10 hover:bg-[#f7b046] transition-all duration-300 ease-in-out">{t.button}</a>
+</form>
+
       
     </div>
   </div>

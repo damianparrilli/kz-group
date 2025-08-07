@@ -1,7 +1,7 @@
 {
   "header": {
     "home": "Home",
-    "divisions": "Our divisions <svg viewBox='0 0 16 10' fill='none' id='dd-arrow' xmlns='http://www.w3.org/2000/svg' class='w-4 lg:w-3 h-auto fill-claro group-hover:fill-acento transition-all duration-300 ease-in-out'><path d='M14.3227 0.860652L15.5594 2.09849L8.81957 8.84065C8.71157 8.94933 8.58315 9.03558 8.44169 9.09444C8.30023 9.15329 8.14853 9.18359 7.99532 9.18359C7.8421 9.18359 7.6904 9.15329 7.54894 9.09444C7.40749 9.03558 7.27906 8.94933 7.17107 8.84065L0.427734 2.09849L1.6644 0.861818L7.99357 7.18982L14.3227 0.860652Z'></path></svg>",
+    "divisions": "Our divisions",
     "divisionsInyeccion": "Injection Division",
     "divisionsMatriceria": "Tooling Division",
     "divisionsDispositivos": "Devices Division",
@@ -24,6 +24,16 @@
   },
   "main": {
     "banner": {
+      "phrases": [
+        "We shape",
+        "solutions,",
+        "we drive your",
+        "industry"
+      ],
+      "highlight": [
+        "solutions,",
+        "industry"
+      ],
       "button": "Learn more"
     },
     "about": {
@@ -32,25 +42,33 @@
       "description2": "It is in full development and expansion stage, merging the experience of its founders with the strength of its young descendants. It is in this process that it presents its new business units, Plastic Injection and Racks and Devices Manufacturing, with the main objective of providing its customers with the complete solution for their products through the quality and stability of the Manufacturing Processes."
     },
     "customers": {
-      "title": "Main <span class='text-acento'>customers</span>"
+      "title": "Main customers"
     },
     "benefits": {
-      "title": "Our benefits, <span class='text-acento'>your advantage</span>",
-      "benefits1": "Safety and confidence",
-      "benefits1desc": "Seguridad y confianza",
-      "benefits2": "Efficiency and accuracy",
-      "benefits2desc": "Seguridad y confianza",
-      "benefits3": "Quality and experience",
-      "benefits3desc": "Seguridad y confianza"
+      "title": "Our benefits, your advantage",
+      "items": [
+        {
+          "title": "Safety and confidence",
+          "description": "Texto descriptivo..."
+        },
+        {
+          "title": "Efficiency and accuracy",
+          "description": "Texto descriptivo..."
+        },
+        {
+          "title": "Quality and experience",
+          "description": "Texto descriptivo..."
+        }
+      ]
     },
     "divisions": {
-      "title": "Our <span class='text-acento'>divisions</span>",
+      "title": "Our divisions",
       "divInyeccion": "Injection Division",
       "divMatriceria": "Tooling Division",
       "divDispositivos": "Devices Division"
     },
     "plants": {
-      "title": "Our <span class='text-acento'>plants</span>",
+      "title": "Our plants",
       "plantInyeccion": "INJECTION AND DEVICES PLANT",
       "plantMatriceria": "TOOLING PLANT",
       "direccion": "Location",
@@ -77,7 +95,7 @@
     "pageTitle": "Injection Division - KZ Group",
     "banner": {
       "title": "Injection Division",
-      "slogan": "We design, we create, <span class='text-acento'>we refine</span>",
+      "slogan": "We design, we create, we refine",
       "button": "Learn more"
     },
     "about": {
@@ -90,12 +108,12 @@
       "item1": "Co-design and product development",
       "item2": "Detail and precision",
       "item3": "Feasibility and improvement",
-      "item4": "Our <span class='text-acento'>services</span>",
-      "item5": "Our <span class='text-acento'>services</span>",
-      "item6": "Our <span class='text-acento'>services</span>"
+      "item4": "Our services",
+      "item5": "Our services",
+      "item6": "Our services"
     },
     "plants": {
-      "title": "Our <span class='text-acento'>plant</span>",
+      "title": "Our plant",
       "plantInyeccion": "INJECTION AND DEVICES PLANT",
       "plantMatriceria": "TOOLING PLANT",
       "direccion": "Location",
@@ -122,7 +140,7 @@
     "pageTitle": "Tooling Division - KZ Group",
     "banner": {
       "title": "Tooling Division",
-      "slogan": "We design, we create, <span class='text-acento'>we refine</span>",
+      "slogan": "We design, we create, we refine",
       "button": "Learn more"
     },
     "about": {
@@ -135,12 +153,12 @@
       "item1": "Co-design and product development",
       "item2": "Detail and precision",
       "item3": "Feasibility and improvement",
-      "item4": "Our <span class='text-acento'>services</span>",
-      "item5": "Our <span class='text-acento'>services</span>",
-      "item6": "Our <span class='text-acento'>services</span>"
+      "item4": "Our services",
+      "item5": "Our services",
+      "item6": "Our services"
     },
     "plants": {
-      "title": "Our <span class='text-acento'>plant</span>",
+      "title": "Our plant",
       "plantInyeccion": "INJECTION AND DEVICES PLANT",
       "plantMatriceria": "TOOLING PLANT",
       "direccion": "Location",
@@ -167,7 +185,7 @@
     "pageTitle": "Devices Division - KZ Group",
     "banner": {
       "title": "Devices Division",
-      "slogan": "We design, we create, <span class='text-acento'>we refine</span>",
+      "slogan": "We design, we create, we refine",
       "button": "Learn more"
     },
     "about": {
@@ -180,12 +198,12 @@
       "item1": "Co-design and product development",
       "item2": "Detail and precision",
       "item3": "Feasibility and improvement",
-      "item4": "Our <span class='text-acento'>services</span>",
-      "item5": "Our <span class='text-acento'>services</span>",
-      "item6": "Our <span class='text-acento'>services</span>"
+      "item4": "Our services",
+      "item5": "Our services",
+      "item6": "Our services"
     },
     "plants": {
-      "title": "Our <span class='text-acento'>plant</span>",
+      "title": "Our plant",
       "plantInyeccion": "INJECTION AND DEVICES PLANT",
       "plantMatriceria": "TOOLING PLANT",
       "direccion": "Location",
@@ -220,7 +238,7 @@
       "button": "Send message"
     },
     "plants": {
-      "title": "Our <span class='text-acento'>plants</span>",
+      "title": "Our plants",
       "plantInyeccion": "INJECTION AND DEVICES PLANT",
       "plantMatriceria": "TOOLING PLANT",
       "direccion": "Location",

@@ -1,0 +1,34 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Banner from "../../components/Banner.astro";
+import About from "../../components/About.astro";
+import Customers from "../../components/Customers.astro";
+import Benefits from "../../components/Benefits.astro";
+import Divisions from "../../components/Divisions.astro";
+import Plants from "../../components/Plants.astro";
+import Contact from "../../components/Contact.astro";
+import Iso from "../../components/Iso.astro";
+
+import t from "../../lang/en.json";
+const lang = "en";
+const base = "/en";
+---
+
+<Layout
+  lang={lang}
+  base={base}
+  t={t}
+  title="KZ Group"
+  description="KZ es una empresa dedicada a brindar soluciones integrales en la fabricación de moldes de inyección, grabados a pantógrafo, mecanizados  especiales fabricación de piezas metálicas, electro erosión por penetración y diseño integral de productos. "
+  keywords="moldes, grabados, inyección, mecanizados, piezas metálicas, electro erosión, diseño integral, fabricación"
+  pageId="main"
+>
+  <Banner t={t.main.banner} lang={lang} />
+  <About t={t.main.about} />
+  <Customers t={t.main.customers} />
+  <Benefits t={t.main.benefits} />
+  <Divisions t={t.main.divisions} />
+  <Plants t={t.main.plants} />
+  <Contact t={t.main.contact} />
+  <Iso t={t.main.iso} />
+</Layout>

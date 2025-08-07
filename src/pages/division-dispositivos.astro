@@ -6,13 +6,17 @@ import Banner from "../components/Divisions/Banner.astro";
 import Services from "../components/Divisions/Services.astro";
 import Contact from "../components/Contact.astro";
 import Iso from "../components/Iso.astro";
+
+import t from "../lang/es.json"; 
+const lang = 'es';
+const base = '';
 ---
 
-<Layout title="División Dispositivos - KZ Group" description="" keywords="" pageId="dispositivos">
-    <Banner bannerId="dispositivos"/>
-    <About aboutId="dispositivos"/>
-    <Services />
-    <Plants />
-    <Contact />
-    <Iso />
+<Layout lang={lang} base={base} t={t} title="División Dispositivos - KZ Group" description="" keywords="" pageId="dispositivos">
+    <Banner bannerId="dispositivos" t={t.dispositivos.banner}/>
+    <About aboutId="dispositivos" t={t.dispositivos.about}/>
+    <Services t={t.dispositivos.services}/>
+    <Plants t={t.dispositivos.plants} />
+    <Contact t={t.main.contact}/>
+    <Iso t={t.main.iso}/>
 </Layout>

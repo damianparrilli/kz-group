@@ -8,16 +8,27 @@ import Divisions from "../components/Divisions.astro";
 import Plants from "../components/Plants.astro";
 import Contact from "../components/Contact.astro";
 import Iso from "../components/Iso.astro";
+
+import t from "../lang/es.json"; 
+const lang = 'es';
+const base = '';
 ---
 
-<Layout title="KZ Group" description="KZ es una empresa dedicada a brindar soluciones integrales en la fabricación de moldes de inyección, grabados a pantógrafo, mecanizados  especiales fabricación de piezas metálicas, electro erosión por penetración y diseño integral de productos. " keywords="moldes, grabados, inyección, mecanizados, piezas metálicas, electro erosión, diseño integral, fabricación" pageId="main">
-
-  <Banner />
-  <About />
-  <Customers />
-  <Benefits />
-  <Divisions />
-  <Plants />
-  <Contact />
-  <Iso />
+<Layout
+  lang={lang}
+  base={base}
+  t={t}
+  title="KZ Group"
+  description="KZ es una empresa dedicada a brindar soluciones integrales en la fabricación de moldes de inyección, grabados a pantógrafo, mecanizados especiales, fabricación de piezas metálicas, electroerosión por penetración y diseño integral de productos."
+  keywords="moldes, grabados, inyección, mecanizados, piezas metálicas, electro erosión, diseño integral, fabricación"
+  pageId="main"
+>
+  <Banner t={t.main.banner} lang={lang} />
+  <About t={t.main.about} />
+  <Customers t={t.main.customers} />
+  <Benefits t={t.main.benefits} />
+  <Divisions t={t.main.divisions} />
+  <Plants t={t.main.plants} />
+  <Contact t={t.main.contact} />
+  <Iso t={t.main.iso} />
 </Layout>

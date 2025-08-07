@@ -1,17 +1,29 @@
 ---
-const isHomePage = new URL(Astro.request.url).pathname === "/";
+const { t } = Astro.props;
+const isHomePage = new URL(Astro.request.url).pathname === "/" || new URL(Astro.request.url).pathname === "/en/";
 ---
 
 <section class=`${isHomePage ? "py-36" : "pb-24 pt-10"} overflow-x-hidden`>
   <div class="contenedor flex flex-col justify-center items-center gap-12">
     {isHomePage ? (
-      <h2 data-i18n="plants.title" class="text-3xl font-bold text-oscuro [animation-iteration-count:infinite] delay-[200ms] duration-[500ms] taos:translate-y-[-200px] taos:opacity-0" data-taos-offset="0">
-        Nuestras <span class="text-acento">plantas</span>
-      </h2>
+      <h2 class="text-3xl font-bold text-oscuro">
+  {
+    (() => {
+      const words = t.title.trim().split(" ");
+      const last = words.pop();
+      return (
+        <>
+          {words.join(" ")}{" "}
+          <span class="text-acento">{last}</span>
+        </>
+      );
+    })()
+  }
+</h2>
     ) : null}
     <div class=`w-full flex flex-col md:flex-row ${isHomePage && "[animation-iteration-count:infinite] delay-[200ms] duration-[500ms] taos:translate-x-[-200px] taos:opacity-0"} gap-4` data-taos-offset="0">
       <div class="flex flex-col gap-4 w-full">
-        <h3 data-i18n="plants.plantInyeccion" class="text-xl font-medium text-oscuro">PLANTA INYECCIÓN Y DISPOSITIVOS</h3>
+        <h3 class="text-xl font-medium text-oscuro">{t.plantInyeccion}</h3>
         <div class="flex flex-wrap gap-4 h-full justify-between text-oscuro text-center text-sm sm:text-base">
           <div
             class="w-full flex flex-col justify-center items-center gap-2 rounded-lg border-2 border-[#98989810] bg-plants p-8"
@@ -21,7 +33,7 @@ const isHomePage = new URL(Astro.request.url).pathname === "/";
             <path d="M19.4993 20.4284C22.0635 20.4284 24.1422 18.3497 24.1422 15.7856C24.1422 13.2214 22.0635 11.1427 19.4993 11.1427C16.9351 11.1427 14.8564 13.2214 14.8564 15.7856C14.8564 18.3497 16.9351 20.4284 19.4993 20.4284Z" stroke="#262626" stroke-width="2.44" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
             
-            <h4 data-i18n="plants.direccion" class="text-base sm:text-lg font-medium">Dirección</h4>
+            <h4 class="text-base sm:text-lg font-medium">{t.direccion}</h4>
             <p>
               Cervantes 557 (Ex200), General Pacheco, Buenos Aires – Argentina
             </p>
@@ -34,7 +46,7 @@ const isHomePage = new URL(Astro.request.url).pathname === "/";
                 <path d="M34.459 24.4206L27.1125 21.1955C26.7797 21.0557 26.4165 20.9996 26.0559 21.032C25.6953 21.0645 25.3486 21.1845 25.0473 21.3813C25.0167 21.4005 24.9876 21.4219 24.9602 21.4453L21.1206 24.6445C21.0808 24.6658 21.0364 24.6777 20.9911 24.6793C20.9457 24.6809 20.9006 24.6721 20.8593 24.6537C18.3913 23.4867 15.8347 20.9974 14.6388 18.6132C14.6189 18.5734 14.6085 18.5296 14.6085 18.4853C14.6085 18.4409 14.6189 18.3971 14.6388 18.3573L17.9154 14.5487C17.939 14.5205 17.9608 14.491 17.9808 14.4603C18.1789 14.164 18.2985 13.8241 18.3289 13.4711C18.3593 13.1182 18.2995 12.7634 18.1549 12.4387L14.886 5.25421C14.7004 4.8301 14.3793 4.47641 13.9711 4.24622C13.5628 4.01603 13.0894 3.92177 12.6217 3.97757C10.5895 4.23929 8.72412 5.21694 7.37412 6.72783C6.02411 8.23872 5.28189 10.1795 5.28615 12.1874C5.28615 24.1159 15.1924 33.8202 27.3691 33.8202C29.4188 33.824 31.3997 33.0968 32.942 31.7744C34.4842 30.452 35.4823 28.6248 35.7498 26.6341C35.8066 26.1782 35.7117 25.7165 35.4792 25.3176C35.2466 24.9188 34.8888 24.6042 34.459 24.4206ZM27.3691 31.9921C16.2219 31.9921 7.15232 23.1074 7.15232 12.1874C7.14712 10.6242 7.72306 9.11268 8.77254 7.93517C9.82201 6.75766 11.2732 5.99473 12.855 5.78894H12.8908C12.9535 5.79008 13.0143 5.80975 13.0654 5.84536C13.1164 5.88098 13.1553 5.93087 13.1769 5.98851L16.4583 13.1654C16.477 13.2053 16.4867 13.2487 16.4867 13.2926C16.4867 13.3365 16.477 13.3799 16.4583 13.4198L13.1754 17.2376C13.1509 17.2648 13.1285 17.2939 13.1085 17.3244C12.9031 17.6316 12.7821 17.9856 12.7573 18.352C12.7325 18.7185 12.8047 19.085 12.967 19.4161C14.3464 22.1826 17.1923 24.9492 20.0475 26.3005C20.3875 26.4586 20.7635 26.5276 21.1388 26.5009C21.5141 26.4742 21.8759 26.3527 22.189 26.1482C22.2185 26.1283 22.2481 26.107 22.2761 26.0842L26.1141 22.885C26.1521 22.865 26.1939 22.8533 26.2369 22.8507C26.2798 22.848 26.3228 22.8545 26.363 22.8697L33.711 26.0948C33.771 26.1199 33.8215 26.1628 33.8553 26.2174C33.889 26.2721 33.9044 26.3358 33.8992 26.3995C33.6902 27.9498 32.9121 29.3725 31.7104 30.4017C30.5086 31.4309 28.9654 31.9963 27.3691 31.9921Z" fill="#262626" stroke="black" stroke-width="0.5"/>
                 </svg>
                 
-              <h4 data-i18n="plants.tel" class="text-base sm:text-lg">Teléfono</h4>
+              <h4 class="text-base sm:text-lg">{t.tel}</h4>
               <a href="tel:+541147642687" class="underline">
                 +54 11 4764-2687
               </a>
@@ -47,21 +59,21 @@ const isHomePage = new URL(Astro.request.url).pathname === "/";
                 <path d="M25.9537 25.9529C25.4789 26.4276 24.7092 26.4276 24.2344 25.9529L18.6382 20.3567C18.4097 20.1281 18.2812 19.8181 18.2812 19.4949V9.75C18.2812 9.0769 18.8269 8.53125 19.5 8.53125C20.1731 8.53125 20.7188 9.0769 20.7188 9.75V18.484C20.7188 18.8068 20.8468 19.1165 21.0749 19.3449L25.9546 24.2344C26.4285 24.7093 26.4281 25.4784 25.9537 25.9529Z" fill="#262626"/>
                 </svg>
                 
-              <h4 data-i18n="plants.horarios" class="text-base sm:text-lg">Horarios de atención</h4>
-              <p data-i18n="plants.horariosInyeccion">
-                Lunes a viernes, 8 a 16hs
+              <h4 class="text-base sm:text-lg">{t.horarios}</h4>
+              <p>
+                {t.horariosInyeccion}
               </p>
             </div>
           </div>
         </div>
       </div>
       <div class="md:min-w-[45%] flex w-full order-2 md:order-1">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3289.8812938404626!2d-58.66304202426628!3d-34.4551610730079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bca39cf8ee91b7%3A0xed2d04cb9c0ee029!2sCervantes%20557%2C%20B1617EHI%20Gral.%20Pacheco%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1741364451738!5m2!1ses-419!2sar" class="w-full h-[300px] md:h-full" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3289.8812938404626!2d-58.66304202426628!3d-34.4551610730079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bca39cf8ee91b7%3A0xed2d04cb9c0ee029!2sCervantes%20557%2C%20B1617EHI%20Gral.%20Pacheco%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1741364451738!5m2!1ses-419!2sar" class="w-full h-[300px] md:h-full" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de Planta de Inyección y Dispositivos"></iframe>
       </div>
     </div>
     <div class=`w-full flex  flex-col md:flex-row ${isHomePage && "[animation-iteration-count:infinite] delay-[200ms] duration-[500ms] taos:translate-x-[200px] taos:opacity-0"} gap-4` data-taos-offset="0">
         <div class="flex flex-col gap-4 w-full order-1 md:order-2">
-          <h3 data-i18n="plants.plantMatriceria" class="text-xl font-medium text-oscuro">PLANTA MATRICERÍA</h3>
+          <h3 class="text-xl font-medium text-oscuro">{t.plantMatriceria}</h3>
           <div class="flex flex-wrap gap-4 h-full justify-between text-oscuro text-center text-sm sm:text-base">
             <div
               class="w-full flex flex-col justify-center items-center gap-2 rounded-lg border-2 border-[#98989810] bg-plants p-8"
@@ -71,7 +83,7 @@ const isHomePage = new URL(Astro.request.url).pathname === "/";
               <path d="M19.4993 20.4284C22.0635 20.4284 24.1422 18.3497 24.1422 15.7856C24.1422 13.2214 22.0635 11.1427 19.4993 11.1427C16.9351 11.1427 14.8564 13.2214 14.8564 15.7856C14.8564 18.3497 16.9351 20.4284 19.4993 20.4284Z" stroke="#262626" stroke-width="2.44" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
               
-              <h4 data-i18n="plants.direccion" class="text-base sm:text-lg">Dirección</h4>
+              <h4 class="text-base sm:text-lg">{t.direccion}</h4>
               <p>
                 Lavalle 1550, Villa Ballester (1653), Buenos Aires – Argentina
               </p>
@@ -84,7 +96,7 @@ const isHomePage = new URL(Astro.request.url).pathname === "/";
                   <path d="M34.459 24.4206L27.1125 21.1955C26.7797 21.0557 26.4165 20.9996 26.0559 21.032C25.6953 21.0645 25.3486 21.1845 25.0473 21.3813C25.0167 21.4005 24.9876 21.4219 24.9602 21.4453L21.1206 24.6445C21.0808 24.6658 21.0364 24.6777 20.9911 24.6793C20.9457 24.6809 20.9006 24.6721 20.8593 24.6537C18.3913 23.4867 15.8347 20.9974 14.6388 18.6132C14.6189 18.5734 14.6085 18.5296 14.6085 18.4853C14.6085 18.4409 14.6189 18.3971 14.6388 18.3573L17.9154 14.5487C17.939 14.5205 17.9608 14.491 17.9808 14.4603C18.1789 14.164 18.2985 13.8241 18.3289 13.4711C18.3593 13.1182 18.2995 12.7634 18.1549 12.4387L14.886 5.25421C14.7004 4.8301 14.3793 4.47641 13.9711 4.24622C13.5628 4.01603 13.0894 3.92177 12.6217 3.97757C10.5895 4.23929 8.72412 5.21694 7.37412 6.72783C6.02411 8.23872 5.28189 10.1795 5.28615 12.1874C5.28615 24.1159 15.1924 33.8202 27.3691 33.8202C29.4188 33.824 31.3997 33.0968 32.942 31.7744C34.4842 30.452 35.4823 28.6248 35.7498 26.6341C35.8066 26.1782 35.7117 25.7165 35.4792 25.3176C35.2466 24.9188 34.8888 24.6042 34.459 24.4206ZM27.3691 31.9921C16.2219 31.9921 7.15232 23.1074 7.15232 12.1874C7.14712 10.6242 7.72306 9.11268 8.77254 7.93517C9.82201 6.75766 11.2732 5.99473 12.855 5.78894H12.8908C12.9535 5.79008 13.0143 5.80975 13.0654 5.84536C13.1164 5.88098 13.1553 5.93087 13.1769 5.98851L16.4583 13.1654C16.477 13.2053 16.4867 13.2487 16.4867 13.2926C16.4867 13.3365 16.477 13.3799 16.4583 13.4198L13.1754 17.2376C13.1509 17.2648 13.1285 17.2939 13.1085 17.3244C12.9031 17.6316 12.7821 17.9856 12.7573 18.352C12.7325 18.7185 12.8047 19.085 12.967 19.4161C14.3464 22.1826 17.1923 24.9492 20.0475 26.3005C20.3875 26.4586 20.7635 26.5276 21.1388 26.5009C21.5141 26.4742 21.8759 26.3527 22.189 26.1482C22.2185 26.1283 22.2481 26.107 22.2761 26.0842L26.1141 22.885C26.1521 22.865 26.1939 22.8533 26.2369 22.8507C26.2798 22.848 26.3228 22.8545 26.363 22.8697L33.711 26.0948C33.771 26.1199 33.8215 26.1628 33.8553 26.2174C33.889 26.2721 33.9044 26.3358 33.8992 26.3995C33.6902 27.9498 32.9121 29.3725 31.7104 30.4017C30.5086 31.4309 28.9654 31.9963 27.3691 31.9921Z" fill="#262626" stroke="black" stroke-width="0.5"/>
                   </svg>
                   
-                <h4 data-i18n="plants.tel" class="text-base sm:text-lg">Teléfono</h4>
+                <h4 class="text-base sm:text-lg">{t.tel}</h4>
                 <a href="tel:+541147642687" class="underline">
                   +54 11 4764-2687
                 </a>
@@ -97,16 +109,16 @@ const isHomePage = new URL(Astro.request.url).pathname === "/";
                   <path d="M25.9537 25.9529C25.4789 26.4276 24.7092 26.4276 24.2344 25.9529L18.6382 20.3567C18.4097 20.1281 18.2812 19.8181 18.2812 19.4949V9.75C18.2812 9.0769 18.8269 8.53125 19.5 8.53125C20.1731 8.53125 20.7188 9.0769 20.7188 9.75V18.484C20.7188 18.8068 20.8468 19.1165 21.0749 19.3449L25.9546 24.2344C26.4285 24.7093 26.4281 25.4784 25.9537 25.9529Z" fill="#262626"/>
                   </svg>
                   
-                <h4 data-i18n="plants.horarios" class="text-base sm:text-lg">Horarios de atención</h4>
-                <p data-i18n="plants.horariosMatriceria">
-                    Lunes a viernes, 9 a 19hs
+                <h4 class="text-base sm:text-lg">{t.horarios}</h4>
+                <p>
+                    {t.horariosMatriceria}
                 </p>
               </div>
             </div>
           </div>
         </div>
         <div class="md:min-w-[45%] flex w-full order-2 md:order-1">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.496194341593!2d-58.546120699999996!3d-34.5409901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb0ac35cd443b%3A0x1e5d699695f9fab4!2sLavalle%201550%2C%20B1653%20Villa%20Ballester%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1741364137193!5m2!1ses-419!2sar" class="w-full h-[300px] md:h-full" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.496194341593!2d-58.546120699999996!3d-34.5409901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb0ac35cd443b%3A0x1e5d699695f9fab4!2sLavalle%201550%2C%20B1653%20Villa%20Ballester%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1741364137193!5m2!1ses-419!2sar" class="w-full h-[300px] md:h-full" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de Planta de Matricería"></iframe>
         </div>
       </div>
   </div>

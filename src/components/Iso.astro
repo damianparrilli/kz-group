@@ -1,8 +1,12 @@
+---
+const { t } = Astro.props;
+---
+
 <section class="py-36 px-[20px] flex flex-col justify-center items-center gap-10">
     <div class="flex flex-col gap-4 text-oscuro max-w-[900px] mx-auto text-base md:text-lg">
         <span class="font-semibold">ISO 9001-2015</span>
-        <p data-i18n="iso.texto1">Debido a la demanda de nuestros clientes en Argentina, KZ Group decide avanzar con la certificación y estandarización de procesos para la mejora continua.</p>
-        <p data-i18n="iso.texto2">Con gran satisfacción el objetivo se ha cumplido y en el mes de JULIO-2020 se alcanzado la certificación ISO 9001:2015 con el número de ref: RI 9000-9841</p>
+        <p>{t.texto1}</p>
+        <p>{t.texto1}</p>
     </div>
     <div class="flex gap-4 w-full justify-center items-center text-oscuro font-bold">
         <a href="/IQNET.pdf" class="bg-[#EFEFEF] w-full max-w-48 py-6 flex flex-col justify-center items-center gap-2 rounded-lg border border-[#1D1D1D50] hover:bg-[#e4e4e4] transition-all duration-300 ease-in-out" target="_blank">

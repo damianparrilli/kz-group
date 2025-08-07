@@ -1,4 +1,5 @@
 ---
+const { t } = Astro.props;
 const { bannerId } = Astro.props;
 
 const imageMap = {
@@ -67,15 +68,26 @@ const imageSrc = imageMap[bannerId] || "/default-image.webp";
           ></path>
         </g>
       </svg>
-      <h1 data-i18n="banner.title" class="w-full text-xl md:text-2xl lg:text-3xl font-medium">División Inyección</h1>
+      <h1 class="w-full text-xl md:text-2xl lg:text-3xl font-medium">{t.title}</h1>
     </div>
-    <h2 data-i18n="banner.slogan"
-      class="w-full text-3xl min-[450px]:text-4xl lg:text-5xl font-bold max-w-[400px] md:max-w-[45%]"
-    >Diseñamos, creamos, <span class="text-acento">perfeccionamos</span></h2>
-    <a data-i18n="banner.button"
+    <h1 class="w-full text-3xl min-[450px]:text-4xl lg:text-5xl font-bold max-w-[400px] md:max-w-[45%]">
+  {
+    (() => {
+      const words = t.slogan.trim().split(" ");
+      const last = words.pop();
+      return (
+        <>
+          {words.join(" ")}{" "}
+          <span class="text-acento">{last}</span>
+        </>
+      );
+    })()
+  }
+</h1>
+    <a
       href="#about"
       class="font-medium rounded-md bg-acento text-oscuro px-7 py-2 text-base sm:text-lg cursor-pointer z-10 hover:bg-[#f7b046] transition-all duration-300 ease-in-out"
-      >Conoce más</a
+      >{t.button}</a
     >
   </div>
 </section>

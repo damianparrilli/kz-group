@@ -1,3 +1,7 @@
+---
+const { base = "", t } = Astro.props;
+---
+
 <footer class="bg-oscuro py-12 overflow-hidden">
   <div
     class="contenedor relative flex flex-col md:flex-row items-start gap-16 min-[1100px]:gap-32"
@@ -51,70 +55,65 @@
     >
       <div class="flex gap-y-12 gap-x-32  flex-col min-[965px]:flex-row">
         <div class="flex flex-col gap-6 shrink-0">
-          <h3 data-i18n-footer-navigation class="text-base text-acento">
-            Navegación
+          <h3 class="text-base text-acento">
+            {t.navigation}
           </h3>
           <ul class="flex flex-col gap-4">
             <li>
               <a
-                data-i18n-footer-home
-                href=""
+                href={`${base}/#`}
+                aria-label="Regresar al Inicio"
                 class="hover:text-acento transition-all duration-200 ease-in-out"
-                >Inicio</a>
+                >{t.home}</a>
             </li>
             <li>
               <a
-                data-i18n-footer-about
-                href=""
+                href={`${base}/#about`}
                 class="hover:text-acento transition-all duration-200 ease-in-out"
-                >Quienes somos</a>
+                >{t.about}</a>
             </li>
             <li>
               <a
-                data-i18n-footer-workwith
-                href=""
+                href={`${base}/ser-parte`}
                 class="hover:text-acento transition-all duration-200 ease-in-out"
-                >Ser parte de KZ</a>
+                >{t.workwith}</a>
             </li>
           </ul>
         </div>
         <div class="flex flex-col gap-6 shrink-0">
-          <h3 data-i18n-footer-divisions class="text-base text-acento">
-            Divisiones
+          <h3 class="text-base text-acento">
+            {t.divisions}
           </h3>
           <ul class="flex flex-col gap-4">
             <li>
               <a
-                data-i18n-footer-divisionsInyeccion
-                href=""
+                href={`${base}/division-inyeccion`}
                 class="hover:text-acento transition-all duration-200 ease-in-out"
-                >División Inyección</a>
+                >{t.divisionsInyeccion}</a>
             </li>
             <li>
               <a
-                data-i18n-footer-divisionsMatriceria
-                href=""
+                href={`${base}/division-matriceria`}
                 class="hover:text-acento transition-all duration-200 ease-in-out"
-                >División Matricería</a>
+                >{t.divisionsMatriceria}</a>
             </li>
             <li>
               <a
-                data-i18n-footer-divisionsDispositivos
-                href=""
+                href={`${base}/division-dispsitivos`}
                 class="hover:text-acento transition-all duration-200 ease-in-out"
-                >División Dispositivos</a>
+                >{t.divisionsDispositivos}</a>
             </li>
           </ul>
         </div>
       </div>
       <div class="flex flex-col gap-6 w-min sm:w-auto pr-4 sm:pr-0">
-        <h3 data-i18n-footer-contacto class="text-base text-acento">
-          Contacto
+        <h3 class="text-base text-acento">
+          {t.contacto}
         </h3>
         <div class="flex flex-col xl:flex-row gap-x-32 gap-y-6">
           <div class="flex flex-col gap-4">
             <a
-              href=""
+              href="mailto:info@kzgroup.com.ar"
               class="group flex items-center gap-1 hover:text-acento transition-all duration-200 ease-in-out"
               ><svg
                 class="w-3 min-[450px]:w-4 h-auto"
@@ -131,7 +130,7 @@
               </svg>info@kzgroup.com.ar</a
             >
             <a
-              href=""
+              href="https://www.instagram.com/kz_moldes_dispositivos/" target="_blank"
               class="group flex items-center gap-1 hover:text-acento transition-all duration-200 ease-in-out"
             >
               <svg
@@ -158,11 +157,11 @@
           </div>
           <div class="flex flex-col gap-x-32 gap-y-6 md:pb-24">
             <div class="flex flex-col gap-4">
-              <span data-i18n-footer-plantInyeccion
-                >PLANTA INYECCIÓN Y DISPOSITIVOS</span
+              <span
+                >{t.plantInyeccion}</span
               >
               <a
-                href=""
+                href="tel:+541147642687"
                 class="group flex items-center gap-1 hover:text-acento transition-all duration-200 ease-in-out"
                 ><svg
                   class="w-4 min-[450px]:w-5 h-auto stroke-claro group-hover:stroke-acento fill-claro group-hover:fill-acento transition-all duration-200 ease-in-out"
@@ -177,9 +176,9 @@
               >
             </div>
             <div class="flex flex-col gap-4">
-              <span data-i18n-footer-plantMatriceria>PLANTA MATRICERÍA</span>
+              <span>{t.plantMatriceria}</span>
               <a
-                href=""
+                href="tel:+541147642687"
                 class="group flex items-center gap-1 hover:text-acento transition-all duration-200 ease-in-out"
                 ><svg
                   class="w-4 min-[450px]:w-5 h-auto stroke-claro group-hover:stroke-acento fill-claro group-hover:fill-acento transition-all duration-200 ease-in-out"

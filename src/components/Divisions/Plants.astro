@@ -1,12 +1,25 @@
 ---
-const isMatriceria = new URL(Astro.request.url).pathname === "/division-matriceria/";
+const { t } = Astro.props;
+const isMatriceria = new URL(Astro.request.url).pathname === "/division-matriceria/" || new URL(Astro.request.url).pathname === "/en/division-matriceria/";
 ---
 
 <section class="py-36">
   <div class="contenedor flex flex-col justify-center items-center gap-12">
-    <h2 data-i18n='plants.title' class="text-3xl font-bold text-oscuro [animation-iteration-count:infinite] delay-[200ms] duration-[500ms] taos:translate-y-[-200px] taos:opacity-0" data-taos-offset="0">
-        Nuestra <span class="text-acento">planta</span>
-      </h2>
+    
+      <h2 class="text-3xl font-bold text-oscuro [animation-iteration-count:infinite] delay-[200ms] duration-[500ms] taos:translate-y-[-200px] taos:opacity-0" data-taos-offset="0">
+  {
+    (() => {
+      const words = t.title.trim().split(" ");
+      const last = words.pop();
+      return (
+        <>
+          {words.join(" ")}{" "}
+          <span class="text-acento">{last}</span>
+        </>
+      );
+    })()
+  }
+</h2>
     <div
       class=`w-full flex flex-col md:flex-row [animation-iteration-count:infinite] delay-[200ms] duration-[500ms] taos:translate-x-[-200px] taos:opacity-0 gap-4`
       data-taos-offset="0"
@@ -15,8 +28,8 @@ const isMatriceria = new URL(Astro.request.url).pathname === "/division-matricer
       <div class="flex flex-col gap-4 w-full">
         
             {isMatriceria? (
-               <h3 data-i18n='plants.plantMatriceria' class='text-xl font-medium text-oscuro'>PLANTA MATRICERÍA</h3>
-              ) : (<h3 data-i18n='plants.plantInyeccion' class='text-xl font-medium text-oscuro'>PLANTA INYECCIÓN Y DISPOSITIVOS</h3>)} 
+               <h3 class='text-xl font-medium text-oscuro'>{t.plantMatriceria}</h3>
+              ) : (<h3 class='text-xl font-medium text-oscuro'>{t.plantInyeccion}</h3>)} 
         <div
           class="flex flex-wrap gap-4 h-full justify-between text-oscuro text-center text-sm sm:text-base"
         >
@@ -45,7 +58,7 @@ const isMatriceria = new URL(Astro.request.url).pathname === "/division-matricer
                 stroke-linejoin="round"></path>
             </svg>
 
-            <h4 data-i18n='plants.direccion' class="text-base sm:text-lg font-medium">Dirección</h4>
+            <h4 class="text-base sm:text-lg font-medium">{t.direccion}</h4>
             <p>
                 {isMatriceria? (
                     "Lavalle 1550, Villa Ballester (1653), Buenos Aires – Argentina"
@@ -69,7 +82,7 @@ const isMatriceria = new URL(Astro.request.url).pathname === "/division-matricer
                   stroke-width="0.5"></path>
               </svg>
 
-              <h4 data-i18n='plants.tel' class="text-base sm:text-lg">Teléfono</h4>
+              <h4 class="text-base sm:text-lg">{t.tel}</h4>
               <a href="tel:+541147642687" class="underline">
                 {isMatriceria? (
                     "+54 11 4764-2687"
@@ -93,10 +106,10 @@ const isMatriceria = new URL(Astro.request.url).pathname === "/division-matricer
                   fill="#262626"></path>
               </svg>
 
-              <h4 data-i18n='plants.horarios' class="text-base sm:text-lg">Horarios de atención</h4>
+              <h4 class="text-base sm:text-lg">{t.horarios}</h4>
               {isMatriceria? (
-                <p data-i18n='plants.horariosMatriceria'>Lunes a viernes, 9 a 19hs</p>
-               ) : (<p data-i18n='plants.horariosInyeccion'>Lunes a viernes, 8 a 16hs</p>)}
+                <p >{t.horariosMatriceria}</p>
+               ) : (<p>{t.horariosInyeccion}</p>)}
             </div>
           </div>
         </div>
@@ -108,7 +121,7 @@ const isMatriceria = new URL(Astro.request.url).pathname === "/division-matricer
           style="border:0;"
           allowfullscreen=""
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
+          referrerpolicy="no-referrer-when-downgrade" title="Mapa de Planta de Matricería"></iframe>
       </div>
     </div>
   </div>

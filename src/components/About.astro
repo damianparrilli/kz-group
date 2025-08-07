@@ -1,3 +1,7 @@
+---
+const { t } = Astro.props;
+---
+
 <section
   id="about"
   class="w-full h-full md:h-[550px] lg:h-[750px] relative before:bg-[url(/about-bg.webp)] before:bg-no-repeat before:-z-10 before:h-full before:bg-[bottom_right] md:before:bg-[bottom_right_-60px] before:bg-[clamp(20rem,2.222rem+88.889vw,25rem)_auto] md:before:bg-[400px_auto] lg:before:bg-[auto_700px] before:w-full before:absolute before:left-0 before:top-0 before:content-[''] after:bg-[#383838] after:-z-20 after:h-full after:w-full after:absolute after:left-0 after:top-0 after:content-[''] overflow-hidden"
@@ -6,22 +10,11 @@
     class="contenedor about flex flex-col justify-center w-full h-full gap-4 [animation-iteration-count:infinite] taos:translate-x-[-200px] delay-[200ms] duration-[500ms] taos:opacity-0"
     data-taos-offset="300"
   >
-    <h2 data-i18n="about.title" class="text-acento text-3xl font-bold">¿Quienes somos?</h2>
-    <p data-i18n="about.description1" class="text-sm sm:text-base">
-      KZ es una empresa fundada en el año 1972 por el alemán Kurt Zellner, desde
-      ese entonces esta dedicada a la fabricación de herramentales para la
-      inyección de termo plásticos atendiendo los requerimientos de calidad de
-      la Industria Automotriz.
-    </p>
-    <p data-i18n="about.description2" class="text-sm sm:text-base">
-      Se encuentra en plena etapa de desarrollo y ampliación fusionando la
-      experiencia de sus fundadores con la fuerza  de sus jóvenes descendientes
-      es en este  proceso que presenta sus nuevas unidades de negocio, Inyección
-      de Plásticos y Fabricación de Racks y Dispositivos, con el  principal
-      objetivo de bridarles a sus clientes la solución completa para sus
-      productos a través de la calidad y estabilidad de los Procesos de
-      Fabricación.
-    </p>
+    <h2 class="text-acento text-3xl font-bold">{t.title}</h2>
+
+    <p class="text-sm sm:text-base">{t.description1}</p>
+
+    <p class="text-sm sm:text-base">{t.description2}</p>
   </div>
 </section>
 

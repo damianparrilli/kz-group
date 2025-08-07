@@ -1,20 +1,70 @@
+---
+const { t } = Astro.props;
+---
+
 <section class="py-20">
     <div class="contenedor flex flex-col items-center">
-        <h2 data-i18n="contact.title" class="text-oscuro text-3xl font-bold w-full text-center">¡Trabaja con nosotros!</h2>
-        <form action="" class="flex flex-col gap-4 w-full md:h-[500px] max-w-4xl py-12">
-            <input data-i18n="contact.formName" type="text" name="nombre" id="nombre" placeholder="Nombre" class="w-full rounded-lg px-4 py-2 border-[0.5px] text-oscuro focus:outline-none flex flex-col gap-2 justify-center items-center border-[#5f5f5f]">
-            <input type="email" name="email" id="email" placeholder="E-mail" class="w-full rounded-lg px-4 py-2 border-[0.5px] text-oscuro focus:outline-none flex flex-col gap-2 justify-center items-center border-[#5f5f5f]">
-            <input data-i18n="contact.subject" type="text" name="asunto" id="asunto" placeholder="Asunto" class="w-full rounded-lg px-4 py-2 border-[0.5px] text-oscuro focus:outline-none flex flex-col gap-2 justify-center items-center border-[#5f5f5f]">
-            <textarea data-i18n="contact.formMessage" name="mensaje" id="mensaje" placeholder="Mensaje" class="w-full rounded-lg px-4 py-2 border-[0.5px] text-oscuro focus:outline-none border-[#5f5f5f] min-h-32 md:h-full"></textarea>
-            <div class="flex items-center gap-2">
-              <input type="file" id="file" name="file" accept=".doc,.docx,.pdf" class="hidden">
-              <label data-i18n="contact.formUpload" for="file" class="rounded-lg px-4 py-2 border-[0.5px] text-oscuro flex flex-col gap-2 justify-center items-center border-[#5f5f5f] hover:bg-[#eeeeee] cursor-pointer transition-all duration-300 ease-in-out">
-                Seleccionar archivo
-              </label>
-              <span data-i18n="contact.formUploadNoSelected" id="file-name" class="text-sm text-[#5f5f5f]">Ningún archivo seleccionado</span>
-            </div>
-            <a data-i18n="contact.button" class="w-full text-center font-medium rounded-md bg-acento text-oscuro px-7 py-3 text-lg cursor-pointer z-10 hover:bg-[#eca63b] transition-all duration-300 ease-in-out">Enviar mensaje</a>
-          </form>
+        <h2 class="text-oscuro text-3xl font-bold w-full text-center">{t.title}</h2>
+       <form class="flex flex-col gap-4 w-full md:h-[500px] max-w-4xl py-12">
+  
+  <label for="nombre" class="sr-only">{t.formName}</label>
+  <input 
+    type="text" 
+    name="nombre" 
+    id="nombre" 
+    placeholder={t.formName} 
+    class="w-full rounded-lg px-4 py-2 border-[0.5px] text-oscuro focus:outline-none flex flex-col gap-2 justify-center items-center border-[#5f5f5f]"
+  >
+
+  <label for="email" class="sr-only">E-mail</label>
+  <input 
+    type="email" 
+    name="email" 
+    id="email" 
+    placeholder="E-mail" 
+    class="w-full rounded-lg px-4 py-2 border-[0.5px] text-oscuro focus:outline-none flex flex-col gap-2 justify-center items-center border-[#5f5f5f]"
+  >
+
+  <label for="asunto" class="sr-only">{t.formSubject}</label>
+  <input 
+    type="text" 
+    name="asunto" 
+    id="asunto" 
+    placeholder={t.formSubject} 
+    class="w-full rounded-lg px-4 py-2 border-[0.5px] text-oscuro focus:outline-none flex flex-col gap-2 justify-center items-center border-[#5f5f5f]"
+  >
+
+  <label for="mensaje" class="sr-only">{t.formMessage}</label>
+  <textarea 
+    name="mensaje" 
+    id="mensaje" 
+    placeholder={t.formMessage} 
+    class="w-full rounded-lg px-4 py-2 border-[0.5px] text-oscuro focus:outline-none border-[#5f5f5f] min-h-32 md:h-full"
+  ></textarea>
+
+  <div class="flex items-center gap-2">
+    <label for="file" class="sr-only">{t.formUpload}</label>
+    <input 
+      type="file" 
+      id="file" 
+      name="file" 
+      accept=".doc,.docx,.pdf" 
+      class="hidden"
+    >
+    <label 
+      for="file" 
+      class="rounded-lg px-4 py-2 border-[0.5px] text-oscuro flex flex-col gap-2 justify-center items-center border-[#5f5f5f] hover:bg-[#eeeeee] cursor-pointer transition-all duration-300 ease-in-out"
+    >
+      {t.formUpload}
+    </label>
+    <span id="file-name" class="text-sm text-[#5f5f5f]">{t.formUploadNoSelected}</span>
+  </div>
+
+  <a class="w-full text-center font-medium rounded-md bg-acento text-oscuro px-7 py-3 text-lg cursor-pointer z-10 hover:bg-[#eca63b] transition-all duration-300 ease-in-out">
+    {t.button}
+  </a>
+</form>
+
           
           
           

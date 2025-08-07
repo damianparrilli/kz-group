@@ -1,37 +1,84 @@
-<section id="divisions" class="pt-36 flex flex-col justify-center items-center w-full gap-8  [animation-iteration-count:infinite] delay-[200ms] duration-[500ms] taos:translate-y-[-200px] taos:opacity-0" data-taos-offset="200">
-    <h2 data-i18n="divisions.title" class="text-3xl font-bold text-oscuro">
-        Nuestras <span class="text-acento">divisiones</span>
-      </h2>
-      <div class="flex flex-col md:flex-row w-full">
-        <a href="/division-inyeccion" class="group h-80 sm:h-96 md:h-[600px] w-full bg-[#3E3E3E] relative overflow-hidden [animation-iteration-count:infinite] delay-[100ms] duration-[400ms]  md:delay-[325ms] md:duration-[425ms] taos:translate-x-[-200px] md:taos:translate-y-[200px] taos:opacity-0" data-taos-offset="-150">
-            <img src="/inyeccion-image.webp" alt="División Inyección" class="object-cover w-full h-full opacity-50 hover:opacity-90 hover:scale-110 transition-all duration-300 ease-in-out">
-            <h3 data-i18n="divisions.divInyeccion" class="font-bold text-4xl absolute bottom-4 left-4 pointer-events-none p-3 transition-all duration-300 ease-in-out w-20">División Inyección</h3>
-        </a>
-        <a href="/division-matriceria" class="group h-80 sm:h-96 md:h-[600px] w-full bg-[#3E3E3E] relative overflow-hidden [animation-iteration-count:infinite] delay-[100ms] duration-[400ms]  md:delay-[450ms] md:duration-[450ms] taos:translate-x-[-200px] md:taos:translate-y-[200px] taos:opacity-0" data-taos-offset="-150">
-            <img src="/matriceria-image.webp" alt="División Matricería" class="object-cover w-full h-full opacity-50 hover:opacity-90 hover:scale-110 transition-all duration-300 ease-in-out">
-            <h3 data-i18n="divisions.divMatriceria" class="font-bold text-4xl absolute bottom-4 left-4 pointer-events-none p-3 transition-all duration-300 ease-in-out w-20">División Matricería</h3>
-        </a>
-        <a href="/division-dispositivos" class="group h-80 sm:h-96 md:h-[600px] w-full bg-[#3E3E3E] relative overflow-hidden [animation-iteration-count:infinite] delay-[100ms] duration-[400ms]  md:delay-[300ms] md:duration-[400ms] taos:translate-x-[-200px] md:taos:translate-y-[200px] taos:opacity-0" data-taos-offset="-150">
-            <img src="/dispositivos-image.webp" alt="División Dispositivos" class="object-cover w-full h-full opacity-50 hover:opacity-90 hover:scale-110 transition-all duration-300 ease-in-out">
-            <h3 data-i18n="divisions.divDispositivos" class="font-bold text-4xl absolute bottom-4 left-4 pointer-events-none p-3 transition-all duration-300 ease-in-out w-20">División Dispositivos</h3>
-        </a>
-      </div>
+---
+const { t } = Astro.props;
+
+const divisions = [
+  {
+    href: "/division-inyeccion",
+    img: "/inyeccion-image.webp",
+    alt: "Foto de la División Inyección",
+    title: t.divInyeccion,
+    delay: "md:delay-[325ms]",
+  },
+  {
+    href: "/division-matriceria",
+    img: "/matriceria-image.webp",
+    alt: "Foto de la División Matricería",
+    title: t.divMatriceria,
+    delay: "md:delay-[450ms]",
+  },
+  {
+    href: "/division-dispositivos",
+    img: "/dispositivos-image.webp",
+    alt: "Foto de la División Dispositivos",
+    title: t.divDispositivos,
+    delay: "md:delay-[300ms]",
+  }
+];
+---
+
+<section
+  id="divisions"
+  class="pt-36 flex flex-col justify-center items-center w-full gap-8 [animation-iteration-count:infinite] delay-[200ms] duration-[500ms] taos:translate-y-[-200px] taos:opacity-0"
+  data-taos-offset="200"
+>
+  <h2 class="text-3xl font-bold text-oscuro">
+  {
+    (() => {
+      const words = t.title.trim().split(" ");
+      const last = words.pop();
+      return (
+        <>
+          {words.join(" ")}{" "}
+          <span class="text-acento">{last}</span>
+        </>
+      );
+    })()
+  }
+</h2>
+
+
+  <div class="flex flex-col md:flex-row w-full">
+    {divisions.map((item, index) => (
+      <a
+        href={item.href}
+        class={`group h-80 sm:h-96 md:h-[600px] w-full bg-[#3E3E3E] relative overflow-hidden [animation-iteration-count:infinite] delay-[100ms] duration-[400ms] ${item.delay} taos:translate-x-[-200px] md:taos:translate-y-[200px] taos:opacity-0`}
+        data-taos-offset="-150"
+      >
+        <img
+          src={item.img}
+          alt={item.alt}
+          class="object-cover w-full h-full opacity-50 hover:opacity-90 hover:scale-110 transition-all duration-300 ease-in-out"
+        />
+        <h3 class="font-bold text-4xl absolute bottom-4 left-4 pointer-events-none p-3 transition-all duration-300 ease-in-out w-20">
+          {item.title}
+        </h3>
+      </a>
+    ))}
+  </div>
+
+  <script is:inline>
+    const section = document.getElementById("divisions");
+    const anchors = section?.querySelectorAll("a");
+    const updateOffsets = () => {{
+      const isMobile = window.innerWidth < 768;
+      if (section) {{
+        section.dataset.taosOffset = isMobile ? "0" : "200";
+      }}
+      anchors?.forEach(a => {{
+        a.dataset.taosOffset = isMobile ? "0" : "-150";
+      }});
+    }};
+    window.addEventListener("resize", updateOffsets);
+    updateOffsets();
+  </script>
 </section>
-
-<script>
-    const divisions = document.getElementById("divisions");
-    const divisionsAnchor = divisions.querySelectorAll("a");
-    const cambiarOfsset = () => {
-        if(window.innerWidth < 768) {
-            divisions.dataset.taosOffset = "0";
-            divisionsAnchor.forEach(a => a.dataset.taosOffset = "0");
-        } else {
-            divisions.dataset.taosOffset = "200";
-            divisionsAnchor.forEach(a => a.dataset.taosOffset = "-150");
-
-        }
-    }
-
-    window.addEventListener("resize", cambiarOfsset);
-    cambiarOfsset();
-</script>

@@ -1,7 +1,7 @@
 {
     "header": {
         "home": "Inicio",
-        "divisions": "Nuestras divisiones <svg viewBox='0 0 16 10' fill='none' id='dd-arrow' xmlns='http://www.w3.org/2000/svg' class='w-4 lg:w-3 h-auto fill-claro group-hover:fill-acento transition-all duration-300 ease-in-out'><path d='M14.3227 0.860652L15.5594 2.09849L8.81957 8.84065C8.71157 8.94933 8.58315 9.03558 8.44169 9.09444C8.30023 9.15329 8.14853 9.18359 7.99532 9.18359C7.8421 9.18359 7.6904 9.15329 7.54894 9.09444C7.40749 9.03558 7.27906 8.94933 7.17107 8.84065L0.427734 2.09849L1.6644 0.861818L7.99357 7.18982L14.3227 0.860652Z'></path></svg>",
+        "divisions": "Nuestras divisiones",
         "divisionsInyeccion": "División Inyección",
         "divisionsMatriceria": "División Matricería",
         "divisionsDispositivos": "División Dispositivos",
@@ -24,7 +24,17 @@
     },
     "main": {
         "banner": {
-            "button": "Conoce más"
+            "phrases": [
+                "Moldeamos",
+                "soluciones,",
+                "impulsamos tu",
+                "industria"
+            ],
+            "highlight": [
+                "soluciones,",
+                "industria"
+            ],
+            "button": "Conocé más"
         },
         "about": {
             "title": "¿Quienes somos?",
@@ -32,25 +42,33 @@
             "description2": "Se encuentra en plena etapa de desarrollo y ampliación fusionando la experiencia de sus fundadores con la fuerza  de sus jóvenes descendientes es en este  proceso que presenta sus nuevas unidades de negocio, Inyección de Plásticos y Fabricación de Racks y Dispositivos, con el  principal objetivo de bridarles a sus clientes la solución completa para sus productos a través de la calidad y estabilidad de los Procesos de Fabricación."
         },
         "customers": {
-            "title": "Principales <span class='text-acento'>clientes</span>"
+            "title": "Principales clientes"
         },
         "benefits": {
-            "title": "Nuestros beneficios, tu <span class='text-acento'>ventaja</span>",
-            "benefits1": "Seguridad y confianza",
-            "benefits1desc": "Seguridad y confianza",
-            "benefits2": "Eficacia y precisión",
-            "benefits2desc": "Seguridad y confianza",
-            "benefits3": "Calidad y experiencia",
-            "benefits3desc": "Seguridad y confianza"
+            "title": "Nuestros beneficios, tu ventaja",
+            "items": [
+                {
+                    "title": "Seguridad y confianza",
+                    "description": "Texto descriptivo..."
+                },
+                {
+                    "title": "Eficacia y precisión",
+                    "description": "Texto descriptivo..."
+                },
+                {
+                    "title": "Calidad y experiencia",
+                    "description": "Texto descriptivo..."
+                }
+            ]
         },
         "divisions": {
-            "title": "Nuestras <span class='text-acento'>divisiones</span>",
+            "title": "Nuestras divisiones",
             "divInyeccion": "División Inyección",
             "divMatriceria": "División Matricería",
             "divDispositivos": "División Dispositivos"
         },
         "plants": {
-            "title": "Nuestras <span class='text-acento'>plantas</span>",
+            "title": "Nuestras plantas",
             "plantInyeccion": "PLANTA INYECCIÓN Y DISPOSITIVOS",
             "plantMatriceria": "PLANTA MATRICERIA",
             "direccion": "Dirección",
@@ -77,7 +95,7 @@
         "pageTitle": "División Inyección - KZ Group",
         "banner": {
             "title": "División Inyección",
-            "slogan": "Diseñamos, creamos, <span class='text-acento'>perfeccionamos</span>",
+            "slogan": "Diseñamos, creamos, perfeccionamos",
             "button": "Conoce más"
         },
         "about": {
@@ -85,17 +103,17 @@
             "description1": "KZ es una empresa fundada en el año 1972 por el alemán Kurt Zellner, desde ese entonces esta dedicada a la fabricación de herramentales para la inyección de termo plásticos atendiendo los requerimientos de calidad de la Industria Automotriz.",
             "description2": "Se encuentra en plena etapa de desarrollo y ampliación fusionando la experiencia de sus fundadores con la fuerza  de sus jóvenes descendientes es en este  proceso que presenta sus nuevas unidades de negocio, Inyección de Plásticos y Fabricación de Racks y Dispositivos, con el  principal objetivo de bridarles a sus clientes la solución completa para sus productos a través de la calidad y estabilidad de los Procesos de Fabricación."
         },
-        "services":{
-          "title": "¿Qué ofrecemos?",
-          "item1": "Co-design y desarrollo de productos",
-          "item2": "Detalle y precisión",
-          "item3": "Factibilidad y mejora",
-          "item4": "Our <span class='text-acento'>services</span>",
-          "item5": "Our <span class='text-acento'>services</span>",
-          "item6": "Our <span class='text-acento'>services</span>"
+        "services": {
+            "title": "¿Qué ofrecemos?",
+            "item1": "Co-design y desarrollo de productos",
+            "item2": "Detalle y precisión",
+            "item3": "Factibilidad y mejora",
+            "item4": "Our services",
+            "item5": "Our services",
+            "item6": "Our services"
         },
         "plants": {
-            "title": "Nuestras <span class='text-acento'>plantas</span>",
+            "title": "Nuestras plantas",
             "plantInyeccion": "PLANTA INYECCIÓN Y DISPOSITIVOS",
             "plantMatriceria": "PLANTA MATRICERIA",
             "direccion": "Dirección",
@@ -122,7 +140,7 @@
         "pageTitle": "División Matricería - KZ Group",
         "banner": {
             "title": "División Matricería",
-            "slogan": "Diseñamos, creamos, <span class='text-acento'>perfeccionamos</span>",
+            "slogan": "Diseñamos, creamos, perfeccionamos",
             "button": "Conoce más"
         },
         "about": {
@@ -130,17 +148,17 @@
             "description1": "KZ es una empresa fundada en el año 1972 por el alemán Kurt Zellner, desde ese entonces esta dedicada a la fabricación de herramentales para la inyección de termo plásticos atendiendo los requerimientos de calidad de la Industria Automotriz.",
             "description2": "Se encuentra en plena etapa de desarrollo y ampliación fusionando la experiencia de sus fundadores con la fuerza  de sus jóvenes descendientes es en este  proceso que presenta sus nuevas unidades de negocio, Inyección de Plásticos y Fabricación de Racks y Dispositivos, con el  principal objetivo de bridarles a sus clientes la solución completa para sus productos a través de la calidad y estabilidad de los Procesos de Fabricación."
         },
-        "services":{
-          "title": "¿Qué ofrecemos?",
-          "item1": "Co-design y desarrollo de productos",
-          "item2": "Detalle y precisión",
-          "item3": "Factibilidad y mejora",
-          "item4": "Our <span class='text-acento'>services</span>",
-          "item5": "Our <span class='text-acento'>services</span>",
-          "item6": "Our <span class='text-acento'>services</span>"
+        "services": {
+            "title": "¿Qué ofrecemos?",
+            "item1": "Co-design y desarrollo de productos",
+            "item2": "Detalle y precisión",
+            "item3": "Factibilidad y mejora",
+            "item4": "Our services",
+            "item5": "Our services",
+            "item6": "Our services"
         },
         "plants": {
-            "title": "Nuestra <span class='text-acento'>planta</span>",
+            "title": "Nuestra planta",
             "plantInyeccion": "PLANTA INYECCIÓN Y DISPOSITIVOS",
             "plantMatriceria": "PLANTA MATRICERIA",
             "direccion": "Dirección",
@@ -167,7 +185,7 @@
         "pageTitle": "División Dispositivos - KZ Group",
         "banner": {
             "title": "División Dispositivos",
-            "slogan": "Diseñamos, creamos, <span class='text-acento'>perfeccionamos</span>",
+            "slogan": "Diseñamos, creamos, perfeccionamos",
             "button": "Conoce más"
         },
         "about": {
@@ -175,17 +193,17 @@
             "description1": "KZ es una empresa fundada en el año 1972 por el alemán Kurt Zellner, desde ese entonces esta dedicada a la fabricación de herramentales para la inyección de termo plásticos atendiendo los requerimientos de calidad de la Industria Automotriz.",
             "description2": "Se encuentra en plena etapa de desarrollo y ampliación fusionando la experiencia de sus fundadores con la fuerza  de sus jóvenes descendientes es en este  proceso que presenta sus nuevas unidades de negocio, Inyección de Plásticos y Fabricación de Racks y Dispositivos, con el  principal objetivo de bridarles a sus clientes la solución completa para sus productos a través de la calidad y estabilidad de los Procesos de Fabricación."
         },
-        "services":{
-          "title": "¿Qué ofrecemos?",
-          "item1": "Co-design y desarrollo de productos",
-          "item2": "Detalle y precisión",
-          "item3": "Factibilidad y mejora",
-          "item4": "Our <span class='text-acento'>services</span>",
-          "item5": "Our <span class='text-acento'>services</span>",
-          "item6": "Our <span class='text-acento'>services</span>"
+        "services": {
+            "title": "¿Qué ofrecemos?",
+            "item1": "Co-design y desarrollo de productos",
+            "item2": "Detalle y precisión",
+            "item3": "Factibilidad y mejora",
+            "item4": "Our services",
+            "item5": "Our services",
+            "item6": "Our services"
         },
         "plants": {
-            "title": "Nuestra <span class='text-acento'>planta</span>",
+            "title": "Nuestra planta",
             "plantInyeccion": "PLANTA INYECCIÓN Y DISPOSITIVOS",
             "plantMatriceria": "PLANTA MATRICERIA",
             "direccion": "Dirección",
@@ -208,7 +226,7 @@
             "texto2": "Con gran satisfacción el objetivo se ha cumplido y en el mes de JULIO-2020 se alcanzado la certificación IRAM ISO 9001:2015 con el número de ref: RI 9000-9841"
         }
     },
-    "workwithkz":{
+    "workwithkz": {
         "pageTitle": "Ser parte - KZ Group",
         "contact": {
             "title": "¡Trabaja con nosotros!",
@@ -220,7 +238,7 @@
             "button": "Enviar mensaje"
         },
         "plants": {
-            "title": "Nuestras <span class='text-acento'>plantas</span>",
+            "title": "Nuestras plantas",
             "plantInyeccion": "PLANTA INYECCIÓN Y DISPOSITIVOS",
             "plantMatriceria": "PLANTA MATRICERIA",
             "direccion": "Dirección",
