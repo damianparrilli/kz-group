@@ -3,17 +3,17 @@ const { t } = Astro.props;
 const { aboutId } = Astro.props;
 
 const imageMap = {
-  inyeccion: "/inyeccion-image.webp",
-  matriceria: "/matriceria-image.webp",
-  dispositivos: "/dispositivos-image.webp"
+  inyeccion: "/historia-inyeccion.webp",
+  matriceria: "/historia-matriceria.webp",
+  dispositivos: "/historia-dispositivos.webp"
 };
 
 const imageSrc = imageMap[aboutId] || "/default-image.webp";
 ---
 
-<section class="py-24">
-    <div class="contenedor flex flex-col md:flex-row gap-8 w-full">
-        <img src={imageSrc} alt="Division" class="md:max-w-[50%] object-cover order-2 md:order-1"/>
+<section class="py-32">
+    <div class="max-w-[1200px] px-5 mx-auto flex flex-col md:flex-row gap-8 w-full items-stretch">
+        <img src={imageSrc} alt=`Imagén de Division ${aboutId}` class="md:max-w-[45%] lg:max-w-[35%] w-full min-h-96 object-cover order-2 md:order-1 rounded-lg"/>
         <div class="flex flex-col gap-4 justify-center w-full order-1 md:order-2">
             <h2 class="text-acento text-3xl font-bold">{t.title}</h2>
             <p class="text-oscuro text-sm sm:text-base">{t.description1}

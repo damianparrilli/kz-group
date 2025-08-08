@@ -49,15 +49,15 @@
       "items": [
         {
           "title": "Safety and confidence",
-          "description": "Texto descriptivo..."
+          "description": "Reliable solutions are essential. Every part we manufacture undergoes strict quality controls to ensure performance and durability."
         },
         {
           "title": "Efficiency and accuracy",
-          "description": "Texto descriptivo..."
+          "description": "From mold design to part injection, every stage is engineered for maximum accuracy and repeatability, leaving no room for error."
         },
         {
           "title": "Quality and experience",
-          "description": "Texto descriptivo..."
+          "description": "With over 50 years in the industry, we anticipate challenges, adapt to each sector, and deliver solutions that exceed expectations."
         }
       ]
     },
@@ -95,22 +95,22 @@
     "pageTitle": "Injection Division - KZ Group",
     "banner": {
       "title": "Injection Division",
-      "slogan": "We design, we create, we refine",
+      "slogan": "We inject, we mold, we optimize",
       "button": "Learn more"
     },
     "about": {
       "title": "Our history",
-      "description1": "KZ is a company founded in 1972 by the German Kurt Zellner, since then is dedicated to the manufacture of tooling for the injection of thermoplastics meeting the quality requirements of the automotive industry.",
-      "description2": "It is in full development and expansion stage, merging the experience of its founders with the strength of its young descendants. It is in this process that it presents its new business units, Plastic Injection and Racks and Devices Manufacturing, with the main objective of providing its customers with the complete solution for their products through the quality and stability of the Manufacturing Processes."
+      "description1": "KZ is a company founded in 1975 by German engineer Kurt Zellner. Since then, it has been dedicated to manufacturing tooling for thermoplastic molding, meeting the quality requirements of the automotive and home appliance industries. Currently in a stage of expansion and development, the company applies its extensive mold expertise to injection and fixture systems for the thermoforming plastics industry, covering everything from mold design to automation for product assembly, ensuring part quality at every stage. Our team of professionals is prepared to meet the most complex needs of our clients, with problem analysis and resolution being our strongest foundation for quality control.",
+      "description2": "Since 2005, our company has merged the experience of its founders with the energy of the next generation, adopting and developing the KAIZEN philosophy. KZ's main objective is to provide clients with complete solutions for their products, ensuring tool durability through internal preventive maintenance, product quality, and process stability."
     },
     "services": {
       "title": "What do we offer?",
-      "item1": "Co-design and product development",
-      "item2": "Detail and precision",
-      "item3": "Feasibility and improvement",
-      "item4": "Our services",
-      "item5": "Our services",
-      "item6": "Our services"
+      "item1": "Thermoplastic injection",
+      "item2": "On-line assembly",
+      "item3": "Product development",
+      "item4": "Co-design and product development",
+      "item5": "Detail and precision",
+      "item6": "Feasibility and improvement"
     },
     "plants": {
       "title": "Our plant",
@@ -140,22 +140,22 @@
     "pageTitle": "Tooling Division - KZ Group",
     "banner": {
       "title": "Tooling Division",
-      "slogan": "We design, we create, we refine",
+      "slogan": "We design, we machine, we refine",
       "button": "Learn more"
     },
     "about": {
       "title": "Our history",
-      "description1": "KZ is a company founded in 1972 by the German Kurt Zellner, since then is dedicated to the manufacture of tooling for the injection of thermoplastics meeting the quality requirements of the automotive industry.",
-      "description2": "It is in full development and expansion stage, merging the experience of its founders with the strength of its young descendants. It is in this process that it presents its new business units, Plastic Injection and Racks and Devices Manufacturing, with the main objective of providing its customers with the complete solution for their products through the quality and stability of the Manufacturing Processes."
+      "description1": "Founded in 1975, KZ has over 40 years of experience in the industrial market, providing comprehensive solutions in precision tooling for molds, pantograph engravings, 1:1 copying, special machining, part manufacturing, EDM (electrical discharge machining), and full product design.",
+      "description2": "KZ specializes in designing and building a wide range of molds for injection, vulcanization, stamping, forging, blow molding, and various components requiring general tooling."
     },
     "services": {
       "title": "What do we offer?",
-      "item1": "Co-design and product development",
-      "item2": "Detail and precision",
-      "item3": "Feasibility and improvement",
-      "item4": "Our services",
-      "item5": "Our services",
-      "item6": "Our services"
+      "item1": "Toolings",
+      "item2": "Mold repair",
+      "item3": "Special machining",
+      "item4": "Various molds",
+      "item5": "Pantograph engravings",
+      "item6": "Cylindrical grinding"
     },
     "plants": {
       "title": "Our plant",
@@ -185,22 +185,22 @@
     "pageTitle": "Devices Division - KZ Group",
     "banner": {
       "title": "Devices Division",
-      "slogan": "We design, we create, we refine",
+      "slogan": "We conceive, we develop, we solve",
       "button": "Learn more"
     },
     "about": {
       "title": "Our history",
-      "description1": "KZ is a company founded in 1972 by the German Kurt Zellner, since then is dedicated to the manufacture of tooling for the injection of thermoplastics meeting the quality requirements of the automotive industry.",
-      "description2": "It is in full development and expansion stage, merging the experience of its founders with the strength of its young descendants. It is in this process that it presents its new business units, Plastic Injection and Racks and Devices Manufacturing, with the main objective of providing its customers with the complete solution for their products through the quality and stability of the Manufacturing Processes."
+      "description1": "KZ Dispositivos is the newest division of KZ Group. With over four years in the local market and supplying major Tier 1 companies in the automotive industry, KZ Dispositivos is positioned as one of the leading providers of automation components, specializing in the design and manufacturing of grippers, control gauges, punching tools, on-line assembly systems, welding fixtures, and more. Working with the world’s top automation brands, KZ combines the experience of its founders with the energy of the next generation to deliver complete customer satisfaction.",
+      "description2": "Recently, and in alignment with the philosophy of continuous improvement (KAIZEN), KZ Dispositivos has partnered with one of the largest U.S. suppliers — Plastec USA. This collaboration marks the beginning of KZ’s official representation of their outstanding range of plastic solutions and services in Argentina, Chile, and Brazil."
     },
     "services": {
       "title": "What do we offer?",
-      "item1": "Co-design and product development",
-      "item2": "Detail and precision",
-      "item3": "Feasibility and improvement",
-      "item4": "Our services",
-      "item5": "Our services",
-      "item6": "Our services"
+      "item1": "Control gauges",
+      "item2": "Gripper (robot end arm)",
+      "item3": "Accessories for injection processes",
+      "item4": "Peripherals for thermoplastic injection",
+      "item5": "Testing devices",
+      "item6": "3D prototypes"
     },
     "plants": {
       "title": "Our plant",

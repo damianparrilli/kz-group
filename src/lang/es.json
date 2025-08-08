@@ -49,15 +49,15 @@
             "items": [
                 {
                     "title": "Seguridad y confianza",
-                    "description": "Texto descriptivo..."
+                    "description": "Se necesitan soluciones que no fallan. Cada pieza que fabricamos pasan por estrictos controles de calidad para garantizar su rendimiento y durabilidad"
                 },
                 {
                     "title": "Eficacia y precisión",
-                    "description": "Texto descriptivo..."
+                    "description": "Desde el diseño de matrices hasta la inyección de piezas, todo está pensado para lograr máxima precisión y repetibilidad, con cero margen de error"
                 },
                 {
                     "title": "Calidad y experiencia",
-                    "description": "Texto descriptivo..."
+                    "description": "Más de 50 años en el rubro nos permiten anticiparnos a los desafíos, adaptarnos a cada industria y responder con soluciones que superan las expectativas"
                 }
             ]
         },
@@ -95,22 +95,22 @@
         "pageTitle": "División Inyección - KZ Group",
         "banner": {
             "title": "División Inyección",
-            "slogan": "Diseñamos, creamos, perfeccionamos",
+            "slogan": "Inyectamos, moldeamos, optimizamos",
             "button": "Conoce más"
         },
         "about": {
             "title": "Nuestra historia",
-            "description1": "KZ es una empresa fundada en el año 1972 por el alemán Kurt Zellner, desde ese entonces esta dedicada a la fabricación de herramentales para la inyección de termo plásticos atendiendo los requerimientos de calidad de la Industria Automotriz.",
-            "description2": "Se encuentra en plena etapa de desarrollo y ampliación fusionando la experiencia de sus fundadores con la fuerza  de sus jóvenes descendientes es en este  proceso que presenta sus nuevas unidades de negocio, Inyección de Plásticos y Fabricación de Racks y Dispositivos, con el  principal objetivo de bridarles a sus clientes la solución completa para sus productos a través de la calidad y estabilidad de los Procesos de Fabricación."
+            "description1": "KZ Es una empresa fundada en 1975 por el alemán Kurt Zellner, desde entonces está dedicada a la fabricación de herramentales para el moldeo de termoplásticos, atendiendo los requerimientos de calidad de la industria automotriz y línea blanca. Actualmente se encuentra en plena etapa de desarrollo y ampliación; aplicando toda la experiencia en moldes a la inyección y dispositivos para la industria termoformadora de plásticos, desde el diseño del molde hasta la automatización para el ensamble del producto, atendiendo en todas la etapas la calidad de la pieza. Nuestro equipo de profesionales esta apto para atender las necesidades mas complejas de nuestros clientes, el análisis y la solución de problemas es nuestra base mas fuerte para controlar la calidad.",
+            "description2": "Desde el año 2005, nuestra empresa fusiono la experiencia de sus fundadores con la fuerza joven de sus descendientes,  enfocados y desarrollando la filosofía KAIZEN, KZ, tiene como principal objetivo presentar a sus clientes la solución completa para sus productos, de esta manera, podremos asegurar la durabilidad de los herramentales a través de nuestros mantenimientos preventivos internos, la calidad de los productos fabricados y la estabilidad de nuestros procesos."
         },
         "services": {
             "title": "¿Qué ofrecemos?",
-            "item1": "Co-design y desarrollo de productos",
-            "item2": "Detalle y precisión",
-            "item3": "Factibilidad y mejora",
-            "item4": "Our services",
-            "item5": "Our services",
-            "item6": "Our services"
+            "item1": "Inyeccion de termoplasticos",
+            "item2": "Ensambles a pie de maquina",
+            "item3": "Desarrollo de productos",
+            "item4": "Co-design y desarrollo de productos",
+            "item5": "Detalle y precisión",
+            "item6": "Factibilidad y mejora"
         },
         "plants": {
             "title": "Nuestras plantas",
@@ -140,22 +140,22 @@
         "pageTitle": "División Matricería - KZ Group",
         "banner": {
             "title": "División Matricería",
-            "slogan": "Diseñamos, creamos, perfeccionamos",
+            "slogan": "Diseñamos, mecanizamos, ajustamos",
             "button": "Conoce más"
         },
         "about": {
             "title": "Nuestra historia",
-            "description1": "KZ es una empresa fundada en el año 1972 por el alemán Kurt Zellner, desde ese entonces esta dedicada a la fabricación de herramentales para la inyección de termo plásticos atendiendo los requerimientos de calidad de la Industria Automotriz.",
-            "description2": "Se encuentra en plena etapa de desarrollo y ampliación fusionando la experiencia de sus fundadores con la fuerza  de sus jóvenes descendientes es en este  proceso que presenta sus nuevas unidades de negocio, Inyección de Plásticos y Fabricación de Racks y Dispositivos, con el  principal objetivo de bridarles a sus clientes la solución completa para sus productos a través de la calidad y estabilidad de los Procesos de Fabricación."
+            "description1": "KZ, fue fundada en 1975, Lleva una trayectoria de más de 40 años en el mercado industrial; dedicándose a brindar soluciones integrales en Matriceria de precisión para moldes, grabados a pantógrafo, copiado 1:1, mecanizados especiales, fabricación de piezas, trabajos de electro erosión por penetración y diseño integral de productos.",
+            "description2": "KZ, se dedica a diseñar y construir la más amplia gama de moldes de inyección, vulcanizado, estampado, forjado, soplado y elementos diversos que requieran matricera en general."
         },
         "services": {
             "title": "¿Qué ofrecemos?",
-            "item1": "Co-design y desarrollo de productos",
-            "item2": "Detalle y precisión",
-            "item3": "Factibilidad y mejora",
-            "item4": "Our services",
-            "item5": "Our services",
-            "item6": "Our services"
+            "item1": "Toolings",
+            "item2": "Reparacion de moldes",
+            "item3": "Mecanizados especiales",
+            "item4": "Moldes variados",
+            "item5": "Grabados a pantografo",
+            "item6": "Rectificados cilindricos"
         },
         "plants": {
             "title": "Nuestra planta",
@@ -185,22 +185,22 @@
         "pageTitle": "División Dispositivos - KZ Group",
         "banner": {
             "title": "División Dispositivos",
-            "slogan": "Diseñamos, creamos, perfeccionamos",
+            "slogan": "Ideamos, desarrollamos, resolvemos",
             "button": "Conoce más"
         },
         "about": {
             "title": "Nuestra historia",
-            "description1": "KZ es una empresa fundada en el año 1972 por el alemán Kurt Zellner, desde ese entonces esta dedicada a la fabricación de herramentales para la inyección de termo plásticos atendiendo los requerimientos de calidad de la Industria Automotriz.",
-            "description2": "Se encuentra en plena etapa de desarrollo y ampliación fusionando la experiencia de sus fundadores con la fuerza  de sus jóvenes descendientes es en este  proceso que presenta sus nuevas unidades de negocio, Inyección de Plásticos y Fabricación de Racks y Dispositivos, con el  principal objetivo de bridarles a sus clientes la solución completa para sus productos a través de la calidad y estabilidad de los Procesos de Fabricación."
+            "description1": "Kz Dispositivos es la división más reciente de KZ Group. Con más de 4 años en el mercado local y abasteciendo a los principales TIER 1 de las industria automotriz local, KZ Dispositivos se posiciona como uno de los principales proveedores de componentes para automatización, diseño y fabricación de Grippers, Calibres de control, Troqueladores, Línea de ensamble a pie de máquina, cunas para soldado, etc. Trabajando con las principales marcas a nivel mundial de automatización. Alineando la experiencia de sus fundadores con la fuerza joven de sus descendientes kz logra la satisfacción integral de sus clientes. ",
+            "description2": "Recientemente y alineados con la filosofía de mejor continua (KAIZEN) KZ dispositivos fusiona su amplia gama de servicios con uno proveedores más grandes de Estados Unidos. Plastec USA. Soluciones plásticas naciendo de esta forma la representación en Argentina, Chile y Brasil de toda su excelente gama de productos y servicios."
         },
         "services": {
             "title": "¿Qué ofrecemos?",
-            "item1": "Co-design y desarrollo de productos",
-            "item2": "Detalle y precisión",
-            "item3": "Factibilidad y mejora",
-            "item4": "Our services",
-            "item5": "Our services",
-            "item6": "Our services"
+            "item1": "Calibres de control",
+            "item2": "Gripper (fin brazo robot)",
+            "item3": "Accesorios para procesos de inyección",
+            "item4": "Perifericos para inyeccion de termoplasticos",
+            "item5": "Dispositivos para ensayos",
+            "item6": "Prototipos 3D"
         },
         "plants": {
             "title": "Nuestra planta",

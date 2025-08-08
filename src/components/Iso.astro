@@ -1,8 +1,38 @@
 ---
-const { t } = Astro.props;
+const { t, base, isoId } = Astro.props;
 ---
 
 <section class="py-36 px-[20px] flex flex-col justify-center items-center gap-10">
+    {isoId === "inyeccion" && base === "/en" && (
+  <div class="flex flex-col gap-4 text-oscuro max-w-[900px] mx-auto text-base md:text-lg">
+    <span class="font-semibold">Quality Policy</span>
+    <p>KZ Group Injection Division has successfully implemented a quality management system based on ISO 9001 certification. (See the <a class="font-semibold" href="/Inyeccion.pdf" target="_blank">CURRENT POLICY</a>).</p>
+    <p> This allows us to guarantee our clients continuous satisfaction. Our main objective is to achieve VDA 6.3 by the end of 2020.</p>
+   
+  </div>
+)}
+
+{isoId === "inyeccion" && base === "" && (
+  <div class="flex flex-col gap-4 text-oscuro max-w-[900px] mx-auto text-base md:text-lg">
+    <span class="font-semibold">Política de calidad</span>
+    <p>KZ Group División Inyección, ha logrado implementar un sistema de gestión de la calidad basado en las normas ISO 9001 Certificado. (Ver <a class="font-semibold" href="/Inyeccion.pdf" target="_blank">POLITICA VIGENTE</a>).</p>
+    <p>Esto nos permite garantizar a nuestros clientes una continua satisfacción. Nuestro objetivo principal es alcanzar VDA 6.3 hacia fines 2020.</p>
+  </div>
+)}
+
+{isoId === "matriceria" && base === "/en" && (
+  <div class="flex flex-col gap-4 text-oscuro max-w-[900px] mx-auto text-base md:text-lg">
+    <span class="font-semibold">Quality Policy</span>
+    <p>Over the years, KZ Group's Tooling Division has developed a quality management system based on excellence and efficiency in every process, where customer satisfaction is the main focus from the very beginning of project development.</p>
+  </div>
+)}
+
+{isoId === "matriceria" && base === "" && (
+  <div class="flex flex-col gap-4 text-oscuro max-w-[900px] mx-auto text-base md:text-lg">
+    <span class="font-semibold">Política de calidad</span>
+    <p>KZ Group División Matricería, ha logrado a través de los años un sistema de gestión de calidad basado en la excelencia y eficiencia cada proceso, donde la satisfacción del cliente es el foco principal inclusive desde el inicio de desarrollo de proyectos.</p>
+  </div>
+)}
     <div class="flex flex-col gap-4 text-oscuro max-w-[900px] mx-auto text-base md:text-lg">
         <span class="font-semibold">ISO 9001-2015</span>
         <p>{t.texto1}</p>

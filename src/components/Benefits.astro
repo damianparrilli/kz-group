@@ -4,10 +4,10 @@ const { t } = Astro.props;
 
 <section
   id="benefits"
-  class="py-48 px-[20px] bg-oscuro w-full h-full md:h-[800px]"
+  class="py-48 px-[20px] bg-oscuro w-full h-full md:h-[725px]"
 >
   <div
-    class="max-w-[1000px] mx-auto flex flex-col justify-center items-center gap-12 text-center [animation-iteration-count:infinite] delay-[200ms] duration-[500ms] taos:translate-y-[-200px] taos:opacity-0"
+    class="max-w-[1200px] mx-auto flex flex-col justify-center items-center gap-12 text-center [animation-iteration-count:infinite] delay-[200ms] duration-[500ms] taos:translate-y-[-200px] taos:opacity-0"
     data-taos-offset="0"
   >
     <h2 class="text-3xl font-bold">
@@ -26,7 +26,7 @@ const { t } = Astro.props;
 </h2>
 
     <div
-      class="flex w-full justify-center items-start flex-col md:flex-row gap-16 md:gap-0 h-full"
+      class="flex w-full justify-center items-start flex-col md:flex-row gap-16 md:gap-0 lg:gap-6 h-full"
     >
       {
         t.items.map((benefit, index) => (
