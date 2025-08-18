@@ -83,7 +83,7 @@
             "formTitle": "Escribinos un mensaje",
             "formName": "Nombre",
             "formSubject": "Asunto",
-            "forMessage": "Mensaje",
+            "formMessage": "Mensaje",
             "button": "Enviar mensaje"
         },
         "iso": {
@@ -235,7 +235,8 @@
             "formMessage": "Mensaje",
             "formUpload": "Seleccionar archivo",
             "formUploadNoSelected": "Ningún archivo seleccionado",
-            "button": "Enviar mensaje"
+            "button": "Enviar mensaje",
+            "mailTitle": "También podes enviarnos tu CV a"
         },
         "plants": {
             "title": "Nuestras plantas",

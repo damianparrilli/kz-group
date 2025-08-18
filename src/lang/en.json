@@ -235,7 +235,8 @@
       "formMessage": "Message",
       "formUpload": "Upload file",
       "formUploadNoSelected": "No file selected",
-      "button": "Send message"
+      "button": "Send message",
+      "mailTitle": "You can also send us your CV to"
     },
     "plants": {
       "title": "Our plants",
