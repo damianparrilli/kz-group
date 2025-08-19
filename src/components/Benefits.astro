@@ -31,7 +31,7 @@ const { t } = Astro.props;
       {
         t.items.map((benefit, index) => (
           <div
-            class={`w-full h-full px-5 flex flex-col justify-center items-center gap-2 [animation-iteration-count:infinite] delay-[100ms] duration-[400ms] md:delay-[${300 + index * 50}ms] md:duration-[${400 + index * 50}ms] taos:translate-y-[200px] taos:opacity-0`}
+            class={`w-full h-full px-5 flex flex-col justify-center items-center gap-2 [animation-iteration-count:infinite] delay-[100ms] duration-[400ms] md:delay-[${100+(index*100)}ms] md:duration-[400ms] taos:translate-y-[200px] taos:opacity-0`}
             data-taos-offset="0"
           >
             {index === 0 && (

@@ -25,7 +25,7 @@ const { base = "", t } = Astro.props;
         <span class="slice"></span>
       </label>
     </div>
-    <a href="/#" aria-label="Ir a Inicio" class="group">
+    <a href="/#" aria-label="Ir a Inicio" class="group" data-astro-reload>
       <svg
         class="w-20 h-auto"
         viewBox="0 0 610 250"
@@ -47,6 +47,7 @@ const { base = "", t } = Astro.props;
       <li class="max-[1024px]:w-full max-[1024px]:flex">
         <a
           href={`${base}/#`}
+          data-astro-reload
           aria-label="Volver al Inicio"
           class="hover:text-acento font-medium transition-all duration-300 ease-in-out max-[1024px]:py-6 max-[1024px]:border-b max-[1024px]:w-full max-[1024px]:border-claro"
           >{t.home}</a
@@ -79,6 +80,7 @@ const { base = "", t } = Astro.props;
           <li>
             <a
               href={`${base}/division-inyeccion`}
+              data-astro-reload
               class="hover:text-acento font-medium transition-all duration-300 ease-in-out"
               >{t.divisionsInyeccion}</a
             >
@@ -86,6 +88,7 @@ const { base = "", t } = Astro.props;
           <li>
             <a
               href={`${base}/division-matriceria`}
+              data-astro-reload
               class="hover:text-acento font-medium transition-all duration-300 ease-in-out"
               >{t.divisionsMatriceria}</a
             >
@@ -93,6 +96,7 @@ const { base = "", t } = Astro.props;
           <li>
             <a
               href={`${base}/division-dispositivos`}
+              data-astro-reload
               class="hover:text-acento font-medium transition-all duration-300 ease-in-out"
               >{t.divisionsDispositivos}</a
             >
@@ -102,6 +106,7 @@ const { base = "", t } = Astro.props;
       <li class="max-[1024px]:w-full max-[1024px]:flex">
         <a
           href={`${base}/#about`}
+          data-astro-reload
           class="hover:text-acento font-medium transition-all duration-300 ease-in-out max-[1024px]:py-6 max-[1024px]:border-t max-[1024px]:border-b max-[1024px]:w-full max-[1024px]:border-claro"
           >{t.quienessomos}</a
         >
@@ -109,6 +114,7 @@ const { base = "", t } = Astro.props;
       <li class="max-[1024px]:w-full max-[1024px]:flex">
         <a
           href={`${base}/ser-parte`}
+          data-astro-reload
           class="hover:text-acento font-medium transition-all duration-300 ease-in-out max-[1024px]:py-6 max-[1024px]:border-b max-[1024px]:w-full max-[1024px]:border-claro"
           >{t.trabajaconnosotros}</a
         >
@@ -116,6 +122,7 @@ const { base = "", t } = Astro.props;
       <li class="max-[1024px]:w-full max-[1024px]:flex">
         <a
           href={`${base}/#contacto`}
+          data-astro-reload
           class="hover:text-acento font-medium transition-all duration-300 ease-in-out max-[1024px]:py-6 max-[1024px]:border-b max-[1024px]:w-full max-[1024px]:border-claro"
           >{t.contacto}</a
         >

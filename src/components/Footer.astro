@@ -66,6 +66,7 @@ const { base = "", t } = Astro.props;
             <li>
               <a
                 href={`${base}/#`}
+                data-astro-reload
                 aria-label="Regresar al Inicio"
                 class="hover:text-acento transition-all duration-200 ease-in-out"
                 >{t.home}</a>
@@ -73,12 +74,14 @@ const { base = "", t } = Astro.props;
             <li>
               <a
                 href={`${base}/#about`}
+                data-astro-reload
                 class="hover:text-acento transition-all duration-200 ease-in-out"
                 >{t.about}</a>
             </li>
             <li>
               <a
                 href={`${base}/ser-parte`}
+                data-astro-reload
                 class="hover:text-acento transition-all duration-200 ease-in-out"
                 >{t.workwith}</a>
             </li>
@@ -92,18 +95,21 @@ const { base = "", t } = Astro.props;
             <li>
               <a
                 href={`${base}/division-inyeccion`}
+                data-astro-reload
                 class="hover:text-acento transition-all duration-200 ease-in-out"
                 >{t.divisionsInyeccion}</a>
             </li>
             <li>
               <a
                 href={`${base}/division-matriceria`}
+                data-astro-reload
                 class="hover:text-acento transition-all duration-200 ease-in-out"
                 >{t.divisionsMatriceria}</a>
             </li>
             <li>
               <a
                 href={`${base}/division-dispsitivos`}
+                data-astro-reload
                 class="hover:text-acento transition-all duration-200 ease-in-out"
                 >{t.divisionsDispositivos}</a>
             </li>

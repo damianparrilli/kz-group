@@ -2,54 +2,155 @@
 const { t, base, isoId } = Astro.props;
 ---
 
-<section class="py-36 px-[20px] flex flex-col justify-center items-center gap-10">
-    {isoId === "inyeccion" && base === "/en" && (
-  <div class="flex flex-col gap-4 text-oscuro max-w-[900px] mx-auto text-base md:text-lg">
-    <span class="font-semibold">Quality Policy</span>
-    <p>KZ Group Injection Division has successfully implemented a quality management system based on ISO 9001 certification. (See the <a class="font-semibold" href="/Inyeccion.pdf" target="_blank">CURRENT POLICY</a>).</p>
-    <p> This allows us to guarantee our clients continuous satisfaction. Our main objective is to achieve VDA 6.3 by the end of 2020.</p>
-   
-  </div>
-)}
+<section
+  class="py-36 px-[20px] flex flex-col justify-center items-center gap-10"
+>
+  {
+    isoId === "inyeccion" && base === "/en" && (
+      <div class="flex flex-col gap-4 text-oscuro max-w-[900px] mx-auto text-base md:text-lg">
+        <span class="font-semibold">Quality Policy</span>
+        <p>
+          KZ Group Injection Division has successfully implemented a quality
+          management system based on ISO 9001 certification. (See the{" "}
+          <a class="font-semibold" href="/Inyeccion.pdf" target="_blank">
+            CURRENT POLICY
+          </a>
+          ).
+        </p>
+        <p>
+          {" "}
+          This allows us to guarantee our clients continuous satisfaction. Our
+          main objective is to achieve VDA 6.3 by the end of 2020.
+        </p>
+      </div>
+    )
+  }
 
-{isoId === "inyeccion" && base === "" && (
-  <div class="flex flex-col gap-4 text-oscuro max-w-[900px] mx-auto text-base md:text-lg">
-    <span class="font-semibold">Política de calidad</span>
-    <p>KZ Group División Inyección, ha logrado implementar un sistema de gestión de la calidad basado en las normas ISO 9001 Certificado. (Ver <a class="font-semibold" href="/Inyeccion.pdf" target="_blank">POLITICA VIGENTE</a>).</p>
-    <p>Esto nos permite garantizar a nuestros clientes una continua satisfacción. Nuestro objetivo principal es alcanzar VDA 6.3 hacia fines 2020.</p>
-  </div>
-)}
+  {
+    isoId === "inyeccion" && base === "" && (
+      <div class="flex flex-col gap-4 text-oscuro max-w-[900px] mx-auto text-base md:text-lg">
+        <span class="font-semibold">Política de calidad</span>
+        <p>
+          KZ Group División Inyección, ha logrado implementar un sistema de
+          gestión de la calidad basado en las normas ISO 9001 Certificado. (Ver{" "}
+          <a class="font-semibold" href="/Inyeccion.pdf" target="_blank">
+            POLITICA VIGENTE
+          </a>
+          ).
+        </p>
+        <p>
+          Esto nos permite garantizar a nuestros clientes una continua
+          satisfacción. Nuestro objetivo principal es alcanzar VDA 6.3 hacia
+          fines 2020.
+        </p>
+      </div>
+    )
+  }
 
-{isoId === "matriceria" && base === "/en" && (
-  <div class="flex flex-col gap-4 text-oscuro max-w-[900px] mx-auto text-base md:text-lg">
-    <span class="font-semibold">Quality Policy</span>
-    <p>Over the years, KZ Group's Tooling Division has developed a quality management system based on excellence and efficiency in every process, where customer satisfaction is the main focus from the very beginning of project development.</p>
-  </div>
-)}
+  {
+    isoId === "matriceria" && base === "/en" && (
+      <div class="flex flex-col gap-4 text-oscuro max-w-[900px] mx-auto text-base md:text-lg">
+        <span class="font-semibold">Quality Policy</span>
+        <p>
+          Over the years, KZ Group's Tooling Division has developed a quality
+          management system based on excellence and efficiency in every process,
+          where customer satisfaction is the main focus from the very beginning
+          of project development.
+        </p>
+      </div>
+    )
+  }
 
-{isoId === "matriceria" && base === "" && (
-  <div class="flex flex-col gap-4 text-oscuro max-w-[900px] mx-auto text-base md:text-lg">
-    <span class="font-semibold">Política de calidad</span>
-    <p>KZ Group División Matricería, ha logrado a través de los años un sistema de gestión de calidad basado en la excelencia y eficiencia cada proceso, donde la satisfacción del cliente es el foco principal inclusive desde el inicio de desarrollo de proyectos.</p>
+  {
+    isoId === "matriceria" && base === "" && (
+      <div class="flex flex-col gap-4 text-oscuro max-w-[900px] mx-auto text-base md:text-lg">
+        <span class="font-semibold">Política de calidad</span>
+        <p>
+          KZ Group División Matricería, ha logrado a través de los años un
+          sistema de gestión de calidad basado en la excelencia y eficiencia
+          cada proceso, donde la satisfacción del cliente es el foco principal
+          inclusive desde el inicio de desarrollo de proyectos.
+        </p>
+      </div>
+    )
+  }
+  <div
+    class="flex flex-col gap-4 text-oscuro max-w-[900px] mx-auto text-base md:text-lg"
+  >
+    <span class="font-semibold">ISO 9001-2015</span>
+    <p>{t.texto1}</p>
+    <p>{t.texto2}</p>
   </div>
-)}
-    <div class="flex flex-col gap-4 text-oscuro max-w-[900px] mx-auto text-base md:text-lg">
-        <span class="font-semibold">ISO 9001-2015</span>
-        <p>{t.texto1}</p>
-        <p>{t.texto2}</p>
-    </div>
-    <div class="flex gap-4 w-full justify-center items-center text-oscuro font-bold">
-        <a href="/IQNET.pdf" class="bg-[#EFEFEF] w-full max-w-48 py-6 flex flex-col justify-center items-center gap-2 rounded-lg border border-[#1D1D1D50] hover:bg-[#e4e4e4] transition-all duration-300 ease-in-out" target="_blank">
-            <img src="/pdf.svg" alt="" class="w-8 sm:w-12 h-auto">
-            <span class="text-sm sm:text-base">IQNET</span>
-        </a>
-        <a href="/IRAM.pdf" class="bg-[#EFEFEF] w-full max-w-48 py-6 flex flex-col justify-center items-center gap-2 rounded-lg border border-[#1D1D1D50] hover:bg-[#e4e4e4] transition-all duration-300 ease-in-out" target="_blank">
-            <img src="/pdf.svg" alt="" class="w-8 sm:w-12 h-auto">
-            <span class="text-sm sm:text-base">ISO</span>
-
-        </a>
-    </div>
-    <a href="http://qr.afip.gob.ar/?qr=axE-6P82aAUet3ON_y30Uw,," class="w-28 sm:w-36"><img src="/DATAWEB.jpg" alt="Data Fiscal">
+  <div
+    class="flex gap-4 w-full justify-center items-center text-oscuro font-bold"
+  >
+    <a
+      href="/IQNET.pdf"
+      class="bg-[#EFEFEF] w-full max-w-48 py-6 flex flex-col justify-center items-center gap-2 rounded-lg border border-[#1D1D1D50] hover:bg-[#e4e4e4] transition-all duration-300 ease-in-out"
+      target="_blank"
+    >
+      <img src="/pdf.svg" alt="" class="w-8 sm:w-12 h-auto" />
+      <span class="text-sm sm:text-base">IQNET</span>
     </a>
+    <a
+      href="/IRAM.pdf"
+      class="bg-[#EFEFEF] w-full max-w-48 py-6 flex flex-col justify-center items-center gap-2 rounded-lg border border-[#1D1D1D50] hover:bg-[#e4e4e4] transition-all duration-300 ease-in-out"
+      target="_blank"
+    >
+      <img src="/pdf.svg" alt="" class="w-8 sm:w-12 h-auto" />
+      <span class="text-sm sm:text-base">ISO</span>
+    </a>
+  </div>
+  <div class="flex flex-wrap justify-center mt-10 gap-16">
+    <div
+      class="flex flex-col text-center w-36 gap-3 text-sm text-oscuro"
+    >
+      <a
+        href="http://qr.afip.gob.ar/?qr=IMGS0k3IWEcajJvI0inp3g,,"
+        target="blank"
+        class="w-36"
+      >
+        <img
+          src="/DATAFISCALERIC.webp"
+          alt="Data Fiscal BIAGIONI ZELLNER ERIC SEBASTIAN"
+        />
+      </a>
+      <div class="flex flex-col gap-1">
+        <p class="font-semibold">BIAGIONI ZELLNER ERIC SEBASTIAN</p>
+        <p>CUIT: 20-33182478-0</p>
+      </div>
+    </div>
+    <div
+      class="flex flex-col text-center w-36 gap-3 text-sm text-oscuro"
+    >
+      <a
+        href="http://qr.afip.gob.ar/?qr=axE-6P82aAUet3ON_y30Uw,,"
+        target="blank"
+        class="w-36"
+        ><img
+          src="/DATAFISCALJOSE.webp"
+          alt="Data Fiscal BIAGIONI ARMANDO JOSE"
+        />
+      </a>
+      <div class="flex flex-col gap-1">
+        <p class="font-semibold">BIAGIONI ARMANDO JOSE</p>
+        <p>CUIT: 20-14674266-2</p>
+      </div>
+    </div>
 
+    <div
+      class="flex flex-col text-center w-36 gap-3 text-sm text-oscuro"
+    >
+      <a
+        href="http://qr.afip.gob.ar/?qr=mA6JtmCCRvsZw2fJJhM30A,,"
+        target="blank"
+        class="w-36"
+        ><img src="/DATAFISCALKZ.webp" alt="Data Fiscal KZ AUTOMOTIVE S.A." />
+      </a>
+      <div class="flex flex-col gap-1">
+        <p class="font-semibold">KZ AUTOMOTIVE S.A.</p>
+        <p class="mt-auto">CUIT: 30-71889722-6</p>
+      </div>
+    </div>
+  </div>
 </section>
