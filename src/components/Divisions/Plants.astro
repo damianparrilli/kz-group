@@ -83,9 +83,11 @@ const isMatriceria = new URL(Astro.request.url).pathname === "/division-matricer
               </svg>
 
               <h4 class="text-base sm:text-lg">{t.tel}</h4>
-              <a href="tel:+541147642687" class="underline">
+              <a href=`tel:${isMatriceria? (
+                    "+54117398-1785"
+                   ) : "+54114764-2687"}` class="underline">
                 {isMatriceria? (
-                    "+54 11 4764-2687"
+                    "+54 11 7398-1785"
                    ) : "+54 11 4764-2687"} 
               </a>
             </div>

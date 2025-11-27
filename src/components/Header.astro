@@ -392,66 +392,70 @@ const { base = "", t } = Astro.props;
   }
 </style>
 
-<script>
+<script is:inline>
   function initHeaderLogic() {
     const nav = document.getElementById("navigation");
-    const hamburger = document.getElementById(
-      "hamburger-toggle"
-    ) as HTMLInputElement;
+    const hamburger = document.getElementById("hamburger-toggle");
 
     if (nav && hamburger && !nav.dataset.bound) {
       nav.dataset.bound = "1";
 
-      const updateHamburgerARIA = () => {
+      const overlay = document.getElementById("overlay");
+
+      const syncMenuWithHamburger = () => {
+        const lista = document.getElementById("lista");
+        if (!lista || !overlay) return;
+
+        if (hamburger.checked) {
+          lista.classList.add("open");
+          overlay.classList.remove("opacity-0", "pointer-events-none");
+          overlay.classList.add("opacity-50");
+          document.body.classList.add("overflow-y-hidden");
+        } else {
+          lista.classList.remove("open");
+          overlay.classList.add("opacity-0", "pointer-events-none");
+          overlay.classList.remove("opacity-50");
+          document.body.classList.remove("overflow-y-hidden");
+        }
+
         const menu = document.getElementById("menu");
-        if (!menu) return;
-        menu.setAttribute("aria-hidden", !hamburger.checked ? "true" : "false");
+        if (menu) {
+          menu.setAttribute("aria-hidden", hamburger.checked ? "false" : "true");
+        }
         hamburger.setAttribute(
           "aria-expanded",
           hamburger.checked ? "true" : "false"
         );
       };
 
-      hamburger.addEventListener("change", updateHamburgerARIA);
+      hamburger.addEventListener("change", syncMenuWithHamburger);
 
       window.addEventListener("click", (event) => {
         const eventPath = event.composedPath();
         const isTargeted = eventPath.includes(nav);
-        if (!isTargeted) {
+        if (!isTargeted && hamburger.checked) {
           hamburger.checked = false;
-          updateHamburgerARIA();
+          syncMenuWithHamburger();
         }
       });
 
-      const overlay = document.getElementById("overlay");
-      const abrirMenu = () => {
-        const lista = document.getElementById("lista");
-        if (!lista || !overlay) return;
-        lista.classList.toggle("open");
-        overlay.classList.toggle("opacity-0");
-        overlay.classList.toggle("opacity-50");
-        overlay.classList.toggle("pointer-events-none");
-        document.body.classList.toggle("overflow-y-hidden");
-      };
-
       if (overlay) {
         overlay.addEventListener("click", () => {
+          if (!hamburger.checked) return;
           hamburger.checked = false;
-          abrirMenu();
+          syncMenuWithHamburger();
         });
       }
 
       const anchors = document.querySelectorAll("#lista a");
       anchors.forEach((a) =>
         a.addEventListener("click", () => {
-          if (window.innerWidth < 1024) {
+          if (window.innerWidth < 1024 && hamburger.checked) {
             hamburger.checked = false;
-            abrirMenu();
+            syncMenuWithHamburger();
           }
         })
       );
-
-      hamburger.addEventListener("change", abrirMenu);
 
       const dropdown = document.getElementById("dropdown-toggle");
       const abrirDropdown = () => {
@@ -468,6 +472,8 @@ const { base = "", t } = Astro.props;
       if (dropdown) {
         dropdown.addEventListener("change", abrirDropdown);
       }
+
+      syncMenuWithHamburger();
     }
 
     const langToggle = document.getElementById("lang-toggle");
@@ -481,8 +487,8 @@ const { base = "", t } = Astro.props;
 
       document.addEventListener("click", (e) => {
         if (
-          !langMenu.contains(e.target as HTMLElement) &&
-          !langToggle.contains(e.target as HTMLElement)
+          !langMenu.contains(e.target) &&
+          !langToggle.contains(e.target)
         ) {
           langMenu.classList.add("hidden");
         }
@@ -496,7 +502,6 @@ const { base = "", t } = Astro.props;
           const selectedLang = btn.getAttribute("data-lang");
           if (!selectedLang) return;
 
-          // Ya está en el idioma correcto, no hacer nada
           if (
             (selectedLang === "en" && isEnglish) ||
             (selectedLang === "es" && !isEnglish)
@@ -541,4 +546,5 @@ const { base = "", t } = Astro.props;
   document.addEventListener("DOMContentLoaded", initHeaderLogic);
   document.addEventListener("astro:page-load", initHeaderLogic);
 </script>
+
 
