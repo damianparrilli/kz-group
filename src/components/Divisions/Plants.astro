@@ -1,6 +1,7 @@
 ---
 const { t } = Astro.props;
 const isMatriceria = new URL(Astro.request.url).pathname === "/division-matriceria/" || new URL(Astro.request.url).pathname === "/en/division-matriceria/" || new URL(Astro.request.url).pathname === "/en/division-matriceria" || new URL(Astro.request.url).pathname === "/division-matriceria";
+const isDispositivos = new URL(Astro.request.url).pathname === "/division-dispositivos/" || new URL(Astro.request.url).pathname === "/en/division-dispositivos/" || new URL(Astro.request.url).pathname === "/en/division-dispositivos" || new URL(Astro.request.url).pathname === "/division-dispositivos";
 ---
 
 <section class="py-36">
@@ -29,7 +30,7 @@ const isMatriceria = new URL(Astro.request.url).pathname === "/division-matricer
         
             {isMatriceria? (
                <h3 class='text-xl font-medium text-oscuro'>{t.plantMatriceria}</h3>
-              ) : (<h3 class='text-xl font-medium text-oscuro'>{t.plantInyeccion}</h3>)} 
+              ) : isDispositivos? (<h3 class='text-xl font-medium text-oscuro'>{t.plantDispositivos}</h3>) : (<h3 class='text-xl font-medium text-oscuro'>{t.plantInyeccion}</h3>)}
         <div
           class="flex flex-wrap gap-4 h-full justify-between text-oscuro text-center text-sm sm:text-base"
         >
@@ -62,7 +63,7 @@ const isMatriceria = new URL(Astro.request.url).pathname === "/division-matricer
             <p>
                 {isMatriceria? (
                     "Lavalle 1550, Villa Ballester (1653), Buenos Aires – Argentina"
-                   ) : "Cervantes 557 (Ex200), General Pacheco, Buenos Aires – Argentina"} 
+                   ) : isDispositivos? ("Santiago de Chile 2020, General Pacheco, Buenos Aires – Argentina") : "Cervantes 557 (Ex200), General Pacheco, Buenos Aires – Argentina"} 
             </p>
           </div>
           <div class="flex gap-4 w-full flex-col min-[450px]:flex-row">
@@ -85,10 +86,10 @@ const isMatriceria = new URL(Astro.request.url).pathname === "/division-matricer
               <h4 class="text-base sm:text-lg">{t.tel}</h4>
               <a href=`tel:${isMatriceria? (
                     "+54117398-1785"
-                   ) : "+54114764-2687"}` class="underline">
+                   ) : isDispositivos? ("+541173981785") : "+541177229465"}` class="underline">
                 {isMatriceria? (
                     "+54 11 7398-1785"
-                   ) : "+54 11 4764-2687"} 
+                   ) : isDispositivos? ("+54 11 7398-1785") : "+54 11 7722-9465"} 
               </a>
             </div>
             <div
@@ -121,7 +122,7 @@ const isMatriceria = new URL(Astro.request.url).pathname === "/division-matricer
         
           src={isMatriceria? (
                     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.496194341593!2d-58.546120699999996!3d-34.5409901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb0ac35cd443b%3A0x1e5d699695f9fab4!2sLavalle%201550%2C%20B1653%20Villa%20Ballester%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1741364137193!5m2!1ses-419!2sar"
-                   ) : "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3289.9592614941403!2d-58.659709!3d-34.453182!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb0ac36b7082d%3A0xd73c2caec61e11ec!2sKZ%20Group!5e0!3m2!1ses-419!2sar!4v1755626847471!5m2!1ses-419!2sar"}
+                   ) : isDispositivos? ("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3289.953451775879!2d-58.664396323662935!3d-34.45332947300858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bca39c6eff1867%3A0xd2fed7901440b08c!2sSantiago%20de%20Chile%202020%2C%20B1617HMD%20Gral.%20Pacheco%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1781568377831!5m2!1ses-419!2sar") : "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3289.9592614941403!2d-58.659709!3d-34.453182!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb0ac36b7082d%3A0xd73c2caec61e11ec!2sKZ%20Group!5e0!3m2!1ses-419!2sar!4v1755626847471!5m2!1ses-419!2sar"}
           class="w-full h-[300px] md:h-full"
           style="border:0;"
           allowfullscreen=""

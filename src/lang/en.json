@@ -19,8 +19,9 @@
     "about": "About us",
     "workwith": "Work with KZ",
     "contacto": "Contact",
-    "plantInyeccion": "INJECTION AND DEVICES PLANT",
-    "plantMatriceria": "TOOLING PLANT"
+    "plantInyeccion": "INJECTION PLANT",
+    "plantMatriceria": "TOOLING PLANT",
+    "plantDispositivos": "DEVICES PLANT"
   },
   "main": {
     "banner": {
@@ -69,8 +70,10 @@
     },
     "plants": {
       "title": "Our plants",
-      "plantInyeccion": "INJECTION AND DEVICES PLANT",
+      "plantInyeccion": "INJECTION PLANT",
       "plantMatriceria": "TOOLING PLANT",
+      
+    "plantDispositivos": "DEVICES PLANT",
       "direccion": "Location",
       "tel": "Phone number",
       "horarios": "Operating hours",
@@ -114,8 +117,10 @@
     },
     "plants": {
       "title": "Our plant",
-      "plantInyeccion": "INJECTION AND DEVICES PLANT",
+      "plantInyeccion": "INJECTION PLANT",
       "plantMatriceria": "TOOLING PLANT",
+      
+    "plantDispositivos": "DEVICES PLANT",
       "direccion": "Location",
       "tel": "Phone number",
       "horarios": "Operating hours",
@@ -159,8 +164,10 @@
     },
     "plants": {
       "title": "Our plant",
-      "plantInyeccion": "INJECTION AND DEVICES PLANT",
+      "plantInyeccion": "INJECTION PLANT",
       "plantMatriceria": "TOOLING PLANT",
+      
+    "plantDispositivos": "DEVICES PLANT",
       "direccion": "Location",
       "tel": "Phone number",
       "horarios": "Operating hours",
@@ -204,8 +211,10 @@
     },
     "plants": {
       "title": "Our plant",
-      "plantInyeccion": "INJECTION AND DEVICES PLANT",
+      "plantInyeccion": "INJECTION PLANT",
       "plantMatriceria": "TOOLING PLANT",
+      
+    "plantDispositivos": "DEVICES PLANT",
       "direccion": "Location",
       "tel": "Phone number",
       "horarios": "Operating hours",
@@ -240,8 +249,9 @@
     },
     "plants": {
       "title": "Our plants",
-      "plantInyeccion": "INJECTION AND DEVICES PLANT",
+      "plantInyeccion": "INJECTION PLANT",
       "plantMatriceria": "TOOLING PLANT",
+    "plantDispositivos": "DEVICES PLANT",
       "direccion": "Location",
       "tel": "Phone number",
       "horarios": "Operating hours",

@@ -19,8 +19,9 @@
         "about": "Quienes Somos",
         "workwith": "Ser parte de KZ",
         "contacto": "Contacto",
-        "plantInyeccion": "PLANTA INYECCIÓN Y DISPOSITIVOS",
-        "plantMatriceria": "PLANTA MATRICERÍA"
+        "plantInyeccion": "PLANTA INYECCIÓN",
+        "plantMatriceria": "PLANTA MATRICERÍA",
+        "plantDispositivos": "PLANTA DISPOSITIVOS"
     },
     "main": {
         "banner": {
@@ -69,8 +70,9 @@
         },
         "plants": {
             "title": "Nuestras plantas",
-            "plantInyeccion": "PLANTA INYECCIÓN Y DISPOSITIVOS",
+            "plantInyeccion": "PLANTA INYECCIÓN",
             "plantMatriceria": "PLANTA MATRICERÍA",
+            "plantDispositivos": "PLANTA DISPOSITIVOS",
             "direccion": "Dirección",
             "tel": "Teléfono",
             "horarios": "Horarios de atención",
@@ -114,8 +116,9 @@
         },
         "plants": {
             "title": "Nuestra planta",
-            "plantInyeccion": "PLANTA INYECCIÓN Y DISPOSITIVOS",
+            "plantInyeccion": "PLANTA INYECCIÓN",
             "plantMatriceria": "PLANTA MATRICERÍA",
+            "plantDispositivos": "PLANTA DISPOSITIVOS",
             "direccion": "Dirección",
             "tel": "Teléfono",
             "horarios": "Horarios de atención",
@@ -159,8 +162,9 @@
         },
         "plants": {
             "title": "Nuestra planta",
-            "plantInyeccion": "PLANTA INYECCIÓN Y DISPOSITIVOS",
+            "plantInyeccion": "PLANTA INYECCIÓN",
             "plantMatriceria": "PLANTA MATRICERÍA",
+            "plantDispositivos": "PLANTA DISPOSITIVOS",
             "direccion": "Dirección",
             "tel": "Teléfono",
             "horarios": "Horarios de atención",
@@ -204,8 +208,9 @@
         },
         "plants": {
             "title": "Nuestra planta",
-            "plantInyeccion": "PLANTA INYECCIÓN Y DISPOSITIVOS",
+            "plantInyeccion": "PLANTA INYECCIÓN",
             "plantMatriceria": "PLANTA MATRICERÍA",
+            "plantDispositivos": "PLANTA DISPOSITIVOS",
             "direccion": "Dirección",
             "tel": "Teléfono",
             "horarios": "Horarios de atención",
@@ -240,8 +245,9 @@
         },
         "plants": {
             "title": "Nuestras plantas",
-            "plantInyeccion": "PLANTA INYECCIÓN Y DISPOSITIVOS",
+            "plantInyeccion": "PLANTA INYECCIÓN",
             "plantMatriceria": "PLANTA MATRICERÍA",
+            "plantDispositivos": "PLANTA DISPOSITIVOS",
             "direccion": "Dirección",
             "tel": "Teléfono",
             "horarios": "Horarios de atención",
