@@ -86,10 +86,10 @@ const isDispositivos = new URL(Astro.request.url).pathname === "/division-dispos
               <h4 class="text-base sm:text-lg">{t.tel}</h4>
               <a href=`tel:${isMatriceria? (
                     "+54117398-1785"
-                   ) : isDispositivos? ("+541173981785") : "+541177229465"}` class="underline">
+                   ) : "+541177229465"}` class="underline">
                 {isMatriceria? (
                     "+54 11 7398-1785"
-                   ) : isDispositivos? ("+54 11 7398-1785") : "+54 11 7722-9465"} 
+                   ) : "+54 11 7722-9465"} 
               </a>
             </div>
             <div
@@ -110,9 +110,7 @@ const isDispositivos = new URL(Astro.request.url).pathname === "/division-dispos
               </svg>
 
               <h4 class="text-base sm:text-lg">{t.horarios}</h4>
-              {isMatriceria? (
-                <p >{t.horariosMatriceria}</p>
-               ) : (<p>{t.horariosInyeccion}</p>)}
+              <p>{t.horariosInyeccion}</p>
             </div>
           </div>
         </div>

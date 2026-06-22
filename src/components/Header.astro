@@ -460,7 +460,10 @@ const { base = "", t } = Astro.props;
 
       window.addEventListener("click", (event) => {
         const eventPath = event.composedPath();
-        const isTargeted = eventPath.includes(nav);
+        const lista = document.getElementById("lista");
+        
+        const isTargeted = eventPath.includes(nav) || (lista && eventPath.includes(lista));
+        
         if (!isTargeted && hamburger.checked) {
           hamburger.checked = false;
           syncMenuWithHamburger();

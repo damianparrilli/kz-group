@@ -5,6 +5,7 @@ import InjItem3 from "../../icons/inyeccion/Item3Icon.astro";
 import InjItem4 from "../../icons/inyeccion/Item4Icon.astro";
 import InjItem5 from "../../icons/inyeccion/Item5Icon.astro";
 import InjItem6 from "../../icons/inyeccion/Item6Icon.astro";
+import InjItem7 from "../../icons/inyeccion/Item7Icon.astro";
 
 import MatItem1 from "../../icons/matriceria/Item1Icon.astro";
 import MatItem2 from "../../icons/matriceria/Item2Icon.astro";
@@ -12,6 +13,7 @@ import MatItem3 from "../../icons/matriceria/Item3Icon.astro";
 import MatItem4 from "../../icons/matriceria/Item4Icon.astro";
 import MatItem5 from "../../icons/matriceria/Item5Icon.astro";
 import MatItem6 from "../../icons/matriceria/Item6Icon.astro";
+import MatItem7 from "../../icons/matriceria/Item7Icon.astro";
 
 import DispItem1 from "../../icons/dispositivos/Item1Icon.astro";
 import DispItem2 from "../../icons/dispositivos/Item2Icon.astro";
@@ -36,6 +38,7 @@ const iconSets = {
     item4: InjItem4,
     item5: InjItem5,
     item6: InjItem6,
+    item7: InjItem7,
     // item4: InjItem4, item5: InjItem5, item6: InjItem6
   },
   matriceria: {
@@ -45,6 +48,7 @@ const iconSets = {
     item4: MatItem4,
     item5: MatItem5,
     item6: MatItem6,
+    item7: MatItem7,
   },
   dispositivos: {
     item1: DispItem1,
@@ -58,7 +62,7 @@ const iconSets = {
 
 const icons = iconSets[servicesId] ?? {};
 
-const keys = ['item1','item2','item3','item4','item5','item6'];
+const keys = ['item1','item2','item3','item4','item5','item6', 'item7'];
 const entries = keys.filter((k) => typeof t?.[k] === 'string' && t[k]?.trim());
 
 

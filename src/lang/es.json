@@ -40,7 +40,10 @@
         "about": {
             "title": "¿Quienes somos?",
             "description1": "KZ es una empresa fundada en el año 1972 por el alemán Kurt Zellner, desde ese entonces esta dedicada a la fabricación de herramentales para la inyección de termo plásticos atendiendo los requerimientos de calidad de la Industria Automotriz.",
-            "description2": "Se encuentra en plena etapa de desarrollo y ampliación fusionando la experiencia de sus fundadores con la fuerza  de sus jóvenes descendientes es en este  proceso que presenta sus nuevas unidades de negocio, Inyección de Plásticos y Fabricación de Racks y Dispositivos, con el  principal objetivo de bridarles a sus clientes la solución completa para sus productos a través de la calidad y estabilidad de los Procesos de Fabricación."
+            "description2": "Se encuentra en plena etapa de desarrollo y ampliación fusionando la experiencia de sus fundadores con la fuerza  de sus jóvenes descendientes es en este  proceso que presenta sus nuevas unidades de negocio, Inyección de Plásticos y Fabricación de Racks y Dispositivos, con el  principal objetivo de bridarles a sus clientes la solución completa para sus productos a través de la calidad y estabilidad de los Procesos de Fabricación.",
+            "item1":"Superficie total",
+            "item2":"Proyectos",
+            "item3":"Trayectoria"
         },
         "customers": {
             "title": "Principales clientes"
@@ -89,8 +92,10 @@
             "button": "Enviar mensaje"
         },
         "iso": {
-            "texto1": "Debido a la demanda de nuestros clientes en Argentina, KZ Group decide avanzar con la certificación y estandarización de procesos para la mejora continua.",
-            "texto2": "Con gran satisfacción el objetivo se ha cumplido y en el mes de JULIO-2020 se alcanzado la certificación IRAM ISO 9001:2015 con el número de ref: RI 9000-9841"
+            "texto1": "La Unidad de Negocio Inyección de KZ Group implementó un sistema de gestión de calidad basado en estándares internacionales, con el objetivo de fortalecer sus procesos y garantizar la satisfacción de sus clientes.",
+            "texto2": "En julio de 2020 obtuvo la certificación ISO 9001:2015 otorgada por IRAM, consolidando una cultura de mejora continua y gestión eficiente en todas sus operaciones.",
+            "texto3": "Como evolución natural de su sistema de gestión de calidad y en respuesta a las exigencias de la industria automotriz, la Unidad de Negocio Inyección avanzó en la implementación de los requisitos establecidos por IATF 16949:2016.",
+            "texto4": "En abril de 2026 obtuvo esta certificación internacional, reafirmando su compromiso con la excelencia, la prevención de defectos, la mejora continua y el cumplimiento de los más altos estándares del sector automotor."
         }
     },
     "inyeccion": {
@@ -112,7 +117,8 @@
             "item3": "Desarrollo de productos",
             "item4": "Co-design y desarrollo de productos",
             "item5": "Detalle y precisión",
-            "item6": "Factibilidad y mejora"
+            "item6": "Factibilidad y mejora",
+            "item7": "Metrología"
         },
         "plants": {
             "title": "Nuestra planta",
@@ -135,8 +141,10 @@
             "button": "Enviar mensaje"
         },
         "iso": {
-            "texto1": "Debido a la demanda de nuestros clientes en Argentina, KZ Group decide avanzar con la certificación y estandarización de procesos para la mejora continua.",
-            "texto2": "Con gran satisfacción el objetivo se ha cumplido y en el mes de JULIO-2020 se alcanzado la certificación IRAM ISO 9001:2015 con el número de ref: RI 9000-9841"
+            "texto1": "La Unidad de Negocio Inyección de KZ Group implementó un sistema de gestión de calidad basado en estándares internacionales, con el objetivo de fortalecer sus procesos y garantizar la satisfacción de sus clientes.",
+            "texto2": "En julio de 2020 obtuvo la certificación ISO 9001:2015 otorgada por IRAM, consolidando una cultura de mejora continua y gestión eficiente en todas sus operaciones.",
+            "texto3": "Como evolución natural de su sistema de gestión de calidad y en respuesta a las exigencias de la industria automotriz, la Unidad de Negocio Inyección avanzó en la implementación de los requisitos establecidos por IATF 16949:2016.",
+            "texto4": "En abril de 2026 obtuvo esta certificación internacional, reafirmando su compromiso con la excelencia, la prevención de defectos, la mejora continua y el cumplimiento de los más altos estándares del sector automotor."
         }
     },
     "matriceria": {
@@ -158,7 +166,8 @@
             "item3": "Mecanizados especiales",
             "item4": "Moldes variados",
             "item5": "Grabados a pantografo",
-            "item6": "Rectificados cilindricos"
+            "item6": "Rectificados cilindricos",
+            "item7": "Limpieza con hielo seco"
         },
         "plants": {
             "title": "Nuestra planta",
@@ -181,8 +190,10 @@
             "button": "Enviar mensaje"
         },
         "iso": {
-            "texto1": "Debido a la demanda de nuestros clientes en Argentina, KZ Group decide avanzar con la certificación y estandarización de procesos para la mejora continua.",
-            "texto2": "Con gran satisfacción el objetivo se ha cumplido y en el mes de JULIO-2020 se alcanzado la certificación IRAM ISO 9001:2015 con el número de ref: RI 9000-9841"
+            "texto1": "La Unidad de Negocio Inyección de KZ Group implementó un sistema de gestión de calidad basado en estándares internacionales, con el objetivo de fortalecer sus procesos y garantizar la satisfacción de sus clientes.",
+            "texto2": "En julio de 2020 obtuvo la certificación ISO 9001:2015 otorgada por IRAM, consolidando una cultura de mejora continua y gestión eficiente en todas sus operaciones.",
+            "texto3": "Como evolución natural de su sistema de gestión de calidad y en respuesta a las exigencias de la industria automotriz, la Unidad de Negocio Inyección avanzó en la implementación de los requisitos establecidos por IATF 16949:2016.",
+            "texto4": "En abril de 2026 obtuvo esta certificación internacional, reafirmando su compromiso con la excelencia, la prevención de defectos, la mejora continua y el cumplimiento de los más altos estándares del sector automotor."
         }
     },
     "dispositivos": {
@@ -227,8 +238,10 @@
             "button": "Enviar mensaje"
         },
         "iso": {
-            "texto1": "Debido a la demanda de nuestros clientes en Argentina, KZ Group decide avanzar con la certificación y estandarización de procesos para la mejora continua.",
-            "texto2": "Con gran satisfacción el objetivo se ha cumplido y en el mes de JULIO-2020 se alcanzado la certificación IRAM ISO 9001:2015 con el número de ref: RI 9000-9841"
+            "texto1": "La Unidad de Negocio Inyección de KZ Group implementó un sistema de gestión de calidad basado en estándares internacionales, con el objetivo de fortalecer sus procesos y garantizar la satisfacción de sus clientes.",
+            "texto2": "En julio de 2020 obtuvo la certificación ISO 9001:2015 otorgada por IRAM, consolidando una cultura de mejora continua y gestión eficiente en todas sus operaciones.",
+            "texto3": "Como evolución natural de su sistema de gestión de calidad y en respuesta a las exigencias de la industria automotriz, la Unidad de Negocio Inyección avanzó en la implementación de los requisitos establecidos por IATF 16949:2016.",
+            "texto4": "En abril de 2026 obtuvo esta certificación internacional, reafirmando su compromiso con la excelencia, la prevención de defectos, la mejora continua y el cumplimiento de los más altos estándares del sector automotor."
         }
     },
     "workwithkz": {

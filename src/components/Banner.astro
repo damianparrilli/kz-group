@@ -9,10 +9,10 @@ const widthClasses = isES
 ---
 
 <section
-  class="w-full px-[20px] h-[calc(100dvh-70px)] flex justify-center overflow-hidden"
+  class="w-full px-[20px] h-[calc(100svh-70px)] flex justify-center overflow-hidden relative isolate"
 >
 <div class="w-full h-full absolute inset-0 z-[-20] bg-oscuro">
-    <div class="absolute inset-0 bg-[url('/banner-background.webp')] bg-fixed bg-cover bg-center opacity-20"></div>
+    <div class="absolute inset-0 bg-[url('/banner-background.webp')] lg:bg-fixed bg-cover bg-center opacity-20"></div>
   </div>
   <div class="flex flex-col md:flex-row justify-center items-center w-full h-full z-10 gap-y-4 gap-x-10">
     <svg id="Capa_2" class="w-[170px] lg:w-[230px] h-auto" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 610 299.08">
@@ -39,7 +39,7 @@ const widthClasses = isES
       </svg>
 
     <h1 class={`relative text-3xl min-[450px]:text-4xl text-center md:text-left lg:text-5xl font-bold h-[90px] min-[450px]:h-[80px] lg:h-[96px] leading-[1.5] ${widthClasses}`}>
-      {t.phrases.map((word, index) => {
+      {t.phrases.map((word: string, index: number) => {
         const isHighlight = t.highlight.includes(word);
         const delay = index * 0.4;
         return (
@@ -58,7 +58,7 @@ const widthClasses = isES
 
   <a
     href="#about"
-    class="absolute bottom-[15dvh] md:bottom-[25%] font-medium rounded-md bg-acento text-oscuro px-7 py-2 text-base sm:text-lg cursor-pointer z-10 hover:bg-[#f7b046] transition-all duration-300 ease-in-out"
+    class="absolute bottom-[15svh] md:bottom-[25%] font-medium rounded-md bg-acento text-oscuro px-7 py-2 text-base sm:text-lg cursor-pointer z-10 hover:bg-[#f7b046] transition-all duration-300 ease-in-out"
   >
     {t.button}
   </a>

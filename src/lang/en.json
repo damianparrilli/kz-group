@@ -40,7 +40,10 @@
     "about": {
       "title": "About us",
       "description1": "KZ is a company founded in 1972 by the German Kurt Zellner, since then is dedicated to the manufacture of tooling for the injection of thermoplastics meeting the quality requirements of the automotive industry.",
-      "description2": "It is in full development and expansion stage, merging the experience of its founders with the strength of its young descendants. It is in this process that it presents its new business units, Plastic Injection and Racks and Devices Manufacturing, with the main objective of providing its customers with the complete solution for their products through the quality and stability of the Manufacturing Processes."
+      "description2": "It is in full development and expansion stage, merging the experience of its founders with the strength of its young descendants. It is in this process that it presents its new business units, Plastic Injection and Racks and Devices Manufacturing, with the main objective of providing its customers with the complete solution for their products through the quality and stability of the Manufacturing Processes.",
+      "item1": "Total area",
+      "item2": "Projects",
+      "item3": "Experience"
     },
     "customers": {
       "title": "Main customers"
@@ -72,8 +75,7 @@
       "title": "Our plants",
       "plantInyeccion": "INJECTION PLANT",
       "plantMatriceria": "TOOLING PLANT",
-      
-    "plantDispositivos": "DEVICES PLANT",
+      "plantDispositivos": "DEVICES PLANT",
       "direccion": "Location",
       "tel": "Phone number",
       "horarios": "Operating hours",
@@ -90,8 +92,10 @@
       "button": "Send message"
     },
     "iso": {
-      "texto1": "Due to the demand of our customers in Argentina, KZ Group decided to move forward with the certification and standardization of processes for continuous improvement.",
-      "texto2": "With great satisfaction the objective has been achieved and in the month of JULY-2020 the IRAM ISO 9001:2015 certification was obtained with the number of ref: RI 9000-9841."
+      "texto1": "The KZ Group’s Injection Moulding Business Unit has implemented a quality management system based on international standards, with the aim of strengthening its processes and ensuring customer satisfaction.",
+      "texto2": "In July 2020, it obtained ISO 9001:2015 certification from IRAM, consolidating a culture of continuous improvement and efficient management across all its operations.",
+      "texto3": "As a natural evolution of its quality management system and in response to the demands of the automotive industry, the Injection Moulding Business Unit moved forward with the implementation of the requirements set out by IATF 16949:2016.",
+      "texto4": "In April 2026, it obtained this international certification, reaffirming its commitment to excellence, defect prevention, continuous improvement and compliance with the highest standards in the automotive sector."
     }
   },
   "inyeccion": {
@@ -113,14 +117,14 @@
       "item3": "Product development",
       "item4": "Co-design and product development",
       "item5": "Detail and precision",
-      "item6": "Feasibility and improvement"
+      "item6": "Feasibility and improvement",
+      "item7": "Metrology"
     },
     "plants": {
       "title": "Our plant",
       "plantInyeccion": "INJECTION PLANT",
       "plantMatriceria": "TOOLING PLANT",
-      
-    "plantDispositivos": "DEVICES PLANT",
+      "plantDispositivos": "DEVICES PLANT",
       "direccion": "Location",
       "tel": "Phone number",
       "horarios": "Operating hours",
@@ -137,8 +141,10 @@
       "button": "Send message"
     },
     "iso": {
-      "texto1": "Due to the demand of our customers in Argentina, KZ Group decided to move forward with the certification and standardization of processes for continuous improvement.",
-      "texto2": "With great satisfaction the objective has been achieved and in the month of JULY-2020 the IRAM ISO 9001:2015 certification was obtained with the number of ref: RI 9000-9841."
+      "texto1": "The KZ Group’s Injection Moulding Business Unit has implemented a quality management system based on international standards, with the aim of strengthening its processes and ensuring customer satisfaction.",
+      "texto2": "In July 2020, it obtained ISO 9001:2015 certification from IRAM, consolidating a culture of continuous improvement and efficient management across all its operations.",
+      "texto3": "As a natural evolution of its quality management system and in response to the demands of the automotive industry, the Injection Moulding Business Unit moved forward with the implementation of the requirements set out by IATF 16949:2016.",
+      "texto4": "In April 2026, it obtained this international certification, reaffirming its commitment to excellence, defect prevention, continuous improvement and compliance with the highest standards in the automotive sector."
     }
   },
   "matriceria": {
@@ -160,14 +166,14 @@
       "item3": "Special machining",
       "item4": "Various molds",
       "item5": "Pantograph engravings",
-      "item6": "Cylindrical grinding"
+      "item6": "Cylindrical grinding",
+      "item7": "Dry Ice Cleaning"
     },
     "plants": {
       "title": "Our plant",
       "plantInyeccion": "INJECTION PLANT",
       "plantMatriceria": "TOOLING PLANT",
-      
-    "plantDispositivos": "DEVICES PLANT",
+      "plantDispositivos": "DEVICES PLANT",
       "direccion": "Location",
       "tel": "Phone number",
       "horarios": "Operating hours",
@@ -184,8 +190,10 @@
       "button": "Send message"
     },
     "iso": {
-      "texto1": "Due to the demand of our customers in Argentina, KZ Group decided to move forward with the certification and standardization of processes for continuous improvement.",
-      "texto2": "With great satisfaction the objective has been achieved and in the month of JULY-2020 the IRAM ISO 9001:2015 certification was obtained with the number of ref: RI 9000-9841."
+      "texto1": "The KZ Group’s Injection Moulding Business Unit has implemented a quality management system based on international standards, with the aim of strengthening its processes and ensuring customer satisfaction.",
+      "texto2": "In July 2020, it obtained ISO 9001:2015 certification from IRAM, consolidating a culture of continuous improvement and efficient management across all its operations.",
+      "texto3": "As a natural evolution of its quality management system and in response to the demands of the automotive industry, the Injection Moulding Business Unit moved forward with the implementation of the requirements set out by IATF 16949:2016.",
+      "texto4": "In April 2026, it obtained this international certification, reaffirming its commitment to excellence, defect prevention, continuous improvement and compliance with the highest standards in the automotive sector."
     }
   },
   "dispositivos": {
@@ -213,8 +221,7 @@
       "title": "Our plant",
       "plantInyeccion": "INJECTION PLANT",
       "plantMatriceria": "TOOLING PLANT",
-      
-    "plantDispositivos": "DEVICES PLANT",
+      "plantDispositivos": "DEVICES PLANT",
       "direccion": "Location",
       "tel": "Phone number",
       "horarios": "Operating hours",
@@ -231,8 +238,10 @@
       "button": "Send message"
     },
     "iso": {
-      "texto1": "Due to the demand of our customers in Argentina, KZ Group decided to move forward with the certification and standardization of processes for continuous improvement.",
-      "texto2": "With great satisfaction the objective has been achieved and in the month of JULY-2020 the IRAM ISO 9001:2015 certification was obtained with the number of ref: RI 9000-9841."
+      "texto1": "The KZ Group’s Injection Moulding Business Unit has implemented a quality management system based on international standards, with the aim of strengthening its processes and ensuring customer satisfaction.",
+      "texto2": "In July 2020, it obtained ISO 9001:2015 certification from IRAM, consolidating a culture of continuous improvement and efficient management across all its operations.",
+      "texto3": "As a natural evolution of its quality management system and in response to the demands of the automotive industry, the Injection Moulding Business Unit moved forward with the implementation of the requirements set out by IATF 16949:2016.",
+      "texto4": "In April 2026, it obtained this international certification, reaffirming its commitment to excellence, defect prevention, continuous improvement and compliance with the highest standards in the automotive sector."
     }
   },
   "workwithkz": {
@@ -251,7 +260,7 @@
       "title": "Our plants",
       "plantInyeccion": "INJECTION PLANT",
       "plantMatriceria": "TOOLING PLANT",
-    "plantDispositivos": "DEVICES PLANT",
+      "plantDispositivos": "DEVICES PLANT",
       "direccion": "Location",
       "tel": "Phone number",
       "horarios": "Operating hours",

@@ -8,7 +8,7 @@ const imageMap = {
   dispositivos: "/historia-dispositivos.webp"
 };
 
-const imageSrc = imageMap[aboutId] || "/default-image.webp";
+const imageSrc = imageMap[aboutId as keyof typeof imageMap] || "/default-image.webp";
 ---
 
 <section id="about" class="py-32">

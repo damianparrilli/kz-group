@@ -8,11 +8,11 @@ const imageMap = {
   dispositivos: "/dispositivos-image.webp"
 };
 
-const imageSrc = imageMap[bannerId] || "/default-image.webp";
+const imageSrc = imageMap[bannerId as keyof typeof imageMap] || "/default-image.webp";
 ---
 
 <section
-  class="w-full h-[calc(100dvh-70px)] flex items-end md:items-start relative overflow-hidden"
+  class="w-full h-[calc(100svh-70px)] flex items-end md:items-start relative overflow-hidden"
   data-banner-id={bannerId}
 >
   <div class="absolute flex flex-col md:flex-row w-full h-full">
