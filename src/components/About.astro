@@ -16,12 +16,14 @@ const { t } = Astro.props;
 
     <p class="text-sm sm:text-base">{t.description2}</p>
     <div class=" stats-container w-full xl:w-3/4 grid grid-cols-1 min-[440px]:grid-cols-3 max-[440px]:gap-5 mx-auto max-[440px]:max-w-48 gap-2 lg:gap-5 xl:gap-12 !mt-10 justify-center text-center" id="stats-container">
-      <div class="stat-item flex flex-col shrink-0 items-center gap-0 border-acento border rounded-md p-5 w-full">
+      <div class="stat-item flex shrink-0 flex-col items-center gap-0 border-acento border rounded-md p-5 w-full">
         <span class="stat-number text-acento text-xl font-bold"
-          >+<span class="counter" data-target="4000">0</span>m²</span
+          >+<span class="counter " data-target="50">0</span
+          > {t.item3year}</span
         >
-        <span class="stat-label text-xs max-[440px]:text-sm ">{t.item1}</span>
+        <span class="stat-label text-xs max-[440px]:text-sm ">{t.item3}</span>
       </div>
+      
 
       <div class="stat-item flex shrink-0 flex-col items-center gap-0 border-acento border rounded-md p-5 w-full">
         <span class="stat-number text-acento text-xl font-bold"
@@ -31,13 +33,14 @@ const { t } = Astro.props;
         <span class="stat-label max-[440px]:text-sm  text-xs ">{t.item2}</span>
       </div>
 
-      <div class="stat-item flex shrink-0 flex-col items-center gap-0 border-acento border rounded-md p-5 w-full">
+      <div class="stat-item flex flex-col shrink-0 items-center gap-0 border-acento border rounded-md p-5 w-full">
+        
         <span class="stat-number text-acento text-xl font-bold"
-          >+<span class="counter " data-target="50">0</span
-          ></span
+          >+<span class="counter" data-target="4500">0</span>m²</span
         >
-        <span class="stat-label text-xs max-[440px]:text-sm ">{t.item3}</span>
+        <span class="stat-label text-xs max-[440px]:text-sm ">{t.item1}</span>
       </div>
+      
     </div>
   </div>
 </section>
